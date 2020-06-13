@@ -1,0 +1,54 @@
+:root {
+  --primColor: #4d52db;
+  --secColor: #f17039;
+}
+html{
+  overflow: overlay;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  color: var(--primColor);
+}
+
+.customContainer {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  width: 100% !important;
+}
+.optionalTag {
+  color: #c1c1c1;
+  margin-left: 5px;
+}
+
+.noScroll {
+  overflow-y: hidden !important;
+  transition: 1000ms all linear;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  /* position: absolute;
+  top: 0;
+  right:10px */
+}
+::-webkit-scrollbar-thumb {
+  background: #a2a2a2;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+  background: #ebebeb;
+}
