@@ -52,3 +52,10 @@ a {
 ::-webkit-scrollbar-track {
   background: #ebebeb;
 }
+
+.swBtnLoader{
+  width: 8%
+}
+button:focus{
+  outline: 0
+}

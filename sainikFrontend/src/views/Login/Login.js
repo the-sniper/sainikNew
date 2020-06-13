@@ -121,7 +121,7 @@ class Login extends Component {
             </div>
             <PrimaryButton
               type="submit"
-              label="LOGIN"
+              label={user.loading || user.userDetails.isAuthenticated ? [<object className="swBtnLoader" type="image/svg+xml" data="./images/three-dots.svg" />] : "LOGIN"}
               actionFunction={this.submitForm}
             />
           </form>
