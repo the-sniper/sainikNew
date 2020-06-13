@@ -4,6 +4,20 @@ import InputCheckbox from "../../components/Input/InputCheckbox/InputCheckbox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import axios from "axios";
 import "./Login.css";
+import { connect } from "react-redux";
+import { fetchUserDetails } from "../../redux";
+
+const mapStateToProps = (state) => {
+  return {
+    state: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (loginDetails) => dispatch(fetchUserDetails(loginDetails)),
+  };
+};
 
 class Login extends Component {
   constructor(props) {
@@ -67,8 +81,11 @@ class Login extends Component {
   };
 
   render() {
+    console.log("This is the props : ", this.props);
     return (
       <div className="swLogin">
+        <h1>{this.props.state.user.loading}</h1>
+        <button onClick={this.props.login}>Login</button>
         <div className="logoContainer">
           <img src="./images/logo.png" className="img-fluid" alt="" />
         </div>
@@ -109,4 +126,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
