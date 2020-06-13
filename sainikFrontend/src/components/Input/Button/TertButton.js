@@ -11,6 +11,7 @@ class TertButton extends Component {
           id=""
           class="tertButton"
           onClick={this.props.actionFunction}
+          hidden={this.props.hidden}
         >
           {this.props.label}
         </button>
