@@ -7,6 +7,7 @@ import "./Login.css";
 import { connect } from "react-redux";
 import { fetchUser } from "../../redux";
 import { setIn } from "formik";
+import { ToastProvider, useToasts } from "react-toast-notifications";
 
 const mapStateToProps = (state) => {
   return {
@@ -27,7 +28,7 @@ class Login extends Component {
       username: "",
       password: "",
       userNameErrorText: "",
-      passwordErrorText: "",
+      passwordErrorText: "Incorrect username or password",
     };
   }
 
@@ -67,7 +68,7 @@ class Login extends Component {
         inpLabel: "Password",
         inpType: "password",
         inpRequired: "required",
-        minLength: "2",
+        minLength: "5",
         name: "password",
         errorText: this.state.PasswordErrorText,
       },
@@ -86,7 +87,7 @@ class Login extends Component {
     return (
       <div className="swLogin">
         <div className="logoContainer">
-          <img src="./images/logo.png" className="img-fluid" alt="" />
+          {/* <img src="./images/logo.png" className="img-fluid" alt="" /> */}
         </div>
         <div className="loginGreet">
           <h3>LOGIN</h3>
@@ -95,9 +96,20 @@ class Login extends Component {
         </div>
         <div className="swLoginInputContainer">
           <form id="LoginForm">
-            <p className="text-danger">{user.error}</p>
+            {user.error ? (
+              <div className="errorCnt">
+                <span class="material-icons">error</span>
+                <p>Incorrect username or password</p>
+              </div>
+            ) : (
+              ""
+            )}
             {user.userDetails.isAuthenticated ? (
-              <p className="text-success">User Successfully Logged-In.</p>
+              <div className="successCnt">
+                {" "}
+                <span class="material-icons">check_circle</span>
+                <p>User successfully logged in</p>
+              </div>
             ) : (
               ""
             )}

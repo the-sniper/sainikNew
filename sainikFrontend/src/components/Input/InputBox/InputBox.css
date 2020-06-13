@@ -8,6 +8,7 @@
   height: 50px;
   border: 1px solid #c1c1c1;
   border-radius: 3px;
+  background-color: #fff !important;
 }
 
 .customInputFloat label {

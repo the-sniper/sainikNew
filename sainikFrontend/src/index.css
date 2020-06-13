@@ -2,7 +2,7 @@
   --primColor: #4d52db;
   --secColor: #f17039;
 }
-html{
+html {
   overflow: overlay;
 }
 
@@ -53,9 +53,60 @@ a {
   background: #ebebeb;
 }
 
-.swBtnLoader{
-  width: 8%
+.swBtnLoader {
+  width: 8%;
 }
-button:focus{
-  outline: 0
+button:focus {
+  outline: 0;
+}
+
+.errorCnt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffdede;
+  color: #d80101;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 60px;
+}
+.errorCnt p {
+  margin: 0;
+  margin-left: 20px;
+}
+
+
+.successCnt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #dbffe4;
+  color: #01d83a;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 60px;
+}
+.successCnt p {
+  margin: 0;
+  margin-left: 20px;
+}
+
+
+input::-webkit-input-placeholder {
+  color: #495057;
+}
+input:focus::-webkit-input-placeholder {
+  color: #000;
 }
