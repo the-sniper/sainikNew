@@ -5,7 +5,7 @@ import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import axios from "axios";
 import "./Login.css";
 import { connect } from "react-redux";
-import { fetchUserDetails } from "../../redux";
+import { fetchUser } from "../../redux";
 
 const mapStateToProps = (state) => {
   return {
@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: (loginDetails) => dispatch(fetchUserDetails(loginDetails)),
+    login: (loginDetails) => dispatch(fetchUser(loginDetails)),
   };
 };
 
@@ -46,18 +46,11 @@ class Login extends Component {
     if (form.checkValidity && form.checkValidity()) {
       event.preventDefault();
       let { username, password } = this.state;
-      let request = axios.post("http://localhost/api/user_auth/login/", {
+      let loginDetails = {
         username: username,
         password: password,
-      });
-      request
-        .then((res) => {
-          console.log("request was successful", res.response.data);
-        })
-        .catch((err) => {
-          console.log("This was the error : ", err);
-        });
-    } else {
+      };
+      this.props.login(loginDetails);
     }
   };
   Login_Input = () => {
@@ -84,8 +77,6 @@ class Login extends Component {
     console.log("This is the props : ", this.props);
     return (
       <div className="swLogin">
-        <h1>{this.props.state.user.loading}</h1>
-        <button onClick={this.props.login}>Login</button>
         <div className="logoContainer">
           <img src="./images/logo.png" className="img-fluid" alt="" />
         </div>

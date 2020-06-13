@@ -14,7 +14,7 @@ const initialState = {
   error: "",
 };
 
-export default (state = initialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_DETAILS_FETCH:
       return {
@@ -37,3 +37,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default userReducer;
