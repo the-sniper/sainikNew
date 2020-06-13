@@ -8,7 +8,7 @@ const initialState = {
   loading: false,
   userDetails: {
     isAuthenticated: false,
-    authToken: false,
+    authToken: "",
     profileDetails: {},
   },
   error: "",

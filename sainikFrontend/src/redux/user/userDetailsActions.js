@@ -32,11 +32,21 @@ export const fetchUser = (loginDetails) => {
       .post("/api/user_auth/login/", loginDetails)
       .then((res) => {
         console.log(res);
-        dispatch(fetchUserSuccess());
+        dispatch(
+          fetchUserSuccess({
+            isAuthenticated: true,
+            authToken: res.data.token,
+            profileDetails: res.data.user,
+          })
+        );
       })
       .catch((err) => {
         console.log(err.response);
-        dispatch(fetchUserFailure(err.response.data.non_field_errors[0]));
+        if (err.response) {
+          dispatch(fetchUserFailure(err.response.data.non_field_errors[0]));
+        } else {
+          dispatch(fetchUserFailure("Something didn't go as expected."));
+        }
       });
   };
 };

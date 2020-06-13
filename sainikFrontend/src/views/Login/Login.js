@@ -6,6 +6,7 @@ import axios from "axios";
 import "./Login.css";
 import { connect } from "react-redux";
 import { fetchUser } from "../../redux";
+import { setIn } from "formik";
 
 const mapStateToProps = (state) => {
   return {
@@ -73,8 +74,15 @@ class Login extends Component {
     ];
   };
 
+  success_redirect = async () => {
+    setTimeout(() => this.props.history.push("/form"), 5000);
+  };
+
   render() {
-    console.log("This is the props : ", this.props);
+    const { user } = this.props.state;
+    if (user.userDetails.isAuthenticated) {
+      this.success_redirect();
+    }
     return (
       <div className="swLogin">
         <div className="logoContainer">
@@ -87,6 +95,12 @@ class Login extends Component {
         </div>
         <div className="swLoginInputContainer">
           <form id="LoginForm">
+            <p className="text-danger">{user.error}</p>
+            {user.userDetails.isAuthenticated ? (
+              <p className="text-success">User Successfully Logged-In.</p>
+            ) : (
+              ""
+            )}
             {this.Login_Input().map((data, index) => (
               <InputBox
                 label={data.inpLabel}
