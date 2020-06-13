@@ -99,7 +99,7 @@ class UserAuthDetails(AbstractBaseUser):
     # dateCreated = models.DateTimeField(auto_now_add=True)
     approvalStatus = models.CharField(
         max_length=10, choices=APPROVAL_STATUS, default=PENDING)
-    documents = models.FileField()
+    documents = models.FileField(null=True, blank=True)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
@@ -107,6 +107,7 @@ class UserAuthDetails(AbstractBaseUser):
         auto_now_add=True, blank=True, null=True)
     last_login = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+    profile_completion_status = models.PositiveIntegerField(default = 1)
 
     USERNAME_FIELD = "username"
 
@@ -118,7 +119,7 @@ class UserAuthDetails(AbstractBaseUser):
     def __str__(self):
         return str(f"Slno : {self.slno}, username : {self.username}")
 
-    def has_perm(self, perm, obj= None ):
+    def has_perm(self, perm, obj=None):
         return self.is_superuser
 
     def has_module_perms(self, app_label):

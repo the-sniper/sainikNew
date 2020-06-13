@@ -20,9 +20,6 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "username": {
                 "required": False
-            },
-            "documents": {
-                "required": False
             }
         }
 
@@ -70,3 +67,5 @@ class UserSerializer(serializers.ModelSerializer):
                 "Current email and new email cannot be same.")
 
         return super().update(instance, validated_data)
+
+

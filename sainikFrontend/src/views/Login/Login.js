@@ -75,7 +75,7 @@ class Login extends Component {
   };
 
   success_redirect = async () => {
-    setTimeout(() => this.props.history.push("/form"), 3000);
+    setTimeout(() => this.props.history.push("/form"), 2000);
   };
 
   render() {
@@ -121,7 +121,17 @@ class Login extends Component {
             </div>
             <PrimaryButton
               type="submit"
-              label={user.loading || user.userDetails.isAuthenticated ? [<object className="swBtnLoader" type="image/svg+xml" data="./images/three-dots.svg" />] : "LOGIN"}
+              label={
+                user.loading || user.userDetails.isAuthenticated
+                  ? [
+                      <object
+                        className="swBtnLoader"
+                        type="image/svg+xml"
+                        data="./images/three-dots.svg"
+                      />,
+                    ]
+                  : "LOGIN"
+              }
               actionFunction={this.submitForm}
             />
           </form>
