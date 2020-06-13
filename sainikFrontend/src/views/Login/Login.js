@@ -75,7 +75,7 @@ class Login extends Component {
   };
 
   success_redirect = async () => {
-    setTimeout(() => this.props.history.push("/form"), 5000);
+    setTimeout(() => this.props.history.push("/form"), 3000);
   };
 
   render() {
