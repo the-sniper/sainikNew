@@ -58,7 +58,6 @@ class ContactDetails(models.Model):
 
     slno = models.AutoField(primary_key=True)
     user = models.ForeignKey(UserAuthDetails, on_delete=models.CASCADE)
-    mobileNumber = models.PositiveIntegerField()
     telephoneNumber = models.PositiveIntegerField()
     emailAddress = models.EmailField(max_length=30)
     state = models.CharField(max_length=20)

@@ -4,6 +4,7 @@ import {
   USER_DETAILS_FAILURE,
 } from "./constants";
 import axios from "axios";
+import getError from "../apiError";
 
 export const fetchUserDetails = () => {
   return {
@@ -42,11 +43,7 @@ export const fetchUser = (loginDetails) => {
       })
       .catch((err) => {
         console.log(err.response);
-        if (err.response) {
-          dispatch(fetchUserFailure(err.response.data.non_field_errors[0]));
-        } else {
-          dispatch(fetchUserFailure("Something didn't go as expected."));
-        }
+        dispatch(fetchUserFailure(getError(err)));
       });
   };
 };

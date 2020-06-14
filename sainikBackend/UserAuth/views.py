@@ -22,7 +22,9 @@ class LoginView(KnoxLoginView):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
         if user.approvalStatus == UserAuthDetails.PENDING:
-            raise serializers.ValidationError("Approval status pending.")
+            serializer = UserSerializer(user)
+            return Response({"user": serializer.data,
+                             "error": 'Approval status pending.'}, status=status.HTTP_202_ACCEPTED)
         login(request, user)
         response = super(LoginView, self).post(request, format=None)
         return response

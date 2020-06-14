@@ -5,42 +5,85 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import RadioBox from "../../components/Input/RadioBox/RadioBox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import { Link } from "react-router-dom";
+import { registerUser, resetForm } from "../../redux";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return {
+    state: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    register: (registerDetails) => dispatch(registerUser(registerDetails)),
+    resetForm: () => dispatch(resetForm),
+  };
+};
 
 class Registration extends Component {
-  Reg_Details = [
-    {
-      inplabel: "Email address",
-      type: "email",
-      name: "emailAddress",
-      required: "required",
-    },
-    {
-      inplabel: "Username",
-      type: "text",
-      name: "username",
-      required: "required",
-    },
-    {
-      inplabel: "Password",
-      type: "password",
-      name: "password",
-      minLength: "5",
-      required: "required",
-    },
-    {
-      inplabel: "Confirm Password",
-      type: "password",
-      name: "cnfPassword",
-      minLength: "5",
-      required: "required",
-    },
-    {
-      inplabel: "Contact Number",
-      type: "tel",
-      name: "contactNum",
-      required: "required",
-    },
-  ];
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      username: "",
+      password: "",
+      cnfPassword: "",
+      document: "",
+      mobileNumber: "",
+      errors: {
+        email: "",
+        username: "",
+        password: "",
+        cnfPassword: "",
+        document: "",
+        mobileNumber: "",
+      },
+    };
+  }
+
+  Reg_Details = () => {
+    return [
+      {
+        inplabel: "Email address",
+        type: "email",
+        name: "email",
+        required: "required",
+        errorText: this.state.errors.email,
+      },
+      {
+        inplabel: "Username",
+        type: "text",
+        name: "username",
+        required: "required",
+        errorText: this.state.errors.username,
+      },
+      {
+        inplabel: "Password",
+        type: "password",
+        name: "password",
+        minLength: "5",
+        required: "required",
+        errorText: this.state.errors.password,
+      },
+      {
+        inplabel: "Confirm Password",
+        type: "password",
+        name: "cnfPassword",
+        minLength: "5",
+        required: "required",
+        errorText: this.state.errors.cnfPassword,
+      },
+      {
+        inplabel: "Mobile Number",
+        type: "tel",
+        name: "mobileNumber",
+        required: "required",
+        errorText: this.state.errors.mobileNumber,
+        pattern: "[0-9]{3}[0-9]{3}[0-9]{4}",
+      },
+    ];
+  };
 
   createElements = (dataParam) => {
     let radioElementsArray = [];
@@ -71,7 +114,92 @@ class Registration extends Component {
     }
   };
 
+  changeHandler = (event) => {
+    console.log("This is the name : ", event.target.name);
+    let value = event.target.value;
+    if (event.target.name === "document") {
+      value = event.target.files[0];
+    }
+
+    this.setState({
+      [event.target.name]: value,
+    });
+  };
+
+  submitForm = (event) => {
+    let form = document.getElementById("registerForm");
+    console.log(
+      `This is the form element : ${form.checkValidity()}${Object.keys(form)}`
+    );
+    if (form.checkValidity && form.checkValidity()) {
+      event.preventDefault();
+      console.log("This is the state : ", this.state);
+      let {
+        username,
+        password,
+        email,
+        cnfPassword,
+        document,
+        mobileNumber,
+      } = this.state;
+
+      console.log(
+        "This are the values : ",
+        username,
+        password,
+        email,
+        cnfPassword,
+        document,
+        mobileNumber
+      );
+
+      if (cnfPassword != password) {
+        console.log(
+          "This is the password : ",
+          password,
+          "and confirm password : ",
+          cnfPassword
+        );
+        this.setState({
+          errors: {
+            cnfPassword: "Password and Confirm Password must be same.",
+          },
+        });
+        return;
+      }
+      if (mobileNumber.length < 10) {
+        this.setState({
+          errors: {
+            mobileNumber: "Mobile number should be atleast 10 digits long. ",
+          },
+        });
+        return;
+      }
+      let formData = new FormData();
+      formData.append("documents", document);
+      formData.append("username", username);
+      formData.append("password", password);
+      formData.append("cnfPassword", cnfPassword);
+      formData.append("email", email);
+      formData.append("mobileNumber", mobileNumber);
+
+      this.props.register(formData);
+      // this.props.login(loginDetails);
+    }
+  };
+
+  success_redirect = async () => {
+    setTimeout(() => {
+      this.props.resetForm();
+      this.props.history.push("/");
+    }, 5000);
+  };
+
   render() {
+    const { register } = this.props.state;
+    if (register.registrationSuccess) {
+      this.success_redirect();
+    }
     return (
       <div className="regMain">
         <h2>REGISTER</h2>
@@ -84,8 +212,16 @@ class Registration extends Component {
               <h3 className="regSubTitle">Login Information</h3>
             </div>
           </div>
-          <form>
-            {this.Reg_Details.map((data, index) => {
+          <form id="registerForm">
+            {register.registrationSuccess ? (
+              <div className="successCnt">
+                <span class="material-icons">check_circle</span>
+                <p>Successfully registered.</p>
+              </div>
+            ) : (
+              ""
+            )}
+            {this.Reg_Details().map((data, index) => {
               return (
                 <div className="row">
                   <div className="col-12">
@@ -105,8 +241,11 @@ class Registration extends Component {
                             type={data.type}
                             optional={data.optional}
                             required={data.required}
-                            name={`${data.name}${index}`}
+                            name={`${data.name}`}
                             minLength={data.minLength}
+                            changeHandler={this.changeHandler}
+                            errorText={data.errorText}
+                            pattern={data.pattern}
                           />
                         );
                       } else if (data.type === "select") {
@@ -152,12 +291,35 @@ class Registration extends Component {
                   <span className="rduHelp">
                     e.x: Copy of your discharge book
                   </span>
-                  <input type="file" required multiple id="RegDocUpd" hidden />
+                  <input
+                    type="file"
+                    required
+                    multiple
+                    id="RegDocUpd"
+                    name="document"
+                    onChange={this.changeHandler}
+                    hidden
+                  />
                 </label>
               </div>
             </div>
             <div className="regAct d-flex justify-content-center align-items-center">
-              <PrimaryButton label="SUBMIT" name="submit" type="submit" />
+              <PrimaryButton
+                label={
+                  register.loading || register.registrationSuccess
+                    ? [
+                        <object
+                          className="swBtnLoader"
+                          type="image/svg+xml"
+                          data="./images/three-dots.svg"
+                        />,
+                      ]
+                    : "SUBMIT"
+                }
+                name="submit"
+                type="submit"
+                actionFunction={this.submitForm}
+              />
             </div>
           </form>
           <div className="haveAcc text-center">
@@ -169,5 +331,4 @@ class Registration extends Component {
     );
   }
 }
-
-export default Registration;
+export default connect(mapStateToProps, mapDispatchToProps)(Registration);

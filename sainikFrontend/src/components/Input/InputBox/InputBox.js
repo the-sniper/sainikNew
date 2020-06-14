@@ -20,8 +20,11 @@ class InputBox extends Component {
           min="0"
           minLength={this.props.minLength}
           onChange={this.props.changeHandler}
+          pattern={this.props.pattern}
         />
-        <small id="helpId" class="form-text text-muted">{this.props.errorText}</small>
+        <small id="helpId" class="form-text text-muted">
+          {this.props.errorText}
+        </small>
       </div>
     );
   }

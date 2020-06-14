@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 common_fields = ["slno", "email", "username", "userType", 'userCategory',
-                 'approvalStatus', 'documents', 'date_joined', 'last_login']
+                 'approvalStatus', 'documents', 'date_joined', 'last_login', "mobileNumber"]
 common_read_only_fields = ['slno', 'date_joined', 'last_login', ]
 
 
@@ -67,5 +67,4 @@ class UserSerializer(serializers.ModelSerializer):
                 "Current email and new email cannot be same.")
 
         return super().update(instance, validated_data)
-
 

@@ -32,8 +32,6 @@ class Login extends Component {
   }
 
   changeHandler = (event) => {
-    let username = this.state.username;
-    let password = this.state.password;
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -75,7 +73,11 @@ class Login extends Component {
   };
 
   success_redirect = async () => {
-    setTimeout(() => this.props.history.push("/form"), 2000);
+    if (this.props.state.user.userDetails.profileDetails.approvalStatus === "P") {
+      setTimeout(() => this.props.history.push("/msg"), 2000);
+    } else {
+      setTimeout(() => this.props.history.push("/form"), 2000);
+    }
   };
 
   render() {
@@ -98,14 +100,17 @@ class Login extends Component {
             {user.error ? (
               <div className="errorCnt">
                 <span class="material-icons">error</span>
-                <p>Incorrect username or password</p>
+                <p>
+                  {user.error === "Unable to log in with provided credentials."
+                    ? "Username or Password Incorrect"
+                    : user.error}
+                </p>
               </div>
             ) : (
               ""
             )}
             {user.userDetails.isAuthenticated ? (
               <div className="successCnt">
-                {" "}
                 <span class="material-icons">check_circle</span>
                 <p>User successfully logged in</p>
               </div>
@@ -123,7 +128,7 @@ class Login extends Component {
                 name={data.name}
                 changeHandler={this.changeHandler}
                 key={data.name}
-                errorText={this.state.errorText}
+                errorText={data.errorText}
               />
             ))}
             <div className="d-flex justify-content-between align-items-center">
@@ -146,7 +151,9 @@ class Login extends Component {
               actionFunction={this.submitForm}
             />
           </form>
-          <p style={{marginBottom: '5px', marginTop: '15px'}}>Don't have an account yet ?</p>
+          <p style={{ marginBottom: "5px", marginTop: "15px" }}>
+            Don't have an account yet ?
+          </p>
           <Link to="/reg">Register here</Link>
         </div>
       </div>
