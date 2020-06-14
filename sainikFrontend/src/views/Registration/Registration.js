@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     register: (registerDetails) => dispatch(registerUser(registerDetails)),
-    resetForm: () => dispatch(resetForm),
+    resetForm: () => dispatch(resetForm()),
   };
 };
 
@@ -189,6 +189,7 @@ class Registration extends Component {
   };
 
   success_redirect = async () => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.props.resetForm();
       this.props.history.push("/");

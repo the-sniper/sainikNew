@@ -47,7 +47,7 @@ export const registerUser = (registerDetails) => {
       })
       .catch((err) => {
         console.log(err.response);
-        dispatch(fetchUserFailure(getError(err)));
+        dispatch(userRegisterFailure(getError(err)));
       });
   };
 };
