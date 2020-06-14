@@ -12,26 +12,33 @@ class Registration extends Component {
       inplabel: "Email address",
       type: "email",
       name: "emailAddress",
+      required: "required",
     },
     {
       inplabel: "Username",
       type: "text",
       name: "username",
+      required: "required",
     },
     {
       inplabel: "Password",
       type: "password",
       name: "password",
+      minLength: "5",
+      required: "required",
     },
     {
       inplabel: "Confirm Password",
       type: "password",
       name: "cnfPassword",
+      minLength: "5",
+      required: "required",
     },
     {
       inplabel: "Contact Number",
       type: "tel",
       name: "contactNum",
+      required: "required",
     },
   ];
 
@@ -77,77 +84,82 @@ class Registration extends Component {
               <h3 className="regSubTitle">Login Information</h3>
             </div>
           </div>
-          {this.Reg_Details.map((data, index) => {
-            return (
-              <div className="row">
-                <div className="col-12">
-                  {(() => {
-                    if (
-                      data.type === "text" ||
-                      data.type === "date" ||
-                      data.type === "password" ||
-                      data.type === "number" ||
-                      data.type === "tel" ||
-                      data.type === "email"
-                    ) {
-                      return (
-                        <InputBox
-                          id={`servInp_${index}`}
-                          label={data.inplabel}
-                          type={data.type}
-                          optional={data.optional}
-                          name={`${data.name}${index}`}
-                        />
-                      );
-                    } else if (data.type === "select") {
-                      return (
-                        <SelectBox
-                          id={`servSel_${index}`}
-                          label={data.sellabel}
-                          optional={data.optionalCheck}
-                          name={`${data.name}${index}`}
-                        >
-                          {this.createElements(data)}
-                        </SelectBox>
-                      );
-                    } else if (data.type === "radio") {
-                      return (
-                        <div className="formRadio">
-                          <p className="radioLabel">{data.radLabel}</p>
-                          <RadioBox>{this.createElements(data)}</RadioBox>
-                        </div>
-                      );
-                    }
-                  })()}
+          <form>
+            {this.Reg_Details.map((data, index) => {
+              return (
+                <div className="row">
+                  <div className="col-12">
+                    {(() => {
+                      if (
+                        data.type === "text" ||
+                        data.type === "date" ||
+                        data.type === "password" ||
+                        data.type === "number" ||
+                        data.type === "tel" ||
+                        data.type === "email"
+                      ) {
+                        return (
+                          <InputBox
+                            id={`servInp_${index}`}
+                            label={data.inplabel}
+                            type={data.type}
+                            optional={data.optional}
+                            required={data.required}
+                            name={`${data.name}${index}`}
+                            minLength={data.minLength}
+                          />
+                        );
+                      } else if (data.type === "select") {
+                        return (
+                          <SelectBox
+                            id={`servSel_${index}`}
+                            label={data.sellabel}
+                            optional={data.optionalCheck}
+                            name={`${data.name}${index}`}
+                            required={data.required}
+                          >
+                            {this.createElements(data)}
+                          </SelectBox>
+                        );
+                      } else if (data.type === "radio") {
+                        return (
+                          <div className="formRadio">
+                            <p className="radioLabel">{data.radLabel}</p>
+                            <RadioBox>{this.createElements(data)}</RadioBox>
+                          </div>
+                        );
+                      }
+                    })()}
+                  </div>
                 </div>
+              );
+            })}
+            <div className="row">
+              <div className="col-12">
+                <h3 className="regSubTitle" style={{ marginTop: "0px" }}>
+                  Upload Documents
+                </h3>
               </div>
-            );
-          })}
-          <div className="row">
-            <div className="col-12">
-              <h3 className="regSubTitle" style={{ marginTop: "0px" }}>
-                Upload Documents
-              </h3>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <label
-                htmlFor="RegDocUpd"
-                className="regDocUpd d-flex justify-content-center flex-wrap"
-              >
-                <span className="material-icons">publish</span>
-                <p>UPLOAD DOCUMENT TO PROVE YOUR IDENTITY</p>
-                <span className="rduHelp">
-                  e.x: Copy of your discharge book
-                </span>
-                <input type="file" multiple id="RegDocUpd" hidden />
-              </label>
+            <div className="row">
+              <div className="col-12">
+                <label
+                  htmlFor="RegDocUpd"
+                  className="regDocUpd d-flex justify-content-center flex-wrap"
+                >
+                  <span className="material-icons">publish</span>
+                  <p>UPLOAD DOCUMENT TO PROVE YOUR IDENTITY</p>
+                  <span className="rduHelp">
+                    e.x: Copy of your discharge book
+                  </span>
+                  <input type="file" required multiple id="RegDocUpd" hidden />
+                </label>
+              </div>
             </div>
-          </div>
-          <div className="regAct d-flex justify-content-center align-items-center">
-            <PrimaryButton label="SUBMIT" name="submit" type="submit" />
-          </div>
+            <div className="regAct d-flex justify-content-center align-items-center">
+              <PrimaryButton label="SUBMIT" name="submit" type="submit" />
+            </div>
+          </form>
           <div className="haveAcc text-center">
             <p>Already have an account ?</p>
             <span>Login</span> <Link to="/">here</Link>

@@ -9,7 +9,12 @@ class SelectBox extends Component {
           {this.props.label}
           <span className="optionalTag">{this.props.optional}</span>
         </label>
-        <select class="form-control" name={this.props.name} id={this.props.id}>
+        <select
+          class="form-control"
+          required={this.props.required}
+          name={this.props.name}
+          id={this.props.id}
+        >
           {this.props.children}
         </select>
       </div>
