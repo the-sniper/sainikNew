@@ -5,7 +5,7 @@ import UserDetailsForm from "./views/UserDetailsForm/UserDetailsForm";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import PensionDetails from "./views/UserDetailsForm/PensionDetails"
 import Test from "./components/Test/Test";
-import index from "./views/Registration";
+import Registration from "./views/Registration/Registration";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/" component={Login} />
           <Route exact path="/Form" component={UserDetailsForm} />
           <Route exact path="/PensionDetails" component={PensionDetails} />
-          <Route exact path="/Reg" component={index} />
+          <Route exact path="/Reg" component={Registration} />
         </div>
       </Switch>
     </Router>

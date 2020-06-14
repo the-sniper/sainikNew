@@ -6,7 +6,7 @@ import RadioBox from "../../components/Input/RadioBox/RadioBox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import { Link } from "react-router-dom";
 
-class index extends Component {
+class Registration extends Component {
   Reg_Details = [
     {
       inplabel: "Email address",
@@ -27,6 +27,11 @@ class index extends Component {
       inplabel: "Confirm Password",
       type: "password",
       name: "cnfPassword",
+    },
+    {
+      inplabel: "Contact Number",
+      type: "tel",
+      name: "contactNum",
     },
   ];
 
@@ -82,6 +87,7 @@ class index extends Component {
                       data.type === "date" ||
                       data.type === "password" ||
                       data.type === "number" ||
+                      data.type === "tel" ||
                       data.type === "email"
                     ) {
                       return (
@@ -135,7 +141,7 @@ class index extends Component {
                 <span className="rduHelp">
                   e.x: Copy of your discharge book
                 </span>
-                <input type="file" id="RegDocUpd" hidden />
+                <input type="file" multiple id="RegDocUpd" hidden />
               </label>
             </div>
           </div>
@@ -152,4 +158,4 @@ class index extends Component {
   }
 }
 
-export default index;
+export default Registration;

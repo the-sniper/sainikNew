@@ -6,8 +6,7 @@ import axios from "axios";
 import "./Login.css";
 import { connect } from "react-redux";
 import { fetchUser } from "../../redux";
-import { setIn } from "formik";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { Link } from "react-router-dom";
 
 const mapStateToProps = (state) => {
   return {
@@ -147,6 +146,8 @@ class Login extends Component {
               actionFunction={this.submitForm}
             />
           </form>
+          <p style={{marginBottom: '5px', marginTop: '15px'}}>Don't have an account yet ?</p>
+          <Link to="/reg">Register here</Link>
         </div>
       </div>
     );
