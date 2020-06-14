@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import PensionDetails from "./views/UserDetailsForm/PensionDetails"
 import Test from "./components/Test/Test";
 import Registration from "./views/Registration/Registration";
+import UserMessage from "./components/UserMessage/UserMessage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/Form" component={UserDetailsForm} />
           <Route exact path="/PensionDetails" component={PensionDetails} />
           <Route exact path="/Reg" component={Registration} />
+          <Route exact path="/msg" component={UserMessage} />
         </div>
       </Switch>
     </Router>
