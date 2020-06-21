@@ -1,0 +1,17 @@
+.dashTitle{
+    margin: 45px 0;
+}
+
+.verifyUser .vuTable button.actReject{
+    background: #ffe6e6;
+    color: #e55252;
+}
+
+.verifyUser .vuTable button.actApprove{
+    background: #c8f2ef;
+    color: #29a88c;
+}
+
+.verifyUser .vuTable button:first-child{
+    margin-right: 10px;
+}
