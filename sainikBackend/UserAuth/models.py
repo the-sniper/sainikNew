@@ -74,7 +74,7 @@ class UserAuthDetails(AbstractBaseUser):
     OFFICERS = "OFF"
     MILITARY_NURSING_SERVICES = "MNS"
     ARMY_POSTAL_SERVICE = "APS"
-    WIDOWS = "WIDDOW"
+    WIDOWS = "WIDOW"
     BOARD = "BRD"
 
     USER_CATEGORY = (
@@ -89,14 +89,10 @@ class UserAuthDetails(AbstractBaseUser):
     slno = models.AutoField(primary_key=True)
     email = models.EmailField(null=True, blank=True, unique=True)
     username = models.CharField(max_length=50, null=False, unique=True)
-    # registrationNumber = models.CharField(max_length=25, null=False)
-    # isDeleted = models.BooleanField(default=False)
     userType = models.CharField(
         max_length=10, choices=USER_TYPES, default=USER)
-    # userType = forms.ChoiceField(widget=forms.RadioSelect, choices=USER_TYPES)
     userCategory = models.CharField(
         max_length=10, choices=USER_CATEGORY, default=EX_SERVICE_MEN)
-    # dateCreated = models.DateTimeField(auto_now_add=True)
     approvalStatus = models.CharField(
         max_length=10, choices=APPROVAL_STATUS, default=PENDING)
     documents = models.FileField(null=True, blank=True)
@@ -125,4 +121,5 @@ class UserAuthDetails(AbstractBaseUser):
         return self.is_superuser
 
 
-# Create your models here.
+
+

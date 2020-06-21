@@ -119,7 +119,7 @@ GitHub.sublime-settings
 #For React app
 
 /node_modules
-migrations
+migrations/
 # testing
 /coverage
 
