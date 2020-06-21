@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'FamilyDetails.apps.FamilydetailsConfig',
     'userDetails.apps.UserdetailsConfig',
     'api.apps.ApiConfig',
+    'custom_tasks.apps.CustomTasksConfig',
+    'StateDistrictList.apps.StatedistrictlistConfig',
     # 'ContactDetails.apps.ContactdetailsConfig',
     'rest_framework',
     'knox'
