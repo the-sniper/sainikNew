@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'custom_tasks.apps.CustomTasksConfig',
     'StateDistrictList.apps.StatedistrictlistConfig',
-    # 'ContactDetails.apps.ContactdetailsConfig',
     'rest_framework',
     'knox'
 

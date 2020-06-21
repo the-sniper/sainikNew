@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
+from StateDistrictList.models import StateDistrictList
 
 
 class UserAuthManager(BaseUserManager):
@@ -96,6 +97,7 @@ class UserAuthDetails(AbstractBaseUser):
     approvalStatus = models.CharField(
         max_length=10, choices=APPROVAL_STATUS, default=PENDING)
     documents = models.FileField(null=True, blank=True)
+    zila = models.ManyToManyField(StateDistrictList, related_name="users")
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
@@ -119,7 +121,3 @@ class UserAuthDetails(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_superuser
-
-
-
-
