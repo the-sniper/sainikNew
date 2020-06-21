@@ -107,7 +107,7 @@ class UserAuthDetails(AbstractBaseUser):
         auto_now_add=True, blank=True, null=True)
     last_login = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
-    mobileNumber = models.PositiveIntegerField()
+    mobileNumber = models.PositiveIntegerField(default='1111111111')
     USERNAME_FIELD = "username"
 
     objects = UserAuthManager()
