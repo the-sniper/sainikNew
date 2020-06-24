@@ -49,6 +49,27 @@ class UserAuthManager(BaseUserManager):
     #     )
 
 
+# user category start
+
+EX_SERVICE_MEN = "ESM"
+OFFICERS = "OFF"
+MILITARY_NURSING_SERVICES = "MNS"
+ARMY_POSTAL_SERVICE = "APS"
+WIDOWS = "WIDOW"
+BOARD = "BRD"
+
+USER_CATEGORY = (
+    (EX_SERVICE_MEN, "Ex Service men"),
+    (OFFICERS, "Officers"),
+    (MILITARY_NURSING_SERVICES, "Military Nursing Services"),
+    (ARMY_POSTAL_SERVICE, "Army Postal Services"),
+    (WIDOWS, "Widow"),
+    (BOARD, "Board"),
+)
+
+# user category end
+
+
 class UserAuthDetails(AbstractBaseUser):
 
     PENDING = "P"
@@ -69,22 +90,6 @@ class UserAuthDetails(AbstractBaseUser):
         (RAJYA_SAINIK, "Rajya Sainik Board"),
         (ZILLA_SAINIK, "Zilla Sainik Board"),
         (USER, "User")
-    )
-
-    EX_SERVICE_MEN = "ESM"
-    OFFICERS = "OFF"
-    MILITARY_NURSING_SERVICES = "MNS"
-    ARMY_POSTAL_SERVICE = "APS"
-    WIDOWS = "WIDOW"
-    BOARD = "BRD"
-
-    USER_CATEGORY = (
-        (EX_SERVICE_MEN, "Ex Service men"),
-        (OFFICERS, "Officers"),
-        (MILITARY_NURSING_SERVICES, "Military Nursing Services"),
-        (ARMY_POSTAL_SERVICE, "Army Postal Services"),
-        (WIDOWS, "Widow"),
-        (BOARD, "Board"),
     )
 
     slno = models.AutoField(primary_key=True)

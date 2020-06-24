@@ -82,6 +82,12 @@ class Registration extends Component {
         errorText: this.state.errors.mobileNumber,
         pattern: "[0-9]{3}[0-9]{3}[0-9]{4}",
       },
+      {
+        sellabel: "User Category",
+        type: "select",
+        selOption: ["A", "B", "C"],
+        name: "userCategory",
+      },
     ];
   };
 
