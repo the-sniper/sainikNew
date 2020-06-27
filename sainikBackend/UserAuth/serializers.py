@@ -31,6 +31,9 @@ class UserSerializer(serializers.ModelSerializer):
             },
             "documents": {
                 "required": True
+            },
+            "userCategory": {
+                "required": True
             }
         }
 
@@ -54,6 +57,11 @@ class UserSerializer(serializers.ModelSerializer):
 
         else:
             data["userType"] = USER
+
+        if (user.is_authenticated and user.userType not in [RAJYA_SAINIK, KENDRIYA_SAINIK]) or (not user.is_authenticated):
+            if data.get("userCategory") == BOARD:
+                raise serializers.ValidationError(
+                    f"UserCategory cannot be {BOARD}")
 
         state = State.objects.filter(S_Id=data.get("state").pk)
         if state.exists():
