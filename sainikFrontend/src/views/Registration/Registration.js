@@ -224,6 +224,9 @@ class Registration extends Component {
         cnfPassword,
         document,
         mobileNumber,
+        zila,
+        category,
+        state,
       } = this.state;
 
       console.log(
@@ -258,6 +261,13 @@ class Registration extends Component {
         });
         return;
       }
+      let userCategory;
+      this.state.user_categories.map((data) => {
+        if (data.label === category) {
+          userCategory = data.value;
+        }
+      });
+
       let formData = new FormData();
       formData.append("documents", document);
       formData.append("username", username);
@@ -265,6 +275,9 @@ class Registration extends Component {
       formData.append("cnfPassword", cnfPassword);
       formData.append("email", email);
       formData.append("mobileNumber", mobileNumber);
+      formData.append("state", this.state.stateList[state].S_Id);
+      formData.append("zila", this.state.stateList[state].districts[zila].D_Id);
+      formData.append("userCategory", userCategory);
 
       this.props.register(formData);
       // this.props.login(loginDetails);
