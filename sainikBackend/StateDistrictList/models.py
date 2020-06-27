@@ -1,24 +1,29 @@
 from django.db import models
 
 
-class StateDistrictList(models.Model):
+class State(models.Model):
 
-    S_Id = models.PositiveIntegerField()
-    D_Id = models.PositiveIntegerField()
-    Slno = models.AutoField(primary_key=True)
+    S_Id = models.PositiveIntegerField(primary_key=True)
     StateName = models.CharField(max_length=30)
-    DistrictName = models.CharField(max_length=50)
-    NumberOfWorkers = models.PositiveIntegerField(null=True)
-    NameOfDistrictNodalOfficer = models.CharField(max_length=50, null = True)
-    Designation = models.CharField(max_length=25, null = True)
-    MobileNo = models.CharField(max_length=15, null = True)
-    EmailId = models.CharField(max_length=30, null = True)
 
     class Meta:
-        db_table = "StateDistrictList"
+        db_table = "State"
 
     def __str__(self):
-        return str(f"Slno : {self.Slno}, State : {self.StateName}, DistrictName : {self.DistrictName}, NodalOfficer : {self.NameOfDistrictNodalOfficer}")
+        return str(f"S_Id : {self.S_Id}, State : {self.StateName}")
+
+
+class District(models.Model):
+
+    D_Id = models.PositiveIntegerField(primary_key=True)
+    State = models.ForeignKey(State, on_delete=models.CASCADE)
+    DistrictName = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = "District"
+
+    def __str__(self):
+        return str(f"S_Id : {self.D_Id}, State : {self.State}, DistrictName : {self.DistrictName}")
 
 
 # Create your models here.

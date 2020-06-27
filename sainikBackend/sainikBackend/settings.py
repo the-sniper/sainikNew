@@ -41,13 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'StateDistrictList.apps.StatedistrictlistConfig',
     'UserAuth.apps.UserauthConfig',
     'ServiceDetails.apps.ServicedetailsConfig',
     'FamilyDetails.apps.FamilydetailsConfig',
     'userDetails.apps.UserdetailsConfig',
     'api.apps.ApiConfig',
     'custom_tasks.apps.CustomTasksConfig',
-    'StateDistrictList.apps.StatedistrictlistConfig',
     'rest_framework',
     'knox'
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from StateDistrictList.serializers import RegistrationEssentialSerializer, StateDistrictList
+from StateDistrictList.serializers import StateSerializer, State
 from django.http import JsonResponse
 from UserAuth.models import USER_CATEGORY, KENDRIYA_SAINIK, RAJYA_SAINIK, BOARD
 
@@ -16,9 +16,10 @@ class RegistrationEssentials(APIView):
             user_categories = [{"value": x[0], "label": x[1]}
                                for x in USER_CATEGORY if x[0] != BOARD]
 
-        sd_list = RegistrationEssentialSerializer(
-            StateDistrictList.objects.all(), many=True).data
+        sd_list = StateSerializer(
+            State.objects.all(), many=True).data
 
+        print(sd_list)
         sd_dict = {}
         for element in sd_list:
             state = element["StateName"]
@@ -27,10 +28,10 @@ class RegistrationEssentials(APIView):
                     "S_Id": element["S_Id"],
                     "districts": {},
                 }
-            sd_dict[state]["districts"][element["DistrictName"]] = {
-                "D_Id": element["D_Id"],
-                "Slno": element["Slno"]
-            }
+            for dist in element["district_set"]:
+                sd_dict[state]["districts"][dist["DistrictName"]] = {
+                    "D_Id": dist["D_Id"],
+                }
 
         return JsonResponse({
             "sd_dict": sd_dict,

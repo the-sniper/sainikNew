@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
-from StateDistrictList.models import StateDistrictList
+from StateDistrictList.models import *
 
 
 class UserAuthManager(BaseUserManager):
@@ -18,6 +18,9 @@ class UserAuthManager(BaseUserManager):
             raise serializers.ValidationError(
                 f"User must have a password with atleast {settings.MIN_PASSWORD_LENGTH} characters.")
 
+        zila = kwargs.get("zila")
+        del(kwargs["zila"])
+
         user = self.model(
             email=self.normalize_email(email),
             username=username,
@@ -26,6 +29,7 @@ class UserAuthManager(BaseUserManager):
 
         user.set_password(password)
         user.save(using=self._db)
+        user.zila.set(zila)
         return user
 
     def create_superuser(self, *args, **kwargs):
@@ -37,11 +41,42 @@ class UserAuthManager(BaseUserManager):
         user.is_admin = True
         user.is_staff = True
         user.is_superuser = True
-        user.userType = self.model.KENDRIYA_SAINIK
+        user.userType = KENDRIYA_SAINIK
         user.approvalStatus = "A"
 
         user.save(using=self._db)
         return user
+
+    def create_admin(self, *args, **kwargs):
+
+        user = self.create_user(
+            *args, **kwargs
+        )
+
+        user.is_staff = True
+        user.is_admin = True
+        user.userType = RAJYA_SAINIK
+        user.approvalStatus = "A"
+
+        user.save(using=self._db)
+        return user
+
+    def create_staff(self, *args, **kwargs):
+
+        user = self.create_user(
+            *args, **kwargs
+        )
+
+        user.is_staff = True
+        user.userType = ZILLA_SAINIK
+        user.approvalStatus = "A"
+
+        user.save(using=self._db)
+        return user
+
+    create_zsb = create_staff
+    create_rsb = create_admin
+    create_ksb = create_superuser
 
     # def create_zsb_user(self, *args, **kwargs):
     #     user = self.create_user(
@@ -50,7 +85,6 @@ class UserAuthManager(BaseUserManager):
 
 
 # user category start
-
 EX_SERVICE_MEN = "ESM"
 OFFICERS = "OFF"
 MILITARY_NURSING_SERVICES = "MNS"
@@ -102,7 +136,10 @@ class UserAuthDetails(AbstractBaseUser):
     approvalStatus = models.CharField(
         max_length=10, choices=APPROVAL_STATUS, default=PENDING)
     documents = models.FileField(null=True, blank=True)
-    zila = models.ManyToManyField(StateDistrictList, related_name="users")
+    state = models.ForeignKey(
+        State, null=True, blank=True, on_delete=models.DO_NOTHING)
+    zila = models.ManyToManyField(
+        District, related_name="users", null=True, blank=True)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)

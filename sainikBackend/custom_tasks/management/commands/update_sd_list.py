@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from StateDistrictList.models import StateDistrictList
+from StateDistrictList.models import *
 
 
 class Command(BaseCommand):
@@ -13,18 +13,11 @@ class Command(BaseCommand):
                 element = element.split(",")
                 toBeAdded = {}
                 for i in range(len(headings)):
-                    toBeAdded[headings[i]] = element[i]
+                    toBeAdded[headings[i]] = str(element[i]).strip()
 
-                objectCreated = StateDistrictList.objects.create(
-                    S_Id=toBeAdded["S_Id"],
-                    D_Id=toBeAdded["D_Id"],
-                    Slno=toBeAdded["Sno."],
-                    StateName=toBeAdded["StateName"],
-                    DistrictName=toBeAdded["District Name"],
-                    # NumberOfWorkers=toBeAdded["Number of volunteers/ workers"],
-                    # NameOfDistrictNodalOfficer=toBeAdded["Name of District Nodal Officer"],
-                    # Designation=toBeAdded["Designation"],
-                    # MobileNo=toBeAdded["MobileNo"],
-                    # EmailId=toBeAdded["Emailid"]
-                )
+                state = State.objects.get_or_create(
+                    S_Id=toBeAdded["S_Id"], StateName=toBeAdded["StateName"])[0]
+                objectCreated = state.district_set.get_or_create(
+                    D_Id=toBeAdded["D_Id"], DistrictName=toBeAdded["District Name"])[0]
+
                 print(objectCreated)
