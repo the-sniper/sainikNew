@@ -7,16 +7,7 @@ class Header extends Component {
       <div className="header container-fluid d-flex justify-content-between align-items-center">
         <h3>Zilla Sainik Board, Puduchery</h3>
         <ul className="headNav d-flex justify-content-between align-items-center">
-          <li>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">login</span> Login
-            </a>
-          </li>
-          <li className='active'>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">person_add</span> Register
-            </a>
-          </li>
+          
           <li>
             <a href="#" className="d-flex justify-content-start align-items-center">
             <span class="material-icons">search</span> Search
@@ -25,6 +16,16 @@ class Header extends Component {
           <li>
             <a href="#" className="d-flex justify-content-start align-items-center">
             <span class="material-icons">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" className="d-flex justify-content-start align-items-center">
+            <span class="material-icons">login</span> Login
+            </a>
+          </li>
+          <li className='active'>
+            <a href="#" className="d-flex justify-content-start align-items-center">
+            <span class="material-icons">person_add</span> Register
             </a>
           </li>
           <li>
