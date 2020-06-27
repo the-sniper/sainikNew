@@ -23,7 +23,7 @@ class District(models.Model):
         db_table = "District"
 
     def __str__(self):
-        return str(f"S_Id : {self.D_Id}, State : {self.State}, DistrictName : {self.DistrictName}")
+        return str(f"D_Id : {self.D_Id}, State : {self.State}, DistrictName : {self.DistrictName}")
 
 
 # Create your models here.
