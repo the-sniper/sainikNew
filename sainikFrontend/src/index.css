@@ -52,7 +52,6 @@ a {
 ::-webkit-scrollbar-track {
   background: #ebebeb;
 }
-
 .swBtnLoader {
   width: 8%;
 }
@@ -81,7 +80,6 @@ button:focus {
   margin-left: 20px;
 }
 
-
 .successCnt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +100,6 @@ button:focus {
   margin: 0;
   margin-left: 20px;
 }
-
 
 input::-webkit-input-placeholder {
   color: #495057;
