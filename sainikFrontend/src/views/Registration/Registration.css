@@ -24,7 +24,9 @@
 .haveAcc p {
   margin-bottom: 10px;
 }
-
+.regAct {
+  margin-top: 45px;
+}
 .regAct .tertButton {
   margin-right: 15px;
 }
@@ -34,10 +36,16 @@
   border: 2px dashed #c1c1c1;
   padding: 30px 75px;
   border-radius: 10px;
-  margin-bottom: 60px;
   cursor: pointer;
 }
-
+.updDocLoc {
+  text-align: left;
+  background: #efefef;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #434343;
+}
 .regDocUpd p,
 .regDocUpd span {
   width: 100%;
