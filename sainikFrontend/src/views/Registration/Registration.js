@@ -401,6 +401,9 @@ class Registration extends Component {
                     hidden
                   />
                 </label>
+                {this.state.document
+                  ? "Document Selected : " + this.state.document.name
+                  : ""}
               </div>
             </div>
             <div className="regAct d-flex justify-content-center align-items-center">
