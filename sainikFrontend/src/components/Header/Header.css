@@ -1,7 +1,6 @@
 .header {
   background: #343a40;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 60px;
   margin-bottom: 45px;
 }
 .header h3 {
@@ -12,12 +11,27 @@
 .header a {
   color: #ccc;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
 }
 .header a span {
-  padding-left: 10px;
+  padding-right: 5px;
 }
 
 .header a:hover {
   color: #fff;
+}
+
+.header .headNav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  height: 100%;
+}
+.header .headNav li{
+  height: 100%;
+  line-height: 4;
+  padding: 0 15px;
+}
+.header .headNav li:hover, .header .headNav li.active{
+    background: #464b4f;
 }
