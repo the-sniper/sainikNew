@@ -1,0 +1,41 @@
+.customDropdown {
+  width: 145px;
+  width: max-content;
+  height: 50px;
+}
+.customDropdown button {
+  font-size: 15px;
+  color: #595959;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #bbbbbb;
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  height: 100%;
+  padding-left: 10px;
+}
+.customDropdown button:focus {
+  box-shadow: none;
+  border-color: #000;
+}
+.customDropdown .cdContent {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  font-size: 15px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0px 3px 10px #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.customDropdown .cdContent li:hover {
+  background: #ddd;
+}
+.customDropdown .cdContent a {
+  color: #595959;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}

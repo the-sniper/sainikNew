@@ -1,0 +1,59 @@
+.searchCnt {
+  margin: 45px auto;
+  margin-top: 0;
+  background: #f8f8f8;
+  padding: 15px;
+}
+.searchBox {
+  width: 600px;
+}
+.searchBox .sbInput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  background-color: #fff !important;
+  margin-right: 15px;
+}
+.searchBox .sbInput:focus {
+  box-shadow: none;
+  border-color: currentColor;
+}
+
+.sainikSearch .customDropdown {
+  height: 40px;
+}
+
+.sainikSearch .table .thead-dark th {
+  font-size: 15px;
+  font-weight: 500;
+}
+.sainikSearch .table .thead-dark td {
+  font-size: 15px;
+}
+.ssFilters {
+  background: #f8f8f8;
+  padding: 15px;
+}
+.ssFilters .ssfTitle {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+.ssFilters .ssfTitle h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #343a40;
+}
+.ssFilters .ssfTitle span {
+  color: #343a40;
+}
+.ssfContent {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.ssfContent p {
+  font-weight: 500;
+}
