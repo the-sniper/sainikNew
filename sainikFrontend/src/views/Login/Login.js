@@ -7,6 +7,7 @@ import "./Login.css";
 import { connect } from "react-redux";
 import { fetchUser } from "../../redux";
 import { Link } from "react-router-dom";
+import { Routes } from "../../RouteConstants";
 
 const mapStateToProps = (state) => {
   return {
@@ -73,10 +74,15 @@ class Login extends Component {
   };
 
   success_redirect = async () => {
-    if (this.props.state.user.userDetails.profileDetails.approvalStatus === "P") {
-      setTimeout(() => this.props.history.push("/msg"), 2000);
+    if (
+      this.props.state.user.userDetails.profileDetails.approvalStatus === "P"
+    ) {
+      setTimeout(
+        () => this.props.history.push(Routes.userNotification.url),
+        2000
+      );
     } else {
-      setTimeout(() => this.props.history.push("/form"), 2000);
+      setTimeout(() => this.props.history.push(Routes.userForm.url), 2000);
     }
   };
 

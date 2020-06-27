@@ -1,0 +1,70 @@
+{
+  "id": "aacbc202-34bf-4517-a6a3-369cbde62b20",
+  "name": "Welcome",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "userSays": [
+    {
+      "id": "637bcac1-f212-4ed8-af2f-ac2f68ecf043",
+      "data": [
+        {
+          "text": "talk to ",
+          "userDefined": false
+        },
+        {
+          "text": "movie",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " selection",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "ddd7bff2-08cc-41e7-a11a-5c12b862db56",
+      "data": [
+        {
+          "text": "open movie selecition",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "templates": []
+}

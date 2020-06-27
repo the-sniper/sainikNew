@@ -6,7 +6,7 @@ from UserAuth.permissions import *
 from UserAuth.serializers import *
 
 
-class ZsbAdmin(mixins.ListModelMixin):
+class ZSBAdmin(mixins.ListModelMixin, viewsets.GenericViewSet):
 
     queryset = UserAuthDetails.objects.all()
     serializer_class = UserSerializer
@@ -15,7 +15,7 @@ class ZsbAdmin(mixins.ListModelMixin):
     def get_queryset(self):
         user = self.request.user
         if user.userType == ZILLA_SAINIK:
-            return UserAuthDetails.objects.filter(zila__in=user.zila)
+            return UserAuthDetails.objects.filter(zila__in=user.zila.all())
         if user.userType == RAJYA_SAINIK:
             return UserAuthDetails.objects.filter(state=user.state)
         if user.userType == KENDRIYA_SAINIK:
@@ -23,4 +23,4 @@ class ZsbAdmin(mixins.ListModelMixin):
 
     def list(self, request):
         queryset = self.get_queryset()
-        return UserSerializer(queryset.filter(approvalStatus=PENDING))
+        return JsonResponse(UserSerializer(queryset.filter(approvalStatus=PENDING), many=True).data, safe=False)
