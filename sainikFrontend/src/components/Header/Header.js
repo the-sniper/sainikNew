@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
+import { Routes } from "../../RouteConstants";
 
 class Header extends Component {
   render() {
@@ -7,30 +9,41 @@ class Header extends Component {
       <div className="header container-fluid d-flex justify-content-between align-items-center">
         <h3>Zilla Sainik Board, Puduchery</h3>
         <ul className="headNav d-flex justify-content-between align-items-center">
-          
           <li>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">search</span> Search
-            </a>
+            <Link
+              to={Routes.search.url}
+              className="d-flex justify-content-start align-items-center"
+            >
+              <span class="material-icons">search</span> Search
+            </Link>
           </li>
           <li>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">dashboard</span> Dashboard
-            </a>
+            <Link
+              to={Routes.zsbDashboard.url}
+              className="d-flex justify-content-start align-items-center"
+            >
+              <span class="material-icons">dashboard</span> Dashboard
+            </Link>
           </li>
           <li>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">login</span> Login
-            </a>
+            <Link
+              to={Routes.login.url}
+              className="d-flex justify-content-start align-items-center"
+            >
+              <span class="material-icons">login</span> Login
+            </Link>
           </li>
-          <li className='active'>
-            <a href="#" className="d-flex justify-content-start align-items-center">
-            <span class="material-icons">person_add</span> Register
-            </a>
+          <li className="active">
+            <Link
+              to={Routes.reg.url}
+              className="d-flex justify-content-start align-items-center"
+            >
+              <span class="material-icons">person_add</span> Register
+            </Link>
           </li>
           <li>
             <a
-              href="#"
+              to={Routes.logout.url}
               className="d-flex justify-content-start align-items-center"
             >
               <span class="material-icons">power_settings_new</span> Logout
