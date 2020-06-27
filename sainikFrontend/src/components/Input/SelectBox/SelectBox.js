@@ -14,6 +14,8 @@ class SelectBox extends Component {
           required={this.props.required}
           name={this.props.name}
           id={this.props.id}
+          onChange={this.props.changeHandler}
+          value={this.props.value}
         >
           {this.props.children}
         </select>

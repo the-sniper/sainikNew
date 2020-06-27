@@ -67,6 +67,18 @@ USER_CATEGORY = (
     (BOARD, "Board"),
 )
 
+KENDRIYA_SAINIK = "KSB"
+RAJYA_SAINIK = "RSB"
+ZILLA_SAINIK = "ZSB"
+USER = "USR"
+
+USER_TYPES = (
+    (KENDRIYA_SAINIK, "Kendriya Sainik Board"),
+    (RAJYA_SAINIK, "Rajya Sainik Board"),
+    (ZILLA_SAINIK, "Zilla Sainik Board"),
+    (USER, "User")
+)
+
 # user category end
 
 
@@ -78,18 +90,6 @@ class UserAuthDetails(AbstractBaseUser):
     APPROVAL_STATUS = (
         (PENDING, "Pending"),
         (APPROVED, "Approved")
-    )
-
-    KENDRIYA_SAINIK = "KSB"
-    RAJYA_SAINIK = "RSB"
-    ZILLA_SAINIK = "ZSB"
-    USER = "USR"
-
-    USER_TYPES = (
-        (KENDRIYA_SAINIK, "Kendriya Sainik Board"),
-        (RAJYA_SAINIK, "Rajya Sainik Board"),
-        (ZILLA_SAINIK, "Zilla Sainik Board"),
-        (USER, "User")
     )
 
     slno = models.AutoField(primary_key=True)

@@ -4,10 +4,10 @@ from django.conf import settings
 
 
 common_fields = ["slno", "email", "username", "userType", 'userCategory',
-                 'approvalStatus', 'documents', 'date_joined', 'last_login', "mobileNumber"]
+                 'approvalStatus', 'documents', 'date_joined', 'last_login', "mobileNumber", "zila"]
 common_read_only_fields = ['slno', 'date_joined', 'last_login', ]
 
-
+ 
 class UserSerializer(serializers.ModelSerializer):
 
     password = serializers.CharField(

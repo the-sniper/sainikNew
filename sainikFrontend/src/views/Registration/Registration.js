@@ -39,10 +39,66 @@ class Registration extends Component {
         document: "",
         mobileNumber: "",
       },
+      stateList: "",
+      user_categories: "",
+      loading: true,
+      state: "",
+      zila: "",
+      category: "",
     };
   }
 
+  componentDidMount() {
+    fetch("/api/registration_essentials/")
+      .then((res) => {
+        // this.setState()
+        res
+          .json()
+          .then((data) => {
+            let state = Object.keys(data.sd_dict)[0];
+            this.setState({
+              stateList: data.sd_dict,
+              user_categories: data.user_categories,
+              state: state,
+              zila: this.getDistList(state, data.sd_dict)[0],
+              category: data.user_categories[0].label,
+            });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  }
+
+  getDistList(stateName, stateList) {
+    if (stateList) {
+      return Object.keys(stateList[stateName].districts);
+    } else {
+      return Object.keys(this.state.stateList[stateName].districts);
+    }
+  }
+
   Reg_Details = () => {
+    let districtList = "",
+      user_categories = "";
+
+    if (this.state.stateList) {
+      districtList = [];
+      let state;
+      if (this.state.state) {
+        state = this.state.state;
+      } else {
+        state = Object.keys(this.state.stateList)[0];
+      }
+      districtList = this.getDistList(state);
+    }
+
+    if (this.state.user_categories) {
+      user_categories = [];
+      for (let i = 0; i < this.state.user_categories.length; i++) {
+        user_categories.push(this.state.user_categories[i].label);
+      }
+    }
+
     return [
       {
         inplabel: "Email address",
@@ -83,10 +139,25 @@ class Registration extends Component {
         pattern: "[0-9]{3}[0-9]{3}[0-9]{4}",
       },
       {
+        sellabel: "State",
+        type: "select",
+        selOption: Object.keys(this.state.stateList),
+        name: "state",
+        value: this.state.state,
+      },
+      {
+        sellabel: "District",
+        type: "select",
+        selOption: districtList,
+        name: "zila",
+        value: this.state.zila,
+      },
+      {
         sellabel: "User Category",
         type: "select",
-        selOption: ["A", "B", "C"],
-        name: "userCategory",
+        selOption: user_categories,
+        name: "category",
+        value: this.state.category,
       },
     ];
   };
@@ -126,10 +197,16 @@ class Registration extends Component {
     if (event.target.name === "document") {
       value = event.target.files[0];
     }
-
-    this.setState({
-      [event.target.name]: value,
-    });
+    if (event.target.name === "state") {
+      this.setState({
+        [event.target.name]: value,
+        zila: this.getDistList(value)[0],
+      });
+    } else {
+      this.setState({
+        [event.target.name]: value,
+      });
+    }
   };
 
   submitForm = (event) => {
@@ -207,6 +284,7 @@ class Registration extends Component {
     if (register.registrationSuccess) {
       this.success_redirect();
     }
+    console.log(this.state);
     return (
       <div className="regMain">
         <h2>REGISTER</h2>
@@ -261,8 +339,10 @@ class Registration extends Component {
                             id={`servSel_${index}`}
                             label={data.sellabel}
                             optional={data.optionalCheck}
-                            name={`${data.name}${index}`}
+                            name={`${data.name}`}
                             required={data.required}
+                            changeHandler={this.changeHandler}
+                            value={data.value}
                           >
                             {this.createElements(data)}
                           </SelectBox>
