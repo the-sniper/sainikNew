@@ -46,6 +46,15 @@
   font-size: 15px;
   color: #434343;
 }
+.updDocLoc p{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0
+}
+.updDocLoc p span.fName{
+  font-weight: 400;
+  padding-left: 10px;
+}
 .regDocUpd p,
 .regDocUpd span {
   width: 100%;

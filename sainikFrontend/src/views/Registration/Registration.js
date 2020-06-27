@@ -403,7 +403,7 @@ class Registration extends Component {
                 </label>
                 
                   {this.state.document
-                  ? <p className="updDocLoc">Document Selected : {this.state.document.name}</p>
+                  ? <div className="updDocLoc"> <p className="d-flex align-items-center"><span class="material-icons">insert_photo</span> Uploaded : <span className="fName">{this.state.document.name}</span></p></div>
                   : ""}
                 
               </div>
