@@ -1,3 +1,6 @@
+import store from "./store";
+import { fetchUserFailure } from "./user/userDetailsActions";
+
 const is_object = (obj) => {
   let objType = typeof obj;
   if (objType === "object" && obj !== null) {
@@ -25,6 +28,6 @@ export default (err) => {
       }
     }
   } else {
-    dispatch(fetchUserFailure("Something didn't go as expected."));
+    store.dispatch(fetchUserFailure("Something didn't go as expected."));
   }
 };
