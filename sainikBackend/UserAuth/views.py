@@ -32,17 +32,17 @@ class LoginView(KnoxLoginView):
 
 class UserAuthViewset(viewsets.ModelViewSet):
 
-    queryset = UserAuthDetails.objects.all()
+    queryset = UserAuthDetails.objects.filter(is_active=1)
     serializer_class = UserSerializer
     def get_queryset(self):
 
-        if self.request.user.userType == UserAuthDetails.ZILLA_SAINIK:
-            return UserAuthDetails.objects.filter(userType=UserAuthDetails.USER)
-        elif self.request.user.userType == UserAuthDetails.RAJYA_SAINIK:
-            return UserAuthDetails.objects.filter(userType__in=[UserAuthDetails.USER, UserAuthDetails.ZILLA_SAINIK])
-        elif self.request.user.userType == UserAuthDetails.KENDRIYA_SAINIK:
+        if self.request.user.userType == ZILLA_SAINIK:
+            return UserAuthDetails.objects.filter(userType=USER)
+        elif self.request.user.userType == RAJYA_SAINIK:
+            return UserAuthDetails.objects.filter(userType__in=[USER, ZILLA_SAINIK])
+        elif self.request.user.userType == KENDRIYA_SAINIK:
             return UserAuthDetails.objects.all()
-        elif self.request.user.userType == UserAuthDetails.USER:
+        elif self.request.user.userType == USER:
             return UserAuthDetails.objects.filter(pk=self.request.user.pk)
 
     def get_permissions(self):

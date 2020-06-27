@@ -113,18 +113,18 @@ USER_TYPES = (
     (USER, "User")
 )
 
+PENDING = "P"
+APPROVED = "A"
+
+APPROVAL_STATUS = (
+    (PENDING, "Pending"),
+    (APPROVED, "Approved")
+)
+
 # user category end
 
 
 class UserAuthDetails(AbstractBaseUser):
-
-    PENDING = "P"
-    APPROVED = "A"
-
-    APPROVAL_STATUS = (
-        (PENDING, "Pending"),
-        (APPROVED, "Approved")
-    )
 
     slno = models.AutoField(primary_key=True)
     email = models.EmailField(null=True, blank=True, unique=True)

@@ -41,9 +41,9 @@ class UserSerializer(serializers.ModelSerializer):
 
         user = self.context["request"].user
         if user.is_authenticated and user.is_staff:
-            data["approvalStatus"] = UserAuthDetails.APPROVED
+            data["approvalStatus"] = APPROVED
         else:
-            data["approvalStatus"] = UserAuthDetails.PENDING
+            data["approvalStatus"] = PENDING
 
         if user.is_authenticated:
 
@@ -62,6 +62,11 @@ class UserSerializer(serializers.ModelSerializer):
             if data.get("userCategory") == BOARD:
                 raise serializers.ValidationError(
                     f"UserCategory cannot be {BOARD}")
+
+        if(user.is_authenticated and user.userType not in [ZILLA_SAINIK]):
+            if data.get("zila").__len__ > 1:
+                raise serializers.ValidationError(
+                    "User cannot belong to more than one zila.")
 
         state = State.objects.filter(S_Id=data.get("state").pk)
         if state.exists():
