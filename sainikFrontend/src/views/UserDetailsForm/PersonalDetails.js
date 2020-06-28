@@ -195,7 +195,7 @@ class PersonalDetails extends Component {
                       label={data.inplabel}
                       type={data.type}
                       optional={data.optional}
-                      name={`${data.name}${index}`}
+                      name={data.name}
                     />
                   );
                 } else if (data.type === "select") {
@@ -204,7 +204,7 @@ class PersonalDetails extends Component {
                       id={`servSel_${index}`}
                       label={data.sellabel}
                       optional={data.optionalCheck}
-                      name={`${data.name}${index}`}
+                      name={data.name}
                     >
                       {this.createElements(data)}
                     </SelectBox>

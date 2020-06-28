@@ -157,7 +157,7 @@ class ContactDetails extends Component {
                         label={data.inplabel}
                         type={data.type}
                         optional={data.optional}
-                        name={`${data.name}${index}`}
+                        name={data.name}
 
                       />
                     );
@@ -167,7 +167,7 @@ class ContactDetails extends Component {
                         id={`servSel_${index}`}
                         label={data.sellabel}
                         optional={data.optionalCheck}
-                      name={`${data.name}${index}`}
+                      name={data.name}
                       >
                         {this.createElements(data)}
                       </SelectBox>

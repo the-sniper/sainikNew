@@ -9,6 +9,7 @@ import ZsbAdmin from "./views/Admin/ZsbAdmin";
 import Search from "./views/Search/Search";
 import Header from "./components/Header/Header";
 import { Routes } from "./RouteConstants";
+import CustomModal from "./components/CustomModal/CustomModal";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           />
           <Route exact path={Routes.zsbDashboard.url} component={ZsbAdmin} />
           <Route exact path={Routes.search.url} component={Search} />
+          <Route exact path={Routes.customModal.url} component={CustomModal} />
         </div>
       </Switch>
     </Router>

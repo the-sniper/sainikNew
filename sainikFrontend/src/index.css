@@ -52,6 +52,12 @@ a {
 ::-webkit-scrollbar-track {
   background: #ebebeb;
 }
+
+.noScroll{
+  overflow-y: hidden !important;
+  position: fixed;
+}
+
 .swBtnLoader {
   width: 8%;
 }
