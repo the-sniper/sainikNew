@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import "./ZsbAdmin.css";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return {
+    state: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (loginDetails) => dispatch(fetchUser(loginDetails)),
+  };
+};
 
 class VerifyUser extends Component {
-constructor(props) {
-  super(props);
-  this.state = {
-    
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
-}
-
 
   render() {
     return (

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import InputBox from "../../components/Input/InputBox/InputBox";
 import InputCheckbox from "../../components/Input/InputCheckbox/InputCheckbox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
-import axios from "axios";
 import "./Login.css";
 import { connect } from "react-redux";
 import { fetchUser } from "../../redux";
