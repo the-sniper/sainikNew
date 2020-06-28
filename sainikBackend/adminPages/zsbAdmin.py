@@ -15,9 +15,9 @@ class ZSBAdmin(mixins.ListModelMixin, viewsets.GenericViewSet):
     def get_queryset(self):
         user = self.request.user
         if user.userType == ZILLA_SAINIK:
-            return UserAuthDetails.objects.filter(zila__in=user.zila.all())
+            return UserAuthDetails.objects.filter(zila__in=user.zila.all(), userType=USER)
         if user.userType == RAJYA_SAINIK:
-            return UserAuthDetails.objects.filter(state=user.state)
+            return UserAuthDetails.objects.filter(state=user.state, userType__in=[USER, ZILLA_SAINIK])
         if user.userType == KENDRIYA_SAINIK:
             return UserAuthDetails.objects.all()
 

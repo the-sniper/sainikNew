@@ -5,6 +5,8 @@ import {
 } from "./constants";
 import axios from "axios";
 import getError from "../apiError";
+import store from "../store";
+import userReducer from "../user/userDetailsReducer";
 
 export const userListRequest = () => {
   return {
@@ -26,22 +28,28 @@ export const userListFailure = (errorMessage) => {
   };
 };
 
-export const ListUser = (ListDetails) => {
+export const ListUser = () => {
   return function (dispatch) {
-    dispatch(userListRequest());
-    axios
-      .post("/api/user_auth/user/", ListDetails, {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      })
-      .then((res) => {
-        console.log(res);
-        dispatch(userListSuccess(res.data));
-      })
-      .catch((err) => {
-        console.log(err.response);
-        dispatch(userListFailure(getError(err)));
-      });
+    let state = store.getState();
+    if (state.user.userDetails.isAuthenticated) {
+      dispatch(userListRequest());
+      axios
+        .get("/api/zsb_admin/", {
+          headers: {
+            "content-type": "multipart/form-data",
+            Authorization: `Token ${state.user.userDetails.authToken}`,
+          },
+        })
+        .then((res) => {
+          console.log(res);
+          dispatch(userListSuccess(res.data));
+        })
+        .catch((err) => {
+          console.log(err.response);
+          dispatch(userListFailure(getError(err)));
+        });
+    } else {
+      dispatch(userListFailure("User not logged in."));
+    }
   };
 };
