@@ -14,8 +14,9 @@ const userList = (state = initialState, action) => {
   switch (action.type) {
     case USER_LIST_REQUEST:
       return {
-        ...state,
         loading: true,
+        error: "",
+        userList: "",
       };
     case USER_LIST_SUCCESS:
       return {
@@ -26,7 +27,7 @@ const userList = (state = initialState, action) => {
     case USER_LIST_FAILURE:
       return {
         loading: false,
-        userList: {},
+        userList: [],
         error: action.payload,
       };
     default:

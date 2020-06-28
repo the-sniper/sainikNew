@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
-    state: state,
+    userList: state.userList,
   };
 };
 
@@ -19,7 +19,6 @@ const mapDispatchToProps = (dispatch) => {
 class VerifyUser extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   componentDidMount() {
@@ -27,9 +26,15 @@ class VerifyUser extends Component {
   }
 
   render() {
+    let { userList } = this.props;
+    if (userList.loading) {
+      return <h1>loading</h1>;
+    }
+    if (userList.userList.length < 1) {
+      return <h1>No Pending Users</h1>;
+    }
     return (
       <div className="verifyUser customContainer">
-        {/* <h1 className="vuTitle">VERIFY USERS</h1> */}
         <table className="table-hover table vuTable">
           <thead className="thead-dark">
             <tr>
@@ -42,9 +47,13 @@ class VerifyUser extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-            <TableData />
-            </tr>
+            {userList.userList.map((data) => (
+              <tr>
+                <TableData data={data} approveHandler = {() => {
+                  
+                }} />
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

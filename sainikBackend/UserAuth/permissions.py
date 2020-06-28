@@ -18,7 +18,7 @@ class IsUserOrAdmin(permissions.BasePermission):
         return request.user.pk == obj.pk or request.user.is_staff
 
 
-class ZSBAdminAccess(permissions.BasePermission):
+class AdminAccess(permissions.BasePermission):
 
     def has_permission(self, request, view):
 
@@ -30,6 +30,13 @@ class ZSBAdminAccess(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
 
         if request.user.is_authenticated:
-            return request.user.userType in [ZILLA_SAINIK, RAJYA_SAINIK, KENDRIYA_SAINIK]
+
+            if request.user.userType == ZILLA_SAINIK:
+                return obj.userType == USER and obj.zila.all()[0] in request.user.zila.all()
+
+            elif request.user.userType == RAJYA_SAINIK:
+                return obj.userType in [USER, ZILLA_SAINIK] and obj.state == request.user.state
+
+            return request.user.userType == KENDRIYA_SAINIK
 
         return False

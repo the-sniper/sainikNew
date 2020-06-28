@@ -6,6 +6,7 @@ import {
 } from "./constants";
 import axios from "axios";
 import getError from "../apiError";
+import store from "../store";
 
 export const userRegisterRequest = () => {
   return {
@@ -34,12 +35,17 @@ export const resetForm = () => {
 
 export const registerUser = (registerDetails) => {
   return function (dispatch) {
+    let headers = {
+        "content-type": "multipart/form-data",
+      },
+      { user } = store.getState();
+    if (user.userDetails.isAuthenticated) {
+      headers["Authorization"] = `Token ${user.userDetails.authToken}`;
+    }
     dispatch(userRegisterRequest());
     axios
       .post("/api/user_auth/user/", registerDetails, {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
+        headers: headers,
       })
       .then((res) => {
         console.log(res);
