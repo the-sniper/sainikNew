@@ -154,7 +154,7 @@ class PensionDetails extends Component {
                       id={`servInp_${index}`}
                       label={data.inplabel}
                       type={data.type}
-                      name={`${data.name}${index}`}
+                      name={data.name}
                     />
                   );
                 } else if (data.type === "select") {
@@ -162,7 +162,7 @@ class PensionDetails extends Component {
                     <SelectBox
                       id={`servSel_${index}`}
                       label={data.sellabel}
-                      name={`${data.name}${index}`}
+                      name={data.name}
                     >
                       {this.createElements(data)}
                     </SelectBox>

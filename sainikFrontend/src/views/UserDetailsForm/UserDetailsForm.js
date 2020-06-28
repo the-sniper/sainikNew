@@ -56,7 +56,7 @@ class UserDetailsForm extends Component {
     return (
       <div className="userDetailsForm">
         <h3 className="mb-5">ADD USER DETAILS</h3>
-        <div className="customContainer d-flex justify-content-between align-items-start">
+        <div className="customContainer d-flex justify-content-center align-items-start">
           <div className="ltPanel">
             <ul class="nav d-flex justify-content-between">
               <li class="nav-item completed">

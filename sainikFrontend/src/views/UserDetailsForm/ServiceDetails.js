@@ -108,7 +108,7 @@ class ServiceDetails extends Component {
                       id={`servInp_${index}`}
                       label={data.inplabel}
                       type={data.type}
-                      name={`${data.name}${index}`}
+                      name={data.name}
 
                     />
                   );
@@ -117,7 +117,7 @@ class ServiceDetails extends Component {
                     <SelectBox
                       id={`servSel_${index}`}
                       label={data.sellabel}
-                      name={`${data.name}${index}`}
+                      name={data.name}
 
                     >
                       {this.createElements(data)}
