@@ -8,7 +8,12 @@ class CustomModal extends Component {
   render() {
     return (
       <div className="customModal">
-        <button onClick={() => this.setState({ shown: !this.state.shown })}>
+        <button
+          onClick={() => {
+            document.body.classList.add("noScroll");
+            this.setState({ shown: !this.state.shown });
+          }}
+        >
           Open Modal
         </button>
         {this.state.shown ? (
