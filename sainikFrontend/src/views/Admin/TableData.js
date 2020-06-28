@@ -5,7 +5,7 @@ class TableData extends Component {
   
   render() {
     return (
-      <tr>
+      <>
         <td>Mark</td>
               <td>Otto</td>
               <td>@mdo</td>
@@ -27,7 +27,7 @@ class TableData extends Component {
                   <span class="material-icons">how_to_reg</span>Approve
                 </button>
               </td>
-      <tr/>
+      </>
     );
   }
 }

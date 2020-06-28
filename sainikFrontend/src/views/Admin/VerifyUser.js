@@ -42,11 +42,9 @@ class VerifyUser extends Component {
             </tr>
           </thead>
           <tbody>
-            {/* <tr> */}
-            {/* <TableData> */}
-
+            <tr>
             <TableData />
-            {/* </tr> */}
+            </tr>
           </tbody>
         </table>
       </div>
