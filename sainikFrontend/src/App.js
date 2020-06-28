@@ -2,18 +2,10 @@ import React from "react";
 import "./App.css";
 import Login from "./views/Login/Login";
 import UserDetailsForm from "./views/UserDetailsForm/UserDetailsForm";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect,
-} from "react-router-dom";
-import PensionDetails from "./views/UserDetailsForm/PensionDetails";
-import Test from "./components/Test/Test";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Registration from "./views/Registration/Registration";
 import UserMessage from "./components/UserMessage/UserMessage";
-import ZsbAdmin from "./views/ZsbAdmin/ZsbAdmin";
+import ZsbAdmin from "./views/Admin/ZsbAdmin";
 import Search from "./views/Search/Search";
 import Header from "./components/Header/Header";
 import { Routes } from "./RouteConstants";

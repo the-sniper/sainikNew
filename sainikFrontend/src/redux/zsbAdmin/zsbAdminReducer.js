@@ -6,11 +6,11 @@ import {
 
 const initialState = {
   loading: false,
-  userList: {},
+  userList: [],
   error: "",
 };
 
-const register = (state = initialState, action) => {
+const userList = (state = initialState, action) => {
   switch (action.type) {
     case USER_LIST_REQUEST:
       return {
@@ -20,7 +20,7 @@ const register = (state = initialState, action) => {
     case USER_LIST_SUCCESS:
       return {
         loading: false,
-        userList: action.payloadtrue,
+        userList: action.payload,
         error: "",
       };
     case USER_LIST_FAILURE:
@@ -34,4 +34,4 @@ const register = (state = initialState, action) => {
   }
 };
 
-export default register;
+export default userList;

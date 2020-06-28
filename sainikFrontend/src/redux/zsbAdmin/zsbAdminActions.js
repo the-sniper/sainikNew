@@ -6,7 +6,6 @@ import {
 import axios from "axios";
 import getError from "../apiError";
 import store from "../store";
-import userReducer from "../user/userDetailsReducer";
 
 export const userListRequest = () => {
   return {
