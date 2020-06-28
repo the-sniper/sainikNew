@@ -1,18 +1,6 @@
 import React, { Component } from "react";
 import "./ZsbAdmin.css";
-import { connect } from "react-redux";
-
-const mapStateToProps = (state) => {
-  return {
-    state: state,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    login: (loginDetails) => dispatch(fetchUser(loginDetails)),
-  };
-};
+import TableData from "../../components/TableData/TableData";
 
 class VerifyUser extends Component {
   constructor(props) {
@@ -31,21 +19,26 @@ class VerifyUser extends Component {
               <th>Username</th>
               <th>Mobile Number</th>
               <th>Documents</th>
+              <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>
-                <a href="#">VIEW</a>
-              </td>
-              <td>
-                <button className="btn actReject">Reject</button>
-                <button className="btn actApprove">Approve</button>
-              </td>
+              <TableData>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                  <a href="#" className="vuViewDoc"> <span class="material-icons">visibility</span>VIEW</a>
+                </td>
+                <td>Pending</td>
+                <td>
+                  <button className="btn actBlock"><span class="material-icons">block</span>Block</button>
+                  <button className="btn actReject"><span class="material-icons">person_remove</span>Reject</button>
+                  <button className="btn actApprove"><span class="material-icons">how_to_reg</span>Approve</button>
+                </td>
+              </TableData>
             </tr>
           </tbody>
         </table>

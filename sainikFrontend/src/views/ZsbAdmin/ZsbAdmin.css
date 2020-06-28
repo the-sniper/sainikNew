@@ -1,17 +1,47 @@
-.dashTitle{
-    margin: 45px 0;
+.dashTitle {
+  margin: 45px 0;
+}
+.verifyUser .table td,
+.verifyUser .table th {
+  vertical-align: middle;
+}
+.verifyUser .vuTable button.actReject {
+  background: #fcd7d7;
+  color: #e55252;
+  display: inline-flex;
+}
+.verifyUser .vuViewDoc {
+  display: inline-flex;
+}
+.verifyUser .vuViewDoc span {
+  padding-right: 5px;
+}
+.verifyUser .vuTable button.actReject:focus {
+  box-shadow: 0 0 0 0.2rem rgba(229, 82, 86, 0.25);
 }
 
-.verifyUser .vuTable button.actReject{
-    background: #ffe6e6;
-    color: #e55252;
+.verifyUser .vuTable button.actApprove {
+  background: #c8f2ef;
+  color: #29a88c;
+  display: inline-flex;
 }
 
-.verifyUser .vuTable button.actApprove{
-    background: #c8f2ef;
-    color: #29a88c;
+.verifyUser .vuTable button.actApprove:focus {
+  box-shadow: 0 0 0 0.2rem rgba(45, 177, 183, 0.25);
 }
 
-.verifyUser .vuTable button:first-child{
-    margin-right: 10px;
+.verifyUser .vuTable button.actBlock {
+  background: #ffd8c1;
+  color: #e96518;
+  display: inline-flex;
+}
+.verifyUser .vuTable button span {
+  padding-right: 5px;
+}
+.verifyUser .vuTable button.actBlock:focus {
+  box-shadow: 0 0 0 0.2rem rgba(242, 118, 29, 0.25);
+}
+
+.verifyUser .vuTable button:not(:last-child) {
+  margin-right: 10px;
 }
