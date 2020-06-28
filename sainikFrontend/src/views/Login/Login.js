@@ -80,6 +80,14 @@ class Login extends Component {
         () => this.props.history.push(Routes.userNotification.url),
         2000
       );
+    } else if (
+      this.props.state.user.userDetails.profileDetails.approvalStatus === "A" &&
+      this.props.state.user.userDetails.profileDetails.userType === "ZSB"
+    ) {
+      setTimeout(
+        () => this.props.history.push(Routes.zsbDashboard.url),
+        2000
+      );
     } else {
       setTimeout(() => this.props.history.push(Routes.userForm.url), 2000);
     }

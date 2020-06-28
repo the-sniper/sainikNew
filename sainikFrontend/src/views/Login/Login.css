@@ -2,7 +2,8 @@
   max-width: 545px;
   width: 100%;
   padding: 25px 25px;
-  margin: 0px auto;
+  margin: 45px auto;
+  box-shadow: 0px 3px 6px rgb(67, 67, 67, 16%);
 }
 .swLogin .logoContainer {
   margin-bottom: 45px;
