@@ -14,7 +14,7 @@ class CustomDropdown extends Component {
           className="btn d-flex justify-content-between align-items-center"
         >{this.props.label} <span class="material-icons">arrow_drop_down</span>
         </button>
-        {this.state.shown ? (<ul className="cdContent">
+        {this.state.shown ? (<ul className="cdContent" onClick={()=> this.setState({ shown: ! this.state.shown})}>
           {this.props.children}
         </ul>): null}
       </div>

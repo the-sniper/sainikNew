@@ -14,7 +14,7 @@ class Header extends Component {
               to={Routes.search.url}
               className="d-flex justify-content-start align-items-center"
             >
-              <span class="material-icons">search</span> Search
+              <span class="material-icons">search</span> {Routes.search.label}
             </Link>
           </li>
           <li>
@@ -22,7 +22,7 @@ class Header extends Component {
               to={Routes.zsbDashboard.url}
               className="d-flex justify-content-start align-items-center"
             >
-              <span class="material-icons">dashboard</span> Dashboard
+              <span class="material-icons">dashboard</span> {Routes.zsbDashboard.label}
             </Link>
           </li>
           <li>
@@ -30,7 +30,7 @@ class Header extends Component {
               to={Routes.login.url}
               className="d-flex justify-content-start align-items-center"
             >
-              <span class="material-icons">login</span> Login
+              <span class="material-icons">login</span> {Routes.login.label}
             </Link>
           </li>
           <li className="active">
@@ -38,16 +38,16 @@ class Header extends Component {
               to={Routes.reg.url}
               className="d-flex justify-content-start align-items-center"
             >
-              <span class="material-icons">person_add</span> Register
+              <span class="material-icons">person_add</span> {Routes.reg.label}
             </Link>
           </li>
           <li>
-            <a
+            <Link
               to={Routes.logout.url}
               className="d-flex justify-content-start align-items-center"
             >
-              <span class="material-icons">power_settings_new</span> Logout
-            </a>
+              <span class="material-icons">power_settings_new</span> {Routes.logout.label}
+            </Link>
           </li>
         </ul>
       </div>

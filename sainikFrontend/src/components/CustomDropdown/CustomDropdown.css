@@ -1,5 +1,5 @@
 .customDropdown {
-  width: 145px;
+  width: min(145px, 100%);
   width: max-content;
   height: 50px;
 }
@@ -28,6 +28,9 @@
   box-shadow: 0px 3px 10px #ccc;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  background: #fff;
+  z-index: 10;
+  position: relative;
 }
 
 .customDropdown .cdContent li:hover {

@@ -93,9 +93,9 @@ class Login extends Component {
     }
     return (
       <div className="swLogin">
-        <div className="logoContainer">
-          {/* <img src="./images/logo.png" className="img-fluid" alt="" /> */}
-        </div>
+        {/* <div className="logoContainer">
+          <img src="./images/logo.png" className="img-fluid" alt="" />
+        </div> */}
         <div className="loginGreet">
           <h3>LOGIN</h3>
           <p>Welcome</p>
