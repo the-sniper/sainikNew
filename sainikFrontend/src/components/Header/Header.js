@@ -16,28 +16,40 @@ class Header extends Component {
       <div className="header customContainer d-flex justify-content-between align-items-center">
         <h3>Zilla Sainik Board, Puduchery</h3>
         <ul className="headNav d-flex justify-content-between align-items-center">
-          <li>
-            <Link
-              to={Routes.search.url}
-              className="d-flex justify-content-start align-items-center"
-            >
-              <span class="material-icons">search</span> {Routes.search.label}
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={Routes.zsbDashboard.url}
-              className="d-flex justify-content-start align-items-center"
-            >
-              <span class="material-icons">dashboard</span>{" "}
-              {Routes.zsbDashboard.label}
-            </Link>
-          </li>
+          {this.props.state.user.userDetails.profileDetails.userType ===
+          "ZSB" ? (
+            <>
+              <li>
+                <Link
+                  to={Routes.search.url}
+                  className="d-flex justify-content-start align-items-center"
+                >
+                  <span class="material-icons">search</span>{" "}
+                  {Routes.search.label}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={Routes.zsbDashboard.url}
+                  className="d-flex justify-content-start align-items-center"
+                >
+                  <span class="material-icons">dashboard</span>{" "}
+                  {Routes.zsbDashboard.label}
+                </Link>
+              </li>
+            </>
+          ) : (
+            ""
+          )}
+
           {user.userDetails.isAuthenticated ? (
             <li>
               <Link
                 to={Routes.logout.url}
                 className="d-flex justify-content-start align-items-center"
+                onClick={() => {
+                  user.userDetails.isAuthenticated = false;
+                }}
               >
                 <span class="material-icons">power_settings_new</span>{" "}
                 {Routes.logout.label}
