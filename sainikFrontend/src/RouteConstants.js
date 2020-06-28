@@ -31,4 +31,8 @@ export const Routes = {
     url: "/userNotification",
     label: "User Notification",
   },
+  customModal: {
+    url: "/modal",
+    label: "Modal",
+  },
 };
