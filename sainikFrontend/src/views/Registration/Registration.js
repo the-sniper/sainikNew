@@ -7,6 +7,7 @@ import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import { Link } from "react-router-dom";
 import { registerUser, resetForm } from "../../redux";
 import { connect } from "react-redux";
+import { Routes } from "../../RouteConstants";
 
 const mapStateToProps = (state) => {
   return {
@@ -429,7 +430,7 @@ class Registration extends Component {
           </form>
           <div className="haveAcc text-center">
             <p>Already have an account ?</p>
-            <span>Login</span> <Link to="/">here</Link>
+            <span>Login</span> <Link to={Routes.login.url}>here</Link>
           </div>
         </div>
       </div>

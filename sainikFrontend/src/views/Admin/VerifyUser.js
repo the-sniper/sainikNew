@@ -31,7 +31,7 @@ class VerifyUser extends Component {
       return <h1>loading</h1>;
     }
     if (userList.userList.length < 1) {
-      return <h1>No Pending Users</h1>;
+      return <div className="noPending"><img src="./images/noPending.gif"/> <h1>No Pending Users</h1></div>;
     }
     return (
       <div className="verifyUser customContainer">

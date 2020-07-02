@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Routes } from "../../RouteConstants";
 import { connect } from "react-redux";
 
@@ -20,22 +20,27 @@ class Header extends Component {
           "ZSB" ? (
             <>
               <li>
-                <Link
+                <NavLink
+                  exact
+                  to="/"
+                  activeClassName="active"
                   to={Routes.search.url}
                   className="d-flex justify-content-start align-items-center"
                 >
-                  <span class="material-icons">search</span>{" "}
+                  <span class="material-icons">search</span>
                   {Routes.search.label}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
+                  exact
                   to={Routes.zsbDashboard.url}
+                  activeClassName="active"
                   className="d-flex justify-content-start align-items-center"
                 >
-                  <span class="material-icons">dashboard</span>{" "}
+                  <span class="material-icons">dashboard</span>
                   {Routes.zsbDashboard.label}
-                </Link>
+                </NavLink>
               </li>
             </>
           ) : (
@@ -44,35 +49,41 @@ class Header extends Component {
 
           {user.userDetails.isAuthenticated ? (
             <li>
-              <Link
+              <NavLink
+                exact
                 to={Routes.logout.url}
+                activeClassName="active"
                 className="d-flex justify-content-start align-items-center"
                 onClick={() => {
                   user.userDetails.isAuthenticated = false;
+                  setTimeout(() => (window.location = Routes.login.url), 1000);
                 }}
               >
-                <span class="material-icons">power_settings_new</span>{" "}
+                <span class="material-icons">power_settings_new</span>
                 {Routes.logout.label}
-              </Link>
+              </NavLink>
             </li>
           ) : (
             <>
               <li>
-                <Link
+                <NavLink
+                  exact
                   to={Routes.login.url}
+                  activeClassName="active"
                   className="d-flex justify-content-start align-items-center"
                 >
                   <span class="material-icons">login</span> {Routes.login.label}
-                </Link>
+                </NavLink>
               </li>
-              <li className="active">
-                <Link
+              <li>
+                <NavLink
+                  exact
                   to={Routes.reg.url}
                   className="d-flex justify-content-start align-items-center"
                 >
-                  <span class="material-icons">person_add</span>{" "}
+                  <span class="material-icons">person_add</span>
                   {Routes.reg.label}
-                </Link>
+                </NavLink>
               </li>
             </>
           )}

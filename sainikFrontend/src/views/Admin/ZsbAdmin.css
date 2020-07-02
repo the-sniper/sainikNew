@@ -49,3 +49,18 @@
 .verifyUser .vuTable button:not(:last-child) {
   margin-right: 10px;
 }
+
+.verifyUser .userUpdDoc{
+  width: 100%;
+  object-fit: contain;
+}
+.verifyUser .customModal .cmBody{
+  max-width: 1000px;
+  width: 100%;
+}
+.verifyUser .customModal .cmBody .cmContent{
+  padding: 20px;
+}
+.noPending img{
+  width:  80px;
+}

@@ -3,29 +3,31 @@ import "./CustomModal.css";
 
 class CustomModal extends Component {
   state = {
-    shown: this.props.currentState,
+    isModalOpen: false,
   };
+
   render() {
     return (
       <div className="customModal">
-        <button
+        {/* <button
           onClick={() => {
             document.body.classList.add("noScroll");
             this.setState({ shown: !this.state.shown });
           }}
         >
           Open Modal
-        </button>
-        {this.state.shown ? (
+        </button> */}
+        { this.props.isModalOpen ? (
           <div className="cmCnt">
+          {document.body.classList.add("noScroll")}
             <div className="cmBody">
               <div className="cmHead d-flex justify-content-between align-items-center">
-                <h3 className="cmTitle">Test</h3>
-                <a href="#" onClick={() => this.setState({ shown: false })}>
+                <h3 className="cmTitle">{this.props.modalTitle}</h3>
+                <a href="#" onClick={() => this.setState({ isModalOpen: false })}>
                   <span className="material-icons">close</span>
                 </a>
               </div>
-              <div className="cmContent">Test again</div>
+              <div className="cmContent">{this.props.children}</div>
             </div>
           </div>
         ) : (

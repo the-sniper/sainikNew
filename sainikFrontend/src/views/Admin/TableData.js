@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import store from "../../redux/store";
+import CustomModal from "../../components/CustomModal/CustomModal";
 
 class TableData extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class TableData extends Component {
       userDetails: props.data,
       error: "",
       loading: "",
+      isShown: false,
     };
   }
 
@@ -54,7 +56,10 @@ class TableData extends Component {
         <td>{data.username}</td>
         <td>{data.mobileNumber}</td>
         <td>
-          <a href={data.documents} target="_blank" className="vuViewDoc">
+          <a href="#"
+            onClick={() => this.setState({ isShown: !this.state.isShown })}
+            className="vuViewDoc"
+          >
             <span class="material-icons">visibility</span>VIEW
           </a>
         </td>
@@ -75,6 +80,9 @@ class TableData extends Component {
             </>
           )}
         </td>
+        <CustomModal isModalOpen={this.state.isShown} modalTitle="Verify Documents" >
+          <img className="userUpdDoc" src={data.documents}/>
+        </CustomModal>
       </>
     );
   }

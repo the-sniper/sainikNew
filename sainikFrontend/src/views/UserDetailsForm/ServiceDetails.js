@@ -30,6 +30,12 @@ class ServiceDetails extends Component {
       name: "rank",
     },
     {
+      radLabel: "Select your group",
+      radOpt: ["X", "Y", "Z"],
+      type: "radio",
+      group: "group",
+    },
+    {
       sellabel: "Trade",
       type: "select",
       selOption: ["Army", "Airforce", "Navy"],
@@ -45,12 +51,6 @@ class ServiceDetails extends Component {
       type: "select",
       selOption: ["Army", "Airforce", "Navy"],
       name: "decorations",
-    },
-    {
-      radLabel: "Select your group",
-      radOpt: ["X", "Y", "Z"],
-      type: "radio",
-      group: "group",
     },
     {
       radLabel: "Participated in world war 2 ?",

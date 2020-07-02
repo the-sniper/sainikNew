@@ -78,7 +78,7 @@ class Login extends Component {
     ) {
       setTimeout(
         () => this.props.history.push(Routes.userNotification.url),
-        2000
+        500
       );
     } else if (
       this.props.state.user.userDetails.profileDetails.approvalStatus === "A" &&
@@ -86,10 +86,10 @@ class Login extends Component {
     ) {
       setTimeout(
         () => this.props.history.push(Routes.zsbDashboard.url),
-        2000
+        500
       );
     } else {
-      setTimeout(() => this.props.history.push(Routes.userForm.url), 2000);
+      setTimeout(() => this.props.history.push(Routes.userForm.url), 500);
     }
   };
 
@@ -167,7 +167,7 @@ class Login extends Component {
           <p style={{ marginBottom: "5px", marginTop: "15px" }}>
             Don't have an account yet ?
           </p>
-          <Link to="/reg">Register here</Link>
+          <Link to={Routes.reg.url}>Register here</Link>
         </div>
       </div>
     );
