@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Potlab Icons</title>
+        <style>
+                div {
+                        margin-top: 10%;
+                        margin-left: 50%;
+                }
+
+                svg {
+                        text-align: center;
+                        margin: auto;
+                        width: 100px;
+                        height: 100px;
+                }
+
+                #icon-check .circle {
+                        -webkit-animation-name: check;
+                        animation-name: check;
+                        -webkit-animation-duration: 2s;
+                        animation-duration: 2s;
+                        stroke-dashoffset: 1000;
+                        stroke-dasharray: 1000;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: ease-in-out;
+                        animation-timing-function: ease-in-out;
+                }
+
+                #icon-check .check {
+                        -webkit-animation-name: check;
+                        animation-name: check;
+                        -webkit-animation-duration: 2s;
+                        animation-duration: 2s;
+                        stroke-dashoffset: 1000;
+                        stroke-dasharray: 1000;
+                        -webkit-animation-delay: 1s;
+                        animation-delay: 1s;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: ease-in-out;
+                        animation-timing-function: ease-in-out;
+                }
+
+                @keyframes check {
+                        to {
+                                stroke-dashoffset: 0;
+                        }
+                }
+        </style>
+</head>
+
+<body>
+        <div>
+                <svg id="icon-check" viewBox="0 0 225 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                        <g transform="matrix(1,0,0,1,-178.667,-170.667)">
+                                <g class="check" transform="matrix(1,0,0,1,176,113)">
+                                        <path d="M65,166L101,202L165,138" style="fill:none;stroke:#ea3970;stroke-width:16.67px;" />
+                                </g>
+                                <circle class="circle" cx="291" cy="283" r="104" style="fill:none;stroke:#2a2a31;stroke-width:16.67px;" />
+                        </g>
+                </svg>
+        </div>
+</body>
+
+</html>
