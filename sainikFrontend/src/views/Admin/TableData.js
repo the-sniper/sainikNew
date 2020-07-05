@@ -56,7 +56,8 @@ class TableData extends Component {
         <td>{data.username}</td>
         <td>{data.mobileNumber}</td>
         <td>
-          <a href="#"
+          <a
+            href="#"
             onClick={() => this.setState({ isShown: !this.state.isShown })}
             className="vuViewDoc"
           >
@@ -80,8 +81,14 @@ class TableData extends Component {
             </>
           )}
         </td>
-        <CustomModal isModalOpen={this.state.isShown} modalTitle="Verify Documents" >
-          <img className="userUpdDoc" src={data.documents}/>
+        <CustomModal
+          isModalOpen={this.state.isShown}
+          onUserClose={() => {
+            this.setState({ isShown: !this.state.isShown });
+          }}
+          modalTitle="Verify Documents"
+        >
+          <img className="userUpdDoc" src={data.documents} />
         </CustomModal>
       </>
     );

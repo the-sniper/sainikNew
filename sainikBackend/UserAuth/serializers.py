@@ -17,10 +17,19 @@ class UserSerializer(serializers.ModelSerializer):
 
     password = serializers.CharField(
         write_only=True, min_length=settings.MIN_PASSWORD_LENGTH, required=False)
+    board = serializers.SerializerMethodField()
+
+    def get_board(self, obj):
+        zila = obj.zila.first()
+        board = zila.users.filter(userType=ZILLA_SAINIK)
+        if board:
+            return "Zila Sainik Board, " + board[0].username
+        else:
+            return "No Zilla Sainik Board Assigned"
 
     class Meta:
         model = UserAuthDetails
-        fields = common_fields + ["password", ]
+        fields = common_fields + ["password", "board"]
         read_only_fields = common_read_only_fields
         extra_kwargs = {
             "username": {
@@ -44,7 +53,7 @@ class UserSerializer(serializers.ModelSerializer):
 
         user = self.context["request"].user
         requestFrom = self.context.get("requestFrom")
-        if  requestFrom and requestFrom == "adminPage":
+        if requestFrom and requestFrom == "adminPage":
             return data
 
         if(user.is_authenticated and user.userType not in [ZILLA_SAINIK]):
@@ -120,3 +129,13 @@ class UserSerializer(serializers.ModelSerializer):
                 "Current email and new email cannot be same.")
 
         return super().update(instance, validated_data)
+
+
+class UserApprovalStatus(serializers.ModelSerializer):
+
+    slno = serializers.ReadOnlyField()
+    approvalStatus = serializers.ReadOnlyField()
+
+    class Meta:
+        model = UserAuthDetails
+        fields = ['slno', 'approvalStatus']

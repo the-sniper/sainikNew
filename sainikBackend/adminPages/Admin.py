@@ -4,9 +4,10 @@ from django.http import JsonResponse
 from UserAuth.models import *
 from UserAuth.permissions import *
 from UserAuth.serializers import *
+from rest_framework.response import Response
 import logging
 
-logger = logging.getLogger("app_logger")
+logger = logging.getLogger("apps_logger")
 
 
 class Admin(mixins.ListModelMixin, mixins.UpdateModelMixin, viewsets.GenericViewSet):
@@ -25,8 +26,18 @@ class Admin(mixins.ListModelMixin, mixins.UpdateModelMixin, viewsets.GenericView
             return self.queryset
 
     def list(self, request):
+
         queryset = self.get_queryset()
-        return JsonResponse(UserSerializer(queryset.filter(approvalStatus=PENDING), many=True).data, safe=False)
+        userList = request.query_params.get("userList")
+        userList = [x.strip()
+                    for x in userList.split(",") if x] if userList else None
+
+        if userList:
+            logger.debug(f"UserList sent : {userList}")
+            return Response(UserApprovalStatus(queryset.filter(slno__in=userList), many=True).data)
+        else:
+
+            return JsonResponse(UserSerializer(queryset.filter(approvalStatus=PENDING), many=True).data, safe=False)
 
     def update(self, request, pk=None):
         obj = self.get_object()

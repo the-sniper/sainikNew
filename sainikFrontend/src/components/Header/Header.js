@@ -6,18 +6,17 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
-    state: state,
+    user: state.user,
   };
 };
 class Header extends Component {
   render() {
-    const { user } = this.props.state;
+    const { user } = this.props;
     return (
       <div className="header customContainer d-flex justify-content-between align-items-center">
         <h3>Zilla Sainik Board, Puduchery</h3>
         <ul className="headNav d-flex justify-content-between align-items-center">
-          {this.props.state.user.userDetails.profileDetails.userType ===
-          "ZSB" ? (
+          {user.userDetails.profileDetails.userType === "ZSB" ? (
             <>
               <li>
                 <NavLink
@@ -56,7 +55,7 @@ class Header extends Component {
                 className="d-flex justify-content-start align-items-center"
                 onClick={() => {
                   user.userDetails.isAuthenticated = false;
-                  setTimeout(() => (window.location = Routes.login.url), 1000);
+                  // setTimeout(() => (window.location = Routes.login.url), 1000);
                 }}
               >
                 <span class="material-icons">power_settings_new</span>

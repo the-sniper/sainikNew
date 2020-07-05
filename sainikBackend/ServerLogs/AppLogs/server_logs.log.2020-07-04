@@ -1,0 +1,104 @@
+2020-07-04 19:32:38,944, DEBUG, Admin.py, list, 28 : Request.data : {}
+2020-07-04 19:33:07,747, DEBUG, Admin.py, list, 28 : Request.data : {}
+2020-07-04 19:33:30,918, DEBUG, Admin.py, list, 28 : Request.data : {}
+2020-07-04 19:35:19,219, DEBUG, Admin.py, list, 28 : Request.data : {}
+2020-07-04 19:35:38,949, DEBUG, Admin.py, list, 28 : Request.data : {}
+2020-07-04 19:38:07,032, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {}>
+2020-07-04 19:38:35,883, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 19:41:43,493, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 19:41:43,493, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 19:43:34,317, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 19:43:34,318, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:08:46,327, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 20:08:46,327, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:10:27,080, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 20:10:27,080, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:10:27,080, DEBUG, Admin.py, list, 31 : This is dict : param
+2020-07-04 20:11:31,779, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 20:11:31,780, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:11:31,780, DEBUG, Admin.py, list, 31 : This is dict : param
+2020-07-04 20:13:49,858, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {'test': ['param']}>
+2020-07-04 20:13:49,859, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:13:49,859, DEBUG, Admin.py, list, 31 : This is dict : param
+2020-07-04 20:14:06,968, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {}>
+2020-07-04 20:14:06,969, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:14:06,969, DEBUG, Admin.py, list, 31 : This is dict : None
+2020-07-04 20:14:58,771, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {}>
+2020-07-04 20:14:58,771, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:14:58,771, DEBUG, Admin.py, list, 31 : This is dict : None
+2020-07-04 20:15:13,789, DEBUG, Admin.py, list, 28 : Request.params : <QueryDict: {}>
+2020-07-04 20:15:13,789, DEBUG, Admin.py, list, 30 : hasattr(test) : False
+2020-07-04 20:15:13,789, DEBUG, Admin.py, list, 31 : This is dict : None
+2020-07-04 20:17:11,521, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:17:11,521, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:17:11,521, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:17:23,756, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['12']}>
+2020-07-04 20:17:23,756, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:17:23,756, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:17:49,180, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['12']}>
+2020-07-04 20:17:49,180, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:17:49,181, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:18:02,232, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['12']}>
+2020-07-04 20:18:02,233, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:18:02,233, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:18:18,855, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['12']}>
+2020-07-04 20:18:18,855, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:18:18,855, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:18:27,546, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:18:27,547, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:18:27,547, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:20:52,835, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:20:52,835, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:20:52,835, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:20:57,413, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['12']}>
+2020-07-04 20:20:57,414, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:20:57,414, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:21:04,625, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['1']}>
+2020-07-04 20:21:04,626, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:21:04,626, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:21:08,272, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:21:08,273, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:21:08,274, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:21:16,432, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15']}>
+2020-07-04 20:21:16,434, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:21:16,434, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:22:10,219, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15']}>
+2020-07-04 20:22:10,219, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:22:10,219, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:22:10,222, DEBUG, Admin.py, list, 38 : UserList sent : 15
+2020-07-04 20:22:28,158, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15, 20']}>
+2020-07-04 20:22:28,158, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:22:28,159, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:22:28,162, DEBUG, Admin.py, list, 38 : UserList sent : 15, 20
+2020-07-04 20:23:08,106, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15, 20']}>
+2020-07-04 20:23:08,106, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:23:08,106, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:23:08,109, DEBUG, Admin.py, list, 38 : UserList sent : ['15, 20']
+2020-07-04 20:23:49,644, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15, 20']}>
+2020-07-04 20:23:49,644, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:23:49,645, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:23:49,649, DEBUG, Admin.py, list, 39 : UserList sent : ['15', '20']
+2020-07-04 20:23:56,327, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:23:56,327, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:23:56,328, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:24:20,148, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:24:20,148, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:24:20,148, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:26:53,057, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {}>
+2020-07-04 20:26:53,058, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:26:53,059, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:26:56,860, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15, 20']}>
+2020-07-04 20:26:56,864, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:26:56,864, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:26:56,867, DEBUG, Admin.py, list, 40 : UserList sent : ['15', '20']
+2020-07-04 20:27:02,820, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15']}>
+2020-07-04 20:27:02,821, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:27:02,821, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:27:02,823, DEBUG, Admin.py, list, 40 : UserList sent : ['15']
+2020-07-04 20:27:51,736, DEBUG, Admin.py, list, 29 : Request.params : <QueryDict: {'userList': ['15']}>
+2020-07-04 20:27:51,736, DEBUG, Admin.py, list, 31 : hasattr(test) : False
+2020-07-04 20:27:51,736, DEBUG, Admin.py, list, 32 : This is dict : None
+2020-07-04 20:27:51,738, DEBUG, Admin.py, list, 40 : UserList sent : ['15']
+2020-07-04 20:28:23,400, DEBUG, Admin.py, list, 36 : UserList sent : ['15']
+2020-07-04 20:39:08,222, DEBUG, Admin.py, list, 36 : UserList sent : ['15']
+2020-07-04 20:40:44,132, DEBUG, Admin.py, list, 36 : UserList sent : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']
