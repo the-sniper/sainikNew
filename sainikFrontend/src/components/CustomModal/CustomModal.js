@@ -15,7 +15,13 @@ class CustomModal extends Component {
             <div className="cmBody">
               <div className="cmHead d-flex justify-content-between align-items-center">
                 <h3 className="cmTitle">{this.props.modalTitle}</h3>
-                <a href="#" onClick={this.props.onUserClose}>
+                <a
+                  href="#"
+                  onClick={() => {
+                    this.props.onUserClose();
+                    document.body.classList.remove("noScroll");
+                  }}
+                >
                   <span className="material-icons">close</span>
                 </a>
               </div>
