@@ -8,6 +8,7 @@ import DependentDetails from "./DependentDetails";
 import ContactDetails from "./ContactDetails";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import TertButton from "../../components/Input/Button/TertButton";
+import { Link } from "react-router-dom";
 
 class UserDetailsForm extends Component {
   constructor(props) {
@@ -61,39 +62,39 @@ class UserDetailsForm extends Component {
             <ul class="nav d-flex justify-content-between">
               <li class="nav-item completed">
                 <span class="checkpoint">01</span>
-                <a class="nav-link active" href="#">
+                <Link class="nav-link active" disabled to="#">
                   Service Details
-                </a>
+                </Link>
               </li>
               <li class="nav-item active">
                 <span class="checkpoint">02</span>
-                <a class="nav-link" href="#" onClick={this.openSlide}>
+                <Link class="nav-link" to="#" onClick={this.openSlide}>
                   Pension Details
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <span class="checkpoint">03</span>
-                <a class="nav-link" href="#">
+                <Link class="nav-link" to="#">
                   Personal Details
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <span class="checkpoint">04</span>
-                <a class="nav-link" href="#">
+                <Link class="nav-link" to="#">
                   Contact Details
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <span class="checkpoint">05</span>
-                <a class="nav-link" href="#">
+                <Link class="nav-link" to="#">
                   Family Details
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <span class="checkpoint">06</span>
-                <a class="nav-link" href="#">
+                <Link class="nav-link" to="#">
                   Dependent Details
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
