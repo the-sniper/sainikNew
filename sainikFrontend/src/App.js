@@ -10,6 +10,7 @@ import Search from "./views/Search/Search";
 import Header from "./components/Header/Header";
 import { Routes } from "./RouteConstants";
 import CustomModal from "./components/CustomModal/CustomModal";
+import Multiselect from "react-widgets/lib/Multiselect";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path={Routes.zsbDashboard.url} component={ZsbAdmin} />
           <Route exact path={Routes.search.url} component={Search} />
           <Route exact path={Routes.customModal.url} component={CustomModal} />
+          <Route exact path="/multi" component={Multiselect}/>
         </div>
       </Switch>
     </Router>
