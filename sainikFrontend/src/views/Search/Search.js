@@ -5,6 +5,13 @@ import InputBox from "../../components/Input/InputBox/InputBox";
 import InputCheckbox from "../../components/Input/InputCheckbox/InputCheckbox";
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isShown: true,
+    };
+  }
+
   render() {
     return (
       <div className="sainikSearch container-fluid">
@@ -44,19 +51,31 @@ class Search extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-3">
-            <div className="ssFilters">
-              <div className="ssfTitle d-flex justify-content-between align-items-center">
-                <h3>FILTERS</h3>
-                <span class="material-icons">filter_alt</span>
-              </div>
-              <div className="ssfContent">
-                <p>Board name</p>
-                <InputCheckbox label="Puduchery" />
+          {!this.state.isShown && (
+            <a className="showLtPanel" href="#" onClick={() => this.setState({ isShown: true })}>
+              <span class="material-icons">filter_alt</span>
+            </a>
+          )}
+          {this.state.isShown && (
+            <div className="col-3">
+              <div className="ssFilters">
+                <div className="ssfTitle d-flex justify-content-between align-items-center">
+                  <h3>FILTERS</h3>
+                  <a href="#"
+                    onClick={() => this.setState({ isShown: false })}
+                    class="material-icons hideLtPanel"
+                  >
+                    arrow_back
+                  </a>
+                </div>
+                <div className="ssfContent">
+                  <p>Board name</p>
+                  <InputCheckbox label="Puduchery" />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-9">
+          )}
+          <div className="col">
             <div className="table-responsive">
               <table class="table table-striped table-hover">
                 <thead class="thead-dark">

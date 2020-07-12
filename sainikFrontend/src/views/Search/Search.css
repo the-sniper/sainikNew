@@ -32,7 +32,7 @@
 }
 .ssFilters {
   background: #f8f8f8;
-  padding: 15px;
+  padding: 10px 15px;
 }
 .ssFilters .ssfTitle {
   margin-bottom: 30px;
@@ -55,4 +55,34 @@
 }
 .ssfContent p {
   font-weight: 500;
+}
+
+.sainikSearch .showLtPanel {
+  margin: 0px 5px;
+  padding: 5px;
+  background: #efefef;
+  color: #343a40;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sainikSearch .hideLtPanel{
+  color: #343a40;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.sainikSearch .showLtPanel:hover, .sainikSearch .hideLtPanel:hover{
+  color: #343a40;
+  background: #e7e7e7;
 }
