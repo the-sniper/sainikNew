@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'StateDistrictList.apps.StatedistrictlistConfig',
     'UserAuth.apps.UserauthConfig',
+    'RanksAndServices.apps.RanksandservicesConfig',
     'ServiceDetails.apps.ServicedetailsConfig',
     'FamilyDetails.apps.FamilydetailsConfig',
     'userDetails.apps.UserdetailsConfig',

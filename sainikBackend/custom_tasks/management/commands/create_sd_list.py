@@ -4,7 +4,16 @@ from StateDistrictList.models import *
 
 class Command(BaseCommand):
 
+    def add_arguments(self, parser):
+        parser.add_argument('-n', '--no_update', action='store_true',
+                            help='Do not update if states and district list already exists.')
+
     def handle(self, *args, **options):
+
+        if options['no_update']:
+            if State.objects.all().__len__() > 0:
+                print("States and District list already present. Not updating as --no_update passed.")
+                return
 
         with open('./districtData.csv', "r") as file:
             data = file.read().split("\n")

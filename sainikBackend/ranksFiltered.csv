@@ -1,0 +1,57 @@
+Rank,Service,Category
+Sepoy,Army,OR
+Lance Naik,Army,OR
+Naik,Army,OR
+Havildar,Army,OR
+Naib Subedar,Army,OR
+Subedar,Army,OR
+Subedar Major,Army,OR
+Lieutenant,Army,Officer
+Captain,Army,Officer
+Major,Army,Officer
+Lt.Colonel,Army,Officer
+Colonel,Army,Officer
+Brigadier,Army,Officer
+Major General,Army,Officer
+Lt.General,Army,Officer
+General,Army,Officer
+Field Marshal,Army,Officer
+Others ,Army,
+,,
+Seaman II,Navy,OR
+Seaman I,Navy,OR
+Leading Seaman,Navy,OR
+Petty Officer,Navy,OR
+Chief Petty Officer,Navy,OR
+Master Chief Petty Officer 2nd,Navy,OR
+Master Chief Petty Officer  1st,Navy,OR
+Sub Lieutenant,Navy,Officer
+Lieutenant,Navy,Officer
+Lt.Commander,Navy,Officer
+Commander,Navy,Officer
+Captain,Navy,Officer
+Commodore,Navy,Officer
+Rear Admiral,Navy,Officer
+Vice Admiral,Navy,Officer
+Admiral,Navy,Officer
+Admiral of the Fleet,Navy,Officer
+Others ,Navy,
+,,
+Aircraftsman,Air Force,OR
+Leading Aircraftsman,Air Force,OR
+Corporal,Air Force,OR
+Sergeant,Air Force,OR
+Junior Warrant Officer,Air Force,OR
+Warrant Officer,Air Force,OR
+Master Warrant Officer,Air Force,OR
+Flying Officer,Air Force,Officer
+Flight Lieutenant,Air Force,Officer
+Squardon Leader,Air Force,Officer
+Wing Commander,Air Force,Officer
+Group Captain,Air Force,Officer
+Air Commodore,Air Force,Officer
+Air Vice Marshal,Air Force,Officer
+Air Marshal,Air Force,Officer
+Air Chief Marshal,Air Force,Officer
+Marshal of the Air Force,Air Force,Officer
+Others ,Air Force,
