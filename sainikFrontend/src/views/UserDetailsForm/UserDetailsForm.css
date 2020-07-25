@@ -10,26 +10,34 @@
   margin-right: 35px;
   height: 625px;
   padding: 45px 30px;
+  position: sticky;
+  top: 30px;
 }
 .userDetailsForm .ltPanel ul {
   height: 100%;
+  padding-left: 0;
 }
 
-.userDetailsForm .ltPanel li {
+.userDetailsForm .ltPanel .tabItem {
   width: 100%;
   text-align: left;
   display: flex;
   align-items: center;
 }
 
-.userDetailsForm .ltPanel li a {
+.userDetailsForm .ltPanel .tabItem a {
   padding-left: 75px;
   color: #d6d6d6;
   font-size: 16px;
   font-weight: 500;
 }
 
-.userDetailsForm .ltPanel li .checkpoint {
+.userDetailsForm .ltPanel .react-tabs__tab{
+  padding: 0;
+  border: none;
+}
+
+.userDetailsForm .ltPanel .tabItem .checkpoint {
   position: absolute;
   content: "";
   width: 50px;
@@ -42,36 +50,36 @@
   border: 1px solid currentColor;
 }
 
-.userDetailsForm .ltPanel li:not(:last-child) .checkpoint::before {
+.userDetailsForm .ltPanel li:not(:last-child) .tabItem .checkpoint::before {
   position: absolute;
   content: "";
   border-right: 2px dashed #d6d6d6;
-  height: 40px;
+  height: 50px;
   top: 48px;
   left: 50%;
 }
-.userDetailsForm .ltPanel li.active .checkpoint::before {
+.userDetailsForm .ltPanel .ltabItemi.active .checkpoint::before {
   border-color: var(--secColor);
 }
 
-.userDetailsForm .ltPanel li.active .checkpoint {
+.userDetailsForm .ltPanel .tabItem.active .checkpoint {
   color: var(--secColor);
   border: 1px solid currentColor;
 }
-.userDetailsForm .ltPanel li.active a {
+.userDetailsForm .ltPanel .tabItem.active a {
   color: var(--secColor);
 }
 
-.userDetailsForm .ltPanel li.completed .checkpoint::before {
+.userDetailsForm .ltPanel .tabItem.completed .checkpoint::before {
   border-color: var(--secColor);
 }
 
-.userDetailsForm .ltPanel li.completed .checkpoint {
+.userDetailsForm .ltPanel .tabItem.completed .checkpoint {
   color: #fff;
   background: var(--secColor);
   border: 1px solid var(--secColor);
 }
-.userDetailsForm .ltPanel li.completed a {
+.userDetailsForm .ltPanel .tabItem.completed a {
   color: var(--secColor);
 }
 .userDetailsForm .rtPanel {
