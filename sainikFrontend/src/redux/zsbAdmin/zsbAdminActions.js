@@ -28,7 +28,7 @@ export const userListFailure = (errorMessage) => {
 };
 
 export const ListUser = () => {
-  return function (dispatch) {
+  return function(dispatch) {
     let state = store.getState();
     if (state.user.userDetails.isAuthenticated) {
       dispatch(userListRequest());
@@ -53,28 +53,28 @@ export const ListUser = () => {
   };
 };
 
-export const approveUser = (id) => {
-  return function (dispatch) {
-    let {userDetails} = store.getState().user;
-    if (userDetails.isAuthenticated) {
-      dispatch(userListRequest());
-      axios
-        .put(`/api/admin/${id}/`, {
-          headers: {
-            "content-type": "multipart/form-data",
-            Authorization: `Token ${userDetails.authToken}`,
-          },
-        })
-        .then((res) => {
-          console.log("From approveUser : ", res);
-          dispatch(ListUser());
-        })
-        .catch((err) => {
-          console.log(err.response);
-          dispatch(userApproveFailure(getError(err)));
-        });
-    } else {
-      dispatch(userListFailure("User not logged in."));
-    }
-  }
-}
+// export const approveUser = (id) => {
+//   return function (dispatch) {
+//     let {userDetails} = store.getState().user;
+//     if (userDetails.isAuthenticated) {
+//       dispatch(userListRequest());
+//       axios
+//         .put(`/api/admin/${id}/`, {
+//           headers: {
+//             "content-type": "multipart/form-data",
+//             Authorization: `Token ${userDetails.authToken}`,
+//           },
+//         })
+//         .then((res) => {
+//           console.log("From approveUser : ", res);
+//           dispatch(ListUser());
+//         })
+//         .catch((err) => {
+//           console.log(err.response);
+//           dispatch(userApproveFailure(getError(err)));
+//         });
+//     } else {
+//       dispatch(userListFailure("User not logged in."));
+//     }
+//   }
+// }

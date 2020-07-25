@@ -23,7 +23,7 @@ class ServiceDetails(models.Model):
         Service, null=False, on_delete=models.DO_NOTHING)
     serviceNumber = models.CharField(max_length=20)
     enrollmentDate = models.DateField()
-    rank = models.ForeignKey(Rank, null=False, on_delete=models.DO_NOTHING)
+    rank = models.ManyToManyField(Rank, null=True)
     trade = models.CharField(max_length=20)
     operationsAttended = models.IntegerField()
     decorations = models.CharField(
@@ -43,7 +43,7 @@ class ServiceDetails(models.Model):
 class PensionDetails(models.Model):
 
     slno = models.AutoField(primary_key=True)
-    user = models.ForeignKey(
+    user = models.OneToOneField(
         UserAuthDetails, on_delete=models.CASCADE, db_column='user')
     lastUnit = models.CharField(max_length=20)
     dateDischarged = models.DateField()
