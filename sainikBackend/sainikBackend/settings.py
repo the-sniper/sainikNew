@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'userDetails.apps.UserdetailsConfig',
     'api.apps.ApiConfig',
     'custom_tasks.apps.CustomTasksConfig',
+    'Trades.apps.TradesConfig',
     'rest_framework',
     'knox'
 

@@ -1,0 +1,849 @@
+Slno,tradeName,NCO,ServiceType
+1,Borer,831.1,AIR FORCE
+2,Instructor Radar Operators,726.2,AIR FORCE
+3,Radio Mechanic Installation,728.8,AIR FORCE
+4,Kitchen Supervisor,831.1,AIR FORCE
+5,Mechanic Tractor,872.1,AIR FORCE
+6,Mechanic Telephone & Telegraph,872.2,AIR FORCE
+7,Instructor Mechanic,872.4,AIR FORCE
+8,As Senior Supervisor & Instsructor of occupations at plus,831.1,AIR FORCE
+9,Assembler frame Aircraft,872.1,AIR FORCE
+10,Control Tower Operator,811.1,AIR FORCE
+11,"Planer,Wood",844.3,AIR FORCE
+12,Mechanical Diesel Engine,811.5,AIR FORCE
+13,Instructor Dent Remover,812.1,AIR FORCE
+14,Blacksmith,732.25,AIR FORCE
+15,Supervisor Telephone and as at above,813.35,AIR FORCE
+16,Brazer,815.1,AIR FORCE
+17,Ledger Clerk,811.1,AIR FORCE
+18,Turner,811.1,AIR FORCE
+19,Mechanical Petrol Engine,811.1,AIR FORCE
+20,Temperer Metal,871.8,AIR FORCE
+21,Welder Gas,873.1,AIR FORCE
+22,Duplicating Machine Operator,873.4,AIR FORCE
+23,Watch Repairer,873.3,AIR FORCE
+24,Cable Joiner Light & Power,872.5,AIR FORCE
+25,Armourer,726.1,AIR FORCE
+26,Welder Electric,832.1,AIR FORCE
+27,Wireless Operator,873.2,AIR FORCE
+28,"Mechanic Precision Instrument,Electrical",873.1,AIR FORCE
+29,Mechanic Precision Instrumental Electrical,873.2,AIR FORCE
+30,Mechanic Precision Instrument,873.3,AIR FORCE
+31,Mechanic Aircraft,873.4,AIR FORCE
+32,Mechanic Road Roller,873.5,AIR FORCE
+33,"Laboratory Assistant,other",872.5,AIR FORCE
+34,Mechanic Precision General,874.8,AIR FORCE
+35,"Fitter,General",855.2,AIR FORCE
+36,Flight Purser,855.3,AIR FORCE
+37,Furniture Maker Wood,851.1,AIR FORCE
+38,"Fitter,Bench,Viceman",851.3,AIR FORCE
+39,"Book-keeper,General",859.65,AIR FORCE
+40,Carpenter Packing cases,841.7,AIR FORCE
+41,Horner,842.1,AIR FORCE
+42,AS Junior Supervisor and Instructor of occupations,839.1,AIR FORCE
+43,Calibrator,728.7,AIR FORCE
+44,Impregnator,839.1,AIR FORCE
+45,AS Junior Supervisor and Instructor,726.1,AIR FORCE
+46,Instructor Music Precision,833.1,AIR FORCE
+47,"Officer Assistant,Senior Clerk",843.3,AIR FORCE
+48,"Painter,Spray",843.6,AIR FORCE
+49,"Photographer,Aerial",845.1,AIR FORCE
+50,Orchestra Conductor (Band master),845.13,AIR FORCE
+51,Planer,845.2,AIR FORCE
+52,Photostate-Camera Operator,845.26,AIR FORCE
+53,"Annealer , Metal",844.2,AIR FORCE
+54,"Assembler,frame aircraft",844.1,AIR FORCE
+55,"Monitor,Telephone and (b) as on pre page",844.3,AIR FORCE
+56,Station Master Roadways,932.2,AIR FORCE
+57,"Kiln Operator,Wood",844.1,AIR FORCE
+58,"Mechanic Aircraft Engine, field Service",844.3,AIR FORCE
+59,Mechanic Aircraft Engine overhauling,842.1,AIR FORCE
+60,Mechanic Maintenance,,AIR FORCE
+61,Assembler Precision Instrument,351.1,AIR FORCE
+62,Gas cutter,844.4,AIR FORCE
+63,Movie cameraman,844.6,AIR FORCE
+64,Nurse General,844.5,AIR FORCE
+65,Goods Supervisor Road Transport,844.8,AIR FORCE
+66,"Photographer,General",841.15,AIR FORCE
+67,Photographeraerial,841.2,AIR FORCE
+68,"Office Superindent,Head Clerk",841.3,AIR FORCE
+69,Audit Clerk,841.6,AIR FORCE
+70,Photographic Projection Camera Operator,851.2,AIR FORCE
+71,Pharmacist,841.5,AIR FORCE
+72,Riveter,835.45,AIR FORCE
+73,Watch Marker,835.25,AIR FORCE
+74,Supervisor Slaughter House,835.3,AIR FORCE
+75,Butler,835.7,AIR FORCE
+76,"Wood Sawyer,Edger",835.4,AIR FORCE
+77,Instructor Music Precision Instrument,835.5,AIR FORCE
+78,Tin Smith,836.2,AIR FORCE
+79,Instructor Welder Electric Plus,836.35,AIR FORCE
+80,Instructor Radar Operator,836.1,AIR FORCE
+81,Instructor Radar Craft,836.55,AIR FORCE
+82,Painter Hand,845.53,AIR FORCE
+83,"Searcher,cussoms",172.2,AIR FORCE
+84,"Stitcher,Hand",173.9,AIR FORCE
+85,Clerk General,,AIR FORCE
+86,Stores Distributor,,AIR FORCE
+87,"Radio Mechanic Installation,Aircraft",,AIR FORCE
+88,Supervisor Turning,,AIR FORCE
+89,Supervisor Watchman,,AIR FORCE
+90,Electrician Automobile,,AIR FORCE
+91,Grinder tool and Cutter,,AIR FORCE
+92,Gauge Maker,,AIR FORCE
+93,"Supervisor,Fire Fighter,Fireman",,AIR FORCE
+94,Switch Board Attendant,,AIR FORCE
+95,Mechanic Motor Cycle,,AIR FORCE
+96,Mechanic Petrol Engine,,AIR FORCE
+97,Telephone Operator P.B.X.,,AIR FORCE
+98,Telegraphist,,AIR FORCE
+99,Physical Instructor,,AIR FORCE
+100,Wood Bender,,AIR FORCE
+101,Assistant Sub-Inspector Police,,AIR FORCE
+102,Radar Operator,,AIR FORCE
+103,Printing Machine operator Photographic,,AIR FORCE
+104,Radio & TV Mechnic,,AIR FORCE
+105,Police Constable,,AIR FORCE
+106,"Printer,Photographic",,AIR FORCE
+107,"Tailor, Cutter Furrier&Related Workers,other",,AIR FORCE
+108,Photographic Enlarger,,AIR FORCE
+109,Radar Mechanic,,AIR FORCE
+110,"Grinder,General Metal",,AIR FORCE
+111,"Driver,Taxi Car",,AIR FORCE
+112,Harness Maker,,AIR FORCE
+113,"Higher Secondary and High School Teachers,other",,AIR FORCE
+114,Joiner Wood,,AIR FORCE
+115,"Mechanic,Aircraft Propeller",,AIR FORCE
+116,Instructor Assembler frame aircraft,,AIR FORCE
+117,Mechanical Tractor,,AIR FORCE
+118,Mechanical Optical Instrument,,AIR FORCE
+119,Browner,,AIR FORCE
+120,Gear Cutter,,AIR FORCE
+121,"Darner,Cloth Mender",,AIR FORCE
+122,Joiner,,AIR FORCE
+123,Dent Remover,,AIR FORCE
+124,Instructor Fitter General,,AIR FORCE
+125,Body Builder Automobile,,AIR FORCE
+126,"Body Builder,Truck",,AIR FORCE
+127,Carpenter Helper Joiner Helper,,AIR FORCE
+128,Band Saw Operator,,AIR FORCE
+129,Sports Coach,,AIR FORCE
+130,"Office Assistant,Senior Clerk",,AIR FORCE
+131,Office Assistant,,AIR FORCE
+132,Instructor Airframe Erector,,AIR FORCE
+133,House keeper(Institutional),,AIR FORCE
+134,Instructor Air Traffic Control,,AIR FORCE
+135,"Fitter, Automobile",,AIR FORCE
+136,"Fire Fighter,Fireman",,AIR FORCE
+137,Officer Superindent;Head Clerk,,AIR FORCE
+138,"Aeronautical Meteorology,supervisor",,AIR FORCE
+139,Traffic Controller Air Service,,AIR FORCE
+140,"Air Field Safety Operator, Gr.II",,AIR FORCE
+141,Air Defence,,AIR FORCE
+142,Monitor Telephone ( Senior Supervisor),,AIR FORCE
+143,"Stitcher,Hand (Harness& Saddle Making)",,AIR FORCE
+144,"Clerks,Cypher",,AIR FORCE
+145,Electrician General,,AIR FORCE
+146,store keeper,,AIR FORCE
+147,Store Verifier,,AIR FORCE
+148,Store-keeper,,AIR FORCE
+149,Mechanic Optical Instrument,,AIR FORCE
+150,"Driver,Truck",,AIR FORCE
+151,Instructor Riveter,,AIR FORCE
+152,Field Mechanic Aircraft,,AIR FORCE
+153,Roll Grinder,,AIR FORCE
+154,Teleprinter Mechanic,,AIR FORCE
+155,Telephone Operator (Public Service),,AIR FORCE
+156,"Sanitary Darogha,Dispenser,Dresser& Fire Fighter",,AIR FORCE
+157,Sanitary Darogha,,AIR FORCE
+158,Instructor Structural Machine,,AIR FORCE
+159,Instructor Tin Smith,,AIR FORCE
+160,Radio Operator,,AIR FORCE
+161,"Driver,Car",,AIR FORCE
+162,Despatch rider,,AIR FORCE
+163,"Developer,Photographic",,AIR FORCE
+164,"Developer,Photographic Printer",,AIR FORCE
+165,Accounts Clerk,,AIR FORCE
+166,Instructor Sheet Metal Machine Operator,,AIR FORCE
+167,Dispenser,,AIR FORCE
+168,Aeronautical Meteorologist,,AIR FORCE
+169,Battery repairer,,AIR FORCE
+170,Instructor Sheet Metal Worker,,AIR FORCE
+171,Accountant,,AIR FORCE
+172,Butcher Supervisor,,AIR FORCE
+173,Aeronautical Meteorology Instructor,,AIR FORCE
+174,Monitor Telephone (Junior Supervisor),,AIR FORCE
+175,Battery Servicing Man,,AIR FORCE
+176,Signaller Telegraph,,AIR FORCE
+177,Sergent Police,,AIR FORCE
+178,Dresser,,AIR FORCE
+179,"Fitter,Bench",,AIR FORCE
+180,Shaper,,AIR FORCE
+181,"Driller,General",,AIR FORCE
+182,"Driver,Ambulance",,AIR FORCE
+183,"Traffic Inspector,Motor Transport",,AIR FORCE
+184,Sheet Metal Marker,,AIR FORCE
+185,"Science and Engineering Technician,other",,AIR FORCE
+186,Engine Tester Aircraft,,AIR FORCE
+187,"Enlarger,photographic",,AIR FORCE
+188,"Tool Setter,General",,AIR FORCE
+189,tradeName,,AIR FORCE
+190,Senior Clerk,,AIR FORCE
+191,Sergeant,,AIR FORCE
+192,Steward Ship,,AIR FORCE
+193,"Examiner, Wood Working",,AIR FORCE
+194,Head Clerk,,AIR FORCE
+195,Sub-Inspector Police,,AIR FORCE
+196,Wood Turner,,AIR FORCE
+197,Supervisor Automobile Fitters,,AIR FORCE
+198,WoodPolisher,,AIR FORCE
+199,Supervisor Bus Service,,AIR FORCE
+200,Typist,,AIR FORCE
+201,Supervisor Truck Services,,AIR FORCE
+202,"Traffic Controller,Air Service",,AIR FORCE
+203,Fire Officer,,AIR FORCE
+204,Electrical Fitter,,AIR FORCE
+205,Battery Charger,,AIR FORCE
+206,"Umpire,Referce(Sports)",,AIR FORCE
+207,Wages Clerk,,AIR FORCE
+208,"Driver,Bus",,AIR FORCE
+209,Hardner Metal,,AIR FORCE
+210,Supervisor Drilling,,AIR FORCE
+211,Sheet Metal Machine Operator,,AIR FORCE
+212,Supervisor Milling,,AIR FORCE
+213,Sheet Metal Worker General,,AIR FORCE
+214,Sheet Metal Worker Structural,,AIR FORCE
+215,Supervisor Radar Operator,,AIR FORCE
+216,Higher Secondary and High School Teacher,,AIR FORCE
+217,Instructor Welder Gas,,AIR FORCE
+218,Metal Sprayer,,AIR FORCE
+219,Carpenter,,AIR FORCE
+220,"Instructor,Aerodrome Control Tower Operation",,AIR FORCE
+221,Microstat Cameraman,,AIR FORCE
+222,"Camera man,Photo-mechanical",,AIR FORCE
+223,Instructor Blacksmith,,AIR FORCE
+224,Instrumental Musician Wind Instruments,,AIR FORCE
+225,Middle School Teacher,,AIR FORCE
+226,"Cameraman,Motion Picture",,AIR FORCE
+227,Instructor Brazer,,AIR FORCE
+228,Instsrumental Musician Precision Instruments,,AIR FORCE
+229,Miller,,AIR FORCE
+230,Instructor Carpenter General,,AIR FORCE
+231,"Fitter,Arms",,AIR FORCE
+232,Fire Fighter,,AIR FORCE
+233,Film Developing Machine Operator,,AIR FORCE
+234,Fitter General,,AIR FORCE
+235,Fire Prevention Officer,,AIR FORCE
+236,Electrician Aircraft,,AIR FORCE
+237,Instructor Music Wind Instrument,,AIR FORCE
+238,Instructor Painter Spray,,AIR FORCE
+239,"Mechanic,Precision Instrument",,AIR FORCE
+240,"Mechanic,Precision General",,AIR FORCE
+241,"Mechanic Aircraft,Engine overhauling",,AIR FORCE
+242,Mechanic Automobile,,AIR FORCE
+243,Slotter,,AIR FORCE
+244,Mechanic Automiser & Fuel Pump Diesel,,AIR FORCE
+245,Mechanic Diesel Engine,,AIR FORCE
+246,Airframe Erector,,AIR FORCE
+247,Air Frame Fitter,,AIR FORCE
+248,Airframe Technician,,AIR FORCE
+249,"Annealer,Metal",,AIR FORCE
+250,Air Force Trade,,AIR FORCE
+251,Airfield Safety Operator,,AIR FORCE
+252,Store Clerk,,AIR FORCE
+253,Crane and Hoist Operator,156.2,NAVY
+254,Electrician general Instructor,851.1,NAVY
+255,Electrical Fitter,,NAVY
+256,Foreman Elerctrical Aircraft,851.3,NAVY
+257,Electric Overseer,,NAVY
+258,"Radio Operator ,Ship",854.4,NAVY
+259,Radio Craftsman Maintenances,852.3,NAVY
+260,Mechanic automobile,841.3,NAVY
+261,Vaccinator,835.15,NAVY
+262,"Shipwright,Wood",835.25,NAVY
+263,Mixing Machine attendant,835.45,NAVY
+264,Assembler,842.3,NAVY
+265,"Assembler,Stationary & Diesel Engine",842.35,NAVY
+266,"Assembler , Turbine & Steam Engine",842.45,NAVY
+267,Assembler Refrigeration,842.55,NAVY
+268,Mechanic Petrol Engine,845.13,NAVY
+269,"Mechanic, Stationary Steam Engine",845.3,NAVY
+270,Mechanic Turbine,845.35,NAVY
+271,"Fitter,Arms",845.37,NAVY
+272,Fitter Stationary Steam Engine,845.4,NAVY
+273,"Mechanic ,Regrigeration &AC",845.53,NAVY
+274,Mechanic Stationary steam engine,845.57,NAVY
+275,Mechanic Aircraft Engine,845.7,NAVY
+276,Shop Assistanst,873.1,NAVY
+277,Boiler Tindal,874.5,NAVY
+278,Meter Reader,845.84,NAVY
+279,Shot Firer,816.2,NAVY
+280,Massuer,819.15,NAVY
+281,Sergeant Police,816.3,NAVY
+282,Cashier,816.4,NAVY
+283,Kitchen Supervisor,816.5,NAVY
+284,"Carpenter, Boat Building",816.6,NAVY
+285,"Carpenters,Joiners",816.7,NAVY
+286,Cenematograph Operator,816.8,NAVY
+287,Carpentership,819.9,NAVY
+288,Pump Driver,812.1,NAVY
+289,Engine Tester Helper Aircraft,844.4,NAVY
+290,Mechanic Automiser & Fuel Pump Diesel,844.7,NAVY
+291,Fire Fighter,844.8,NAVY
+292,Foreman Mechanic Automobile,844.7,NAVY
+293,Foreman Automobile Workshop,844.8,NAVY
+294,Forest Guard,843.3,NAVY
+295,Mechanic Aircraft Engine Overhauling,844.6,NAVY
+296,Mechanic Pump,845.1,NAVY
+297,Mechanic Diesel Engine,843.3,NAVY
+298,Foreman Fitter Arms,842.1,NAVY
+299,"Fitter,Arms,Helper",839.1,NAVY
+300,"Fitter,Marine",842.1,NAVY
+301,Euddrman,842.2,NAVY
+302,Air Traffic Officer,369.62,NAVY
+303,"Driver,Taxi",986.4,NAVY
+304,"Driver,Truck",986.45,NAVY
+305,Fireman Railway Locoshed,570.3,NAVY
+306,Duplicating Machine Operator,986.65,NAVY
+307,Fire Watcher,570.2,NAVY
+308,Foreman Service Stn.,843.5,NAVY
+309,Foreman Radio Craftsman,843.3,NAVY
+310,Foreman Fitter,855.2,NAVY
+311,Foreman Electric Fitter,855.3,NAVY
+312,Electrician,851.3,NAVY
+313,"Electrician,Aircraft",851.1,NAVY
+314,"Foreman Radio Crfaftsman, Maintenance",854.5,NAVY
+315,Foreman Service Mechanic,854.6,NAVY
+316,Radio Craftsman Installaton,854.5,NAVY
+317,Radio Operator,854.6,NAVY
+318,"Electrician,Automobile",855.2,NAVY
+319,Engine Tester Aircraft,851.1,NAVY
+320,"Electrician,General",855.3,NAVY
+321,Armature Winder,859.5,NAVY
+322,"Works,Mistry",855.1,NAVY
+323,Radio Mechanic,854.5,NAVY
+324,Craft Instsructor,156.2,NAVY
+325,"Searcher,Customs",39.1,NAVY
+326,Erector Machine and Equipment,844.5,NAVY
+327,"Foreman, Mech.Automobile",843.5,NAVY
+328,Foreman Elctrician Automobile,843.3,NAVY
+329,"Fitter,General",842.9,NAVY
+330,Fitter Marine,"834,835",NAVY
+331,Foreman Mechanic Aircraft,839.1,NAVY
+332,"Photographer,News",173.1,NAVY
+333,Physical Instructor,173.2,NAVY
+334,Musicians and Related Works,172.2,NAVY
+335,Store Keeper,351.1,NAVY
+336,Store Verifier,351.2,NAVY
+337,Wafer-Baking Machine Operator (Bakery),321.1,NAVY
+338,Control Tower Operator,350.1,NAVY
+339,Teleprinter Operator,390.3,NAVY
+340,Slinger,391.3,NAVY
+341,Lineman. Light & power,391.4,NAVY
+342,House Keeper (Institutional),361.8,NAVY
+343,Rigger,350.1,NAVY
+344,Telephone Operator Trunk PBX,390.1,NAVY
+345,Serang Ship Builging,573.1,NAVY
+346,Physiotherapy technician,193.6,NAVY
+347,Telegraphist,153.1,NAVY
+348,Plane Table,693.1,NAVY
+349,Turbine Operator,322.1,NAVY
+350,TelegraphistOverseas,350.1,NAVY
+351,Wood Polisher,392.3,NAVY
+352,Radio Operator Broadcasting,392.4,NAVY
+353,Elect. Overseer,359.1,NAVY
+354,Time Keeper,390.1,NAVY
+355,tradeName,390.3,NAVY
+356,Turner,354.1,NAVY
+357,Stores Distributor,351.1,NAVY
+358,Telephone Operator PBX,391.1,NAVY
+359,Telephone Operator Trunk,391.2,NAVY
+360,Physical Instructor (C.B Officer),193.6,NAVY
+361,Telephone Operator (Civil),361.1,NAVY
+362,Sweet Master,361.7,NAVY
+363,"Wiremen,Light and power",369.85,NAVY
+364,Steward Ship,392.2,NAVY
+365,Radio Technician ( Radio Manufacturing),861.2,NAVY
+366,"Radio Operator,Aircraft",392.4,NAVY
+367,Radio-Telecommunication Overseer,392.5,NAVY
+368,"Cook,Domestic",392.6,NAVY
+369,Driver Steam Crane,981.8,NAVY
+370,Splicer,981.85,NAVY
+371,Copyist,520.2,NAVY
+372,"Cook,Institutional",520.3,NAVY
+373,painter Building,777.4,NAVY
+374,Barman,777.1,NAVY
+375,Wine Waiter,777.2,NAVY
+376,Movie Cameraman,777.3,NAVY
+377,Telegraph Master,520.9,NAVY
+378,Laboratory Assistant Clinical,520.2,NAVY
+379,Head Light Keeper,520.1,NAVY
+380,Teacher Primary School,520.2,NAVY
+381,Carpenter Mistry,777.5,NAVY
+382,Personnel Clerk,520.6,NAVY
+383,Store Clerk,539.2,NAVY
+384,Sanitory Inspector,539.5,NAVY
+385,Bill Clerk,521.3,NAVY
+386,Wireman,522.9,NAVY
+387,Cable Jointer telephone,521.1,NAVY
+388,Wireless Operator,521.4,NAVY
+389,Bearer,522.2,NAVY
+390,I.C. Engine Driver,510.1,NAVY
+391,Maintenance Mechanic,510.7,NAVY
+392,Boatman,350.1,NAVY
+393,Marker,261.1,NAVY
+394,Refrigeraton Mech Helper,350.1,NAVY
+395,Electric Fitter,851.1,NAVY
+396,Reception Clerk,854.4,NAVY
+397,"Manager,Catering Service",856.2,NAVY
+398,Candy Maker,857.3,NAVY
+399,X-Ray Technician,855.1,NAVY
+400,Clerical Workers,862.2,NAVY
+401,Linen Supervisor,857.1,NAVY
+402,Telegraph Clerk,961.5,NAVY
+403,Recedptionist (Hotel),854.3,NAVY
+404,Store Distributor for PO and CPO Appendix-I,982.3,NAVY
+405,"Stoker, Ship",961.1,NAVY
+406,Air Compressor Operator,961.25,NAVY
+407,Ammonia Compressor Attendent,961.6,NAVY
+408,Radar Mechanic,961.7,NAVY
+409,Field Mechani Aircraft,961.8,NAVY
+410,Boiler Maker,962.3,NAVY
+411,"Driver,Car",973.1,NAVY
+412,"Ovenman,Bakery",963.1,NAVY
+413,Room Bearer,845.9,NAVY
+414,"Fitter ,Helper",984.1,NAVY
+415,Butler,951.3,NAVY
+416,Umpire,961.3,NAVY
+417,Industrial Nurse,961.2,NAVY
+418,Daphtari,973.88,NAVY
+419,"Serang, Deck",982.1,NAVY
+420,Book Keeper,962.1,NAVY
+421,"Boiler Attendant,Oil Fired",962.2,NAVY
+422,Boiler Fireman,962.2,NAVY
+423,Dress Diver,974.37,NAVY
+424,Mechanical Overseer,845.3,NAVY
+425,"Mechanic, Turbine",845.35,NAVY
+426,Foreman,845.37,NAVY
+427,"Fitter,Stationary Steam Engne",845.4,NAVY
+428,"Assembler,Turbin & Ssteam Engine",842.45,NAVY
+429,Atheletics Coach,842.55,NAVY
+430,Navy Trade,180,NAVY
+431,Radar Craftsman Installation,571.3,NAVY
+432,Security Officer,572.5,NAVY
+433,Excise Inspector,572.7,NAVY
+434,Serang Engine Room,574.1,NAVY
+435,Sheet Metal Worker,571.2,NAVY
+436,"Surveyor,Marine",572.3,NAVY
+437,Exhaust Fan Operator,572.2,NAVY
+438,"Instructor,Physical",571.1,NAVY
+439,"Inspector,Police",572.1,NAVY
+440,Leveller for A.B,981.4,NAVY
+441,Office Assistant,981.75,NAVY
+442,"Painter,WoodWork & Furniture",931.2,NAVY
+443,"Painter,Hand",931.1,NAVY
+444,Dental Assistant,358.1,NAVY
+445,Head Cook,351.1,NAVY
+446,Physical Instructor (C.B. Officer),193.6,NAVY
+447,"Baker,General",193.3,NAVY
+448,Steam Engine Driver,193.4,NAVY
+449,Wages Clerk,193.7,NAVY
+450,Armourer,839.1,NAVY
+451,Miller,359.9,NAVY
+452,Painter Mixer,931.1,NAVY
+453,"Painter,Building",931.2,NAVY
+454,Security Guard,981.3,NAVY
+455,"Boiler Attendant,Coal Fired",981.6,NAVY
+456,Excise Constable,981.7,NAVY
+457,"Painter,Steel Structure",939.1,NAVY
+458,Pantry Man,939.2,NAVY
+459,General Nurse,660.2,NAVY
+460,FireFigher,660.3,NAVY
+461,Fire Officer,570.3,NAVY
+462,Joinership,193.6,NAVY
+463,Shaper,981.1,NAVY
+464,Painter Steel Structure,939.4,NAVY
+465,Sanitory Deroghra,972.1,NAVY
+466,Sports Coach,972.2,NAVY
+467,Station Tech.Assistant,972.3,NAVY
+468,Tea & Coffee Maker,28.4,NAVY
+469,Police Constable,37.1,NAVY
+470,"LightKeeper,Lighthouse",37.2,NAVY
+471,Switch Board attendant,28.1,NAVY
+472,Signallership,714.1,NAVY
+473,Skin Diver,714.9,NAVY
+474,Godown Keeper,84.1,NAVY
+475,Innoculator,84.3,NAVY
+476,Laskar Khalasi,60.1,NAVY
+477,Diarist,81.1,NAVY
+478,"Photographer,General",76.2,NAVY
+479,Seacon-Sukhani Quarter Master,89.3,NAVY
+480,Science and Engineering Technicians. Others,89.4,NAVY
+481,"Waiter,Bearer (Institutional)",80.1,NAVY
+482,"Inspector,Customs",80.2,NAVY
+483,Plumber,88.1,NAVY
+484,Mech. Maintenance,89.5,NAVY
+485,Oarsman,84.2,NAVY
+486,Surveyor Typographical,351.2,NAVY
+487,Clerk General,359.9,NAVY
+488,Shot Firer Operatives,430.3,NAVY
+489,"Supervisor , Customs",351.1,NAVY
+490,Supervisor Wireless,351.3,NAVY
+491,Correspondance Clerk,350.1,NAVY
+492,"Caulker,Boat Building",331.1,NAVY
+493,Office Superindent,302.1,NAVY
+494,Dredger Operator,350.1,NAVY
+495,Craft Instructor if Matriculate with Science,350.1,NAVY
+496,Pharmacist,350.1,NAVY
+497,Wireless Inspector,350.1,NAVY
+498,"Brick Layor, Refractory",330.1,NAVY
+499,Accounts Clerk,330.2,NAVY
+500,Oiler Greaser,300.1,NAVY
+501,Accountant,120.1,NAVY
+502,Typist,321.1,NAVY
+503,Cartographer Air Survey Draughtsman,30.7,ARMY
+504,Storekeeper,351.1,ARMY
+505,Stores Distributor,351.2,ARMY
+506,Stock Verifier,351.3,ARMY
+507,Mechanic Precision Instrument,841.15,ARMY
+508,Typewriter Mechanic,841.4,ARMY
+509,Calibrator,841.7,ARMY
+510,Watch Maker,841.1,ARMY
+511,Watch Repairer,841.1,ARMY
+512,Teleprinter Mechanic,856.3,ARMY
+513,Mechanic Precision Instrument Electrical,851.2,ARMY
+514,Mechanic Optical Instrument,841.5,ARMY
+515,Radio Technician,854.3,ARMY
+516,Inspector Assembly,859.4,ARMY
+517,Telephone Mechanic,856.2,ARMY
+518,Wiring Inspector,859.3,ARMY
+519,Radio Mechanic,854.4,ARMY
+520,Telephone Installation,856.1,ARMY
+521,X-ray Mechanic,852.4,ARMY
+522,Radar Mechanic,852.3,ARMY
+523,Electronic Mechanic,761.37,ARMY
+524,Mechanic Petrol Engine,845.1,ARMY
+525,Mechanic Automobile,843.3,ARMY
+526,Mechanic Diesel Engine,845.13,ARMY
+527,Mechanic Motor Cycle,843.6,ARMY
+528,Fitter Automobile,843.5,ARMY
+529,Petrol Engine Assembler,842.4,ARMY
+530,Automobile Assembler,843.1,ARMY
+531,Motor Cycle Assembler,843.2,ARMY
+532,Diesel Engine Assemblerr,842.45,ARMY
+533,Automobile Electrician,855.3,ARMY
+534,Wireman Light & Power,855.1,ARMY
+535,Armature Winder,859.5,ARMY
+536,Electrical Fitter,851.3,ARMY
+537,Electrician,851.1,ARMY
+538,Battery Repairer,859.65,ARMY
+539,Arms Fitter,839.1,ARMY
+540,Fitter,842.1,ARMY
+541,Security Officer,573.1,ARMY
+542,Lineman Light and Power,857.1,ARMY
+543,Dental Mechanic,841.85,ARMY
+544,Dental Assistant,81.1,ARMY
+545,Draughtsman Architecture,30.1,ARMY
+546,Draughtsman Civil,30.2,ARMY
+547,Draughtsman Structural,30.5,ARMY
+548,Loco Shunter,983.4,ARMY
+549,Fireman Railway,984.1,ARMY
+550,Fireman Boiler,962.3,ARMY
+551,Driver Railway Steam Engine,983.1,ARMY
+552,Station Officer Overseas Communication,732.1,ARMY
+553,Radio Broadcasting,813.45,ARMY
+554,Telephone Supervisor,850.2,ARMY
+555,Tech Asst Overseas Communication,392.2,ARMY
+556,Control Tower Operator Aerodrome,392.6,ARMY
+557,Telephone Inspector,369.8,ARMY
+558,Telephone Line Inspector,369.75,ARMY
+559,Higher School Teacher (PG + B.E.d),151.1,ARMY
+560,High School Teacher,151.9,ARMY
+561,Language Teacher,151.2,ARMY
+562,Lab Assistant,60.1,ARMY
+563,Printing Machine Mechanic,845.65,ARMY
+564,Petrol Engine Mechanic,845.1,ARMY
+565,Diesel Engine Mechanic,845.13,ARMY
+566,Steam Engine Mechanic,845.35,ARMY
+567,Refrigeration and AC Mechanic,845.7,ARMY
+568,Wireless Operator,392.3,ARMY
+569,Civil Engineer Overseer,31.1,ARMY
+570,Surveyor,37.1,ARMY
+571,Surveyor Topographic,28.1,ARMY
+572,Leveller,37.2,ARMY
+573,Traverser,37.2,ARMY
+574,Way Inspector,31.2,ARMY
+575,Personal Assistant,320.1,ARMY
+576,Stenographer,320.2,ARMY
+577,X-ray Technician,86.1,ARMY
+578,Serang Deck,981.1,ARMY
+579,Plane Tabler,37.1,ARMY
+580,Rador Operator,392.7,ARMY
+581,Railway Station Master,360.1,ARMY
+582,Yard Master Railway,369.33,ARMY
+583,Passenger Train Guard,370.1,ARMY
+584,Goods Train Guard,370.2,ARMY
+585,Translator,135.2,ARMY
+586,Interpreter,135.3,ARMY
+587,Control Tower Operator Aerodrome,392.6,ARMY
+588,Grade Operator,974.2,ARMY
+589,Dragline Operator,974.35,ARMY
+590,Bulldozer Operator,974.1,ARMY
+591,Nursing Attendant,89.1,ARMY
+592,Nurse,84.1,ARMY
+593,Clerk,350.1,ARMY
+594,Typist,321.1,ARMY
+595,Office Assistant,302.1,ARMY
+596,Clerk Accounts,330.2,ARMY
+597,Section Officer,300.1,ARMY
+598,Audit Clerk,339.2,ARMY
+599,Record Clerk,350.1,ARMY
+600,Store Clerk,350.1,ARMY
+601,Dresser,80.3,ARMY
+602,Pharmacist,76.2,ARMY
+603,Lithographic Artists,30.8,ARMY
+604,Retoucher Lithographic,925.1,ARMY
+605,Lab Assistant Clinical,60.1,ARMY
+606,Cable Jointer Light & Power,857.3,ARMY
+607,Switch Board Attendant,961.5,ARMY
+608,Mechanic Road Roller,845.26,ARMY
+609,Mechanic Tractor,845.2,ARMY
+610,Guard Passenger Train,370.1,ARMY
+611,Guard Goods Train,370.2,ARMY
+612,Transferor,926.4,ARMY
+613,Middle School Teacher,152.1,ARMY
+614,Primary School Teacher,153.1,ARMY
+615,P.T.Instructor,193.6,ARMY
+616,Assembler Precision Instrument,841.6,ARMY
+617,Mechanic Precision Instrument,841.15,ARMY
+618,Limbmaker,841.8,ARMY
+619,Fitter,842.1,ARMY
+620,Pattern Maker Wood,819.2,ARMY
+621,Upholsterer,796.2,ARMY
+622,Shoe Maker,801.1,ARMY
+623,Lino Operator,893.1,ARMY
+624,Mono Operator,893.2,ARMY
+625,Mechanic Printing Machine,845.65,ARMY
+626,Printing Press Operators,923.9,ARMY
+627,Machineman Lithograhic Printing,923.6,ARMY
+628,Driver Truck,986.65,ARMY
+629,Telegraphist,391.2,ARMY
+630,Teleprinter Operator,322.1,ARMY
+631,Retoucher Photographic,928.6,ARMY
+632,Cameraman,926.1,ARMY
+633,Photographer,173.1,ARMY
+634,Physiotherapy Technician,88.1,ARMY
+635,Radio Assembly Operator,853.5,ARMY
+636,Battery Servicing man,859.6,ARMY
+637,Sanitary Darogha,89.4,ARMY
+638,Saw Doctor,819.85,ARMY
+639,Saw Grinder,836.6,ARMY
+640,Store Distributor,351.2,ARMY
+641,Shop Assistant,430.3,ARMY
+642,Surveyor Topographical,28.1,ARMY
+643,Electronics Fitter,852.1,ARMY
+644,Electronics Technician,32.2,ARMY
+645,Machinist,835.1,ARMY
+646,Tool Maker,833.1,ARMY
+647,Turner,835.15,ARMY
+648,Mechanic Pump,845.57,ARMY
+649,Fitter Arms,839.1,ARMY
+650,Armourer,839.1,ARMY
+651,Bycycle Fitter,845.73,ARMY
+652,Boiler Maker,874.5,ARMY
+653,Riveter,874.8,ARMY
+654,Manager Livestock Farm,604.1,ARMY
+655,Farmer,621.1,ARMY
+656,Stockman,82.2,ARMY
+657,Concrete Moulder,952.1,ARMY
+658,Bricklayer,951.2,ARMY
+659,Draughtsman Electrical,30.3,ARMY
+660,Petrol Pump Attendant,430.4,ARMY
+661,Crane Operator Diesel,973.15,ARMY
+662,Crane Operator Hydraulic,973.3,ARMY
+663,Mobile Crane Operator,973.35,ARMY
+664,Fitter Marine,845.4,ARMY
+665,Driver Launch,981.5,ARMY
+666,Marine Fitter,845.4,ARMY
+667,Fireman Ship,982.3,ARMY
+668,Fitter Loco,845.43,ARMY
+669,Mechanic Stationery Steam Engine,845.35,ARMY
+670,Gauger Oil Well,716.7,ARMY
+671,Fitter Railway Signals,845.75,ARMY
+672,Photo Engraving Operatives,926.9,ARMY
+673,Abdar,521.3,ARMY
+674,Bearer,989.9,ARMY
+675,Chokidar,574.1,ARMY
+676,Patroller Customs,572.6,ARMY
+677,Forest Guard,660.2,ARMY
+678,Peon,358.2,ARMY
+679,Shot Firer Operativers,714.9,ARMY
+680,Sub Inspector (Telephones & Telegraph),850.3,ARMY
+681,Telephone Fault Controller,399.2,ARMY
+682,Cable Jointer Telephone & Telegraph,850.3,ARMY
+683,Lineman Telephone,857.2,ARMY
+684,Turret,835.2,ARMY
+685,Shaper,835.25,ARMY
+686,Planer,835.3,ARMY
+687,Slotter,835.4,ARMY
+688,Miller,835.45,ARMY
+689,Gear Cutter,835.5,ARMY
+690,Radial Driller,835.65,ARMY
+691,Cylinder Borer,835.75,ARMY
+692,Honer,836.35,ARMY
+693,Lapper,836.4,ARMY
+694,Radial Driller,835.65,ARMY
+695,Scrapper Operator,974.15,ARMY
+696,Power Shovel Operator,974.23,ARMY
+697,Dredger Operator,974.37,ARMY
+698,Trench Digging Machine Operator,974.3,ARMY
+699,Dumper Operator,974.45,ARMY
+700,Scoop Truck Operator,974.47,ARMY
+701,Tractor Driver Construction,979.1,ARMY
+702,Tractor Driver Farm,650.1,ARMY
+703,Signallership,391.3,ARMY
+704,Telephone Operator,392.3,ARMY
+705,Radio Operator,861.2,ARMY
+706,Carpenter,811.1,ARMY
+707,Mechanic Refrigeration and AC,845.7,ARMY
+708,Seaconny,981.3,ARMY
+709,Paint Mixer,939.4,ARMY
+710,Shipwright,816.2,ARMY
+711,Driver Bus,986.55,ARMY
+712,Driver Ambulance,986.5,ARMY
+713,Shoe Repairer,801.3,ARMY
+714,Skiver,802.18,ARMY
+715,Cutter Machine,802.12,ARMY
+716,Scourer,802.38,ARMY
+717,Sole rounding Machine Operator,802.5,ARMY
+718,Sole Channeller,802.52,ARMY
+719,Niler,802.56,ARMY
+720,Trimmer,802.74,ARMY
+721,Edge Setter,802.78,ARMY
+722,Borer,835.7,ARMY
+723,Grinder,836.1,ARMY
+724,Fitter Railway Carriage,845.47,ARMY
+725,Train Examiner,369.4,ARMY
+726,Welder Gas,872.1,ARMY
+727,Welder Electric,872.2,ARMY
+728,Spot Welder,872.3,ARMY
+729,Well Driller,716.1,ARMY
+730,Driller Fire Broad Vehicle,986.55,ARMY
+731,Derrickman,716.2,ARMY
+732,Trainer Animal,189.55,ARMY
+733,Instrument Musician,180.6,ARMY
+734,Band Master,180.2,ARMY
+735,Musician,180.5,ARMY
+736,Balacksmith,831.1,ARMY
+737,Village Blacksmith,831.2,ARMY
+738,Carpenter Construction,811.2,ARMY
+739,Carpenter General,811.1,ARMY
+740,Carpenter Structural,811.3,ARMY
+741,Bracksman Railway,370.3,ARMY
+742,Parcel Checker,975.1,ARMY
+743,Cook Institutional,520.2,ARMY
+744,Cook Domestic,520.3,ARMY
+745,Pantryman,520.6,ARMY
+746,Head Cook,520.1,ARMY
+747,Driver Car,986.4,ARMY
+748,Driver Auto Rickshaw,986.8,ARMY
+749,Despatch Rider,381.2,ARMY
+750,IC Engine Driver,961.2,ARMY
+751,Air Compressure Operator,961.25,ARMY
+752,Pump Operator,961.7,ARMY
+753,Road Roller Driver,974.7,ARMY
+754,Batching & Mixing Plant Operator Construction,974.83,ARMY
+755,Driller Machine,713.1,ARMY
+756,Boiler Tindal,962.1,ARMY
+757,Boiler Attendt,962.2,ARMY
+758,Concreter,96.8,ARMY
+759,Pile Driver,974.32,ARMY
+760,Farrier,831.6,ARMY
+761,Syce,569.1,ARMY
+762,Chowkidal,574.1,ARMY
+763,Loaders and Unloaders,971.1,ARMY
+764,Boiler Cleaner,963.2,ARMY
+765,Cleaner Vehicles,874.9,ARMY
+766,Motor Attendant,961.9,ARMY
+767,Athletic Coach,193.3,ARMY
+768,Sports Coach,193.4,ARMY
+769,Umpire,193.7,ARMY
+770,Stocksman,82.2,ARMY
+771,Stone Mason,951.1,ARMY
+772,Brick Layor Construction,951.2,ARMY
+773,Blacksmitch,831.1,ARMY
+774,Police Constable,571.3,ARMY
+775,Inspector of Police (JCO),571.1,ARMY
+776,Moulder,725.1,ARMY
+777,Oiler and Greaser,963.1,ARMY
+778,Radar Operator,392.7,ARMY
+779,Washing Machine Operator,550.2,ARMY
+780,Drying Machine Operator,550.3,ARMY
+781,Calenderar Saris,551.7,ARMY
+782,Dry Cleaner,551.2,ARMY
+783,Fork lift Truck Operator,974.55,ARMY
+784,Tyre Repairer,903.6,ARMY
+785,Moulder Rubber Tube,903.7,ARMY
+786,Tyre Moulder,903.4,ARMY
+787,Tube and Tyre Fitter,903.65,ARMY
+788,Painter,932.1,ARMY
+789,Painter Wood Work & Furniture,939.2,ARMY
+790,Painter Building,931.1,ARMY
+791,Painter Steel Structure,931.2,ARMY
+792,Line and Platelayer,985,ARMY
+793,Postman,380.1,ARMY
+794,Dak Peon,381.3,ARMY
+795,Record Lifter,358.9,ARMY
+796,Daftry,358.1,ARMY
+797,Sorter Mail,389.4,ARMY
+798,Jop Printer,921.1,ARMY
+799,Compositor Hand,921.2,ARMY
+800,Impositor,921.3,ARMY
+801,Hand Pressman,923.1,ARMY
+802,Hand Printing Machineman,923.2,ARMY
+803,Harness Maker,803.1,ARMY
+804,Saddler,803.2,ARMY
+805,Wood Sawyer,732.1,ARMY
+806,Wood Machinist,813.1,ARMY
+807,Wood Turner,813.15,ARMY
+808,Planer Wood,813.35,ARMY
+809,Band Saw Operator,732.25,ARMY
+810,Cross cut saw operator,732.4,ARMY
+811,Circular saw operator,732.3,ARMY
+812,Riding Instructor,193.5,ARMY
+813,Stevedore,971.1,ARMY
+814,Slinger,972.2,ARMY
+815,Winch Operator,973.65,ARMY
+816,Splicer Cables,972.3,ARMY
+817,Lascar,981.4,ARMY
+818,Tinsmith,873.5,ARMY
+819,Brazer,872.5,ARMY
+820,Points Jamadar Railway,985.3,ARMY
+821,Pointsman Railway,985.3,ARMY
+822,Signalman,985.1,ARMY
+823,Traffic Shunter Railway,985.4,ARMY
+824,Uholsterer,796.1,ARMY
+825,Cushion Maker,796.4,ARMY
+826,Barber,560.2,ARMY
+827,Baker Bread,777.1,ARMY
+828,Carpenter,811.1,ARMY
+829,Horse Carriage Driver,987.1,ARMY
+830,Cart Driver,987.2,ARMY
+831,Pack Animal Driver,987.4,ARMY
+832,Animal Trainer,189.55,ARMY
+833,Mail Guard RMS,379.1,ARMY
+834,Packer Bags,976,ARMY
+835,Painter Hand,939.1,ARMY
+836,Painters Mate,939.5,ARMY
+837,Leather Cutter Hand,722.2,ARMY
+838,Stitcher Hand,722.2,ARMY
+839,Sweeper,541.1,ARMY
+840,Tailor,791.1,ARMY
+841,Trouser Maker,791.4,ARMY
+842,Shirt Maker,791.5,ARMY
+843,Tailor Cutter,799.5,ARMY
+844,Sewing Machine Operator,795.15,ARMY
+845,Waiter,521.4,ARMY
+846,Butlers,521.9,ARMY
+847,Dhobi,550.1,ARMY
+848,Priest,190.1,ARMY

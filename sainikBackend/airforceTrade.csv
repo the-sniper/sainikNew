@@ -1,0 +1,377 @@
+,,Air Force Trade,
+Sl.No.,Name of the Trade,,NCO Code No.
+1,Blacksmith,,831.1
+2,Welder Gas,,872.1
+3,Welder Electric,,872.2
+4,Hardner Metal,,726.2
+5,Temperer Metal,,726.3
+6,Metal Sprayer,,728.8
+7,Instructor Blacksmith,,831.1
+8,Instructor Welder Gas,,872.1
+9,Instructor Welder Electric Plus,,872.2
+10,Gas cutter,,872.4
+11,AS Junior Supervisor and Instructor,,831.1
+12,AS Junior Supervisor and Instructor of occupations,,872.1
+13,Carpenter,,811.1
+14,"Mechanic,Aircraft Propeller",,844.3
+15,Joiner,,811.5
+16,Furniture Maker Wood,,812.1
+17,Wood Turner,,813.15
+18,Band Saw Operator,,732.25
+19,"Planer,Wood",,813.35
+20,Body Builder Automobile,,815.1
+21,Instructor Carpenter General,,811.1
+22,Sergeant,can work as Junior Supervisor,811.1
+23,Junior Warrant Officer,,811.1
+24,Riveter,,871.8
+25,Sheet Metal Worker General,,873.1
+26,Dent Remover,,873.4
+27,Sheet Metal Machine Operator,,873.3
+28,Tin Smith,,873.5
+29,Brazer,,872.5
+30,"Annealer , Metal",,726.1
+31,Sheet Metal Marker,,832.1
+32,Sheet Metal Worker Structural,,873.2
+33,Instructor Sheet Metal Worker,,873.1
+34,Instructor Structural Machine,,873.2
+35,Instructor Sheet Metal Machine Operator,,873.3
+36,Instructor Dent Remover,,873.4
+37,Instructor Tin Smith,,873.5
+38,Instructor Brazer,,872.5
+39,Instructor Riveter,,874.8
+40,Electrician Aircraft,,855.2
+41,Electrician Automobile,,855.3
+42,Electrician General,,851.1
+43,Switch Board Attendant,,961.5
+44,Electrical Fitter,,851.3
+45,Battery Servicing Man,,859.65
+46,Calibrator,,841.7
+47,Fitter General,,842.1
+48,Armourer,,839.1
+49,Browner,,728.7
+50,"Fitter,Arms",,839.1
+51,"Annealer,Metal",,726.1
+52,Gauge Maker,,833.1
+53,Mechanic Automobile,,843.3
+54,Mechanic Motor Cycle,,843.6
+55,Mechanic Petrol Engine,,845.1
+56,Mechanic Diesel Engine,,845.13
+57,Mechanic Tractor,,845.2
+58,Mechanic Road Roller,,845.26
+59,Airframe Erector,,844.2
+60,Assembler frame Aircraft,,844.1
+61,Mechanic Aircraft,,844.3
+62,"Painter,Spray",,932.2
+63,Instructor Airframe Erector,,844.2
+64,Instructor Assembler frame aircraft,,844.1
+65,Instructor Mechanic,,844.3
+66,Instructor Fitter General,,842.1
+67,Instructor Painter Spray,,
+68,As Senior Supervisor & Instsructor of occupations at plus,,351.1
+,store keeper,,
+69,Engine Tester Aircraft,,844.4
+70,Mechanic Aircraft,Field Service,844.6
+71,Mechanic Aircraft Engine overhauling,,844.5
+72,Field Mechanic Aircraft,,844.8
+73,Mechanic Precision General,,841.15
+74,Mechanic Precision Instrument,,841.2
+75,Mechanic Automiser & Fuel Pump Diesel,,841.3
+76,Assembler Precision Instrument,,841.6
+77,Mechanic Precision Instrumental Electrical,,851.2
+78,Mechanic Optical Instrument,,841.5
+79,Watch Marker,,841.1
+80,Watch Repairer,,841.1
+81,"Tool Setter,General",,834.1
+82,Turner,,835.15
+83,Miller,,835.45
+84,Shaper,,835.25
+85,Planer,,835.3
+86,Borer,,835.7
+87,Slotter,,835.4
+88,Gear Cutter,,835.5
+89,Roll Grinder,,836.2
+90,Horner,,836.35
+91,"Grinder,General Metal",,836.1
+92,Grinder tool and Cutter,,836.55
+93,Mechanic Maintenance,,845.53
+94,Movie cameraman,,172.2
+95,"Photographer,Aerial",,173.9
+96,"Camera man,Photo-mechanical",926.1
+97,Photostate-Camera Operator,926.3
+98,Microstat Cameraman,926.2
+99,"Printer,Photographic",928.1
+100,Printing Machine operator Photographic,928.2
+101,"Developer,Photographic",928.3
+102,Film Developing Machine Operator,928.4
+103,"Enlarger,photographic",928.5
+104,Radar Mechanic,852.3
+105,Radar Operator,392.7
+106,Instructor Radar Craft,852.3
+107,Instructor Radar Operators,392.7
+108,Wireless Operator,392.3
+109,Radio Operator,392.5
+110,Radio Mechanic Installation,854.4
+111,Mechanic Telephone & Telegraph,856.1
+112,Teleprinter Mechanic,856.2
+113,Telegraphist,856.3
+114,Signaller Telegraph,391.1
+115,Assembler Frame Aircraft,844.1
+116,Mechanical Petrol Engine,845.1
+117,Mechanical Diesel Engine,845.13
+118,Mechanical Tractor,845.2
+119,"Mechanic,Precision General",841.15
+120,"Mechanic,Precision Instrument",841.2
+121,Radio & TV Mechnic,854.9
+122,"Mechanic Precision Instrument,Electrical",851.2
+123,Mechanical Optical Instrument,851.5
+124,Fire Fighter,570.3
+125,"Traffic Controller,Air Service",369.2
+126,Control Tower Operator,392.6
+127,Fire Officer,570.2
+128,Store Keeper,351.1
+129,Fire Prevention Officer,570.1
+130,Instructor Air Traffic Control,369.2
+131,"Instructor,Aerodrome Control Tower Operation",392.6
+132,"Fitter,General",839.1
+133,"Kiln Operator,Wood",731.1
+134,Joiner Wood,811.5
+135,"Body Builder,Truck",815.1
+136,"Examiner, Wood Working",819.1
+137,Carpenter Helper Joiner Helper,811.9
+138,Wood Bender,731.3
+139,"Wood Sawyer,Edger",732.2
+140,Impregnator,731.2
+141,WoodPolisher,819.83
+142,Carpenter Packing cases,811.5
+143,Furniture Maker Wood,812.1
+144,Battery Charger,859.6
+145,Battery repairer,859.65
+146,Cable Joiner Light & Power,857.3
+147,"Assembler,frame aircraft",844.1
+148,Painter Hand,939.1
+149,"Mechanic Aircraft,Engine overhauling",844.7
+150,"Mechanic Aircraft Engine, field Service",844.6
+151,"Fitter,Bench,Viceman",842.15
+152,"Fitter, Automobile",843.5
+153,"Fitter,Bench",842.15
+154,"Driver,Truck",986.65
+155,"Driver,Car",986.4
+156,Mechanic Automobile,843.3
+157,Supervisor Automobile Fitters,843.5
+158,Aeronautical Meteorologist,3.1
+159,"Science and Engineering Technician,other",39.1
+160,"Aeronautical Meteorology,supervisor",3.1
+161,Aeronautical Meteorology Instructor,3.1
+162,"Laboratory Assistant,other",34.9
+163,"Photographer,General",172.1
+164,"Cameraman,Motion Picture",172.1
+165,"Developer,Photographic Printer",928.3
+166,Photographic Enlarger,928.1
+167,Photographic Projection Camera Operator,928.5
+168,Photographic ProjectionCamera Operator,173.9
+,Photographeraerial,
+169,Supervisor Radar Operator,392.7
+170,Instructor Radar Operator,392.7
+171,"Stitcher,Hand",795.1
+172,"Darner,Cloth Mender",795.7
+173,"Tailor, Cutter Furrier&Related Workers,other",799.5
+174,Harness Maker,803.1
+175,"Stitcher,Hand (Harness& Saddle Making)",803.5
+176,Turner,835.15
+177,Turner,835.15
+178,"Driller,General",835.65
+179,Miller,835.45
+180,Supervisor Turning,835.15
+181,Supervisor Drilling,835.65
+182,Supervisor Milling,835.45
+183,Wireless Operator,392.3
+184,Radio Operator,985.1
+185,"Radio Mechanic Installation,Aircraft",854.5
+186,Monitor Telephone (Junior Supervisor),361.65
+187,Monitor Telephone ( Senior Supervisor),361.5
+188,Higher Secondary and High School Teacher,151.1
+189,"Higher Secondary and High School Teachers,other",151.9
+190,Middle School Teacher,152.1
+191,"Clerks,Cypher",355.1
+192,Office Assistant,302.1
+193,Clerk General,350.1
+194,Typist,321.1
+195,Clerk General,350.1
+196,Typist,321.1
+197,Clerk General,350.1
+198,Typist,321.1
+199,Accounts Clerk,330.2
+200,Head Clerk,300.1
+201,Store Clerk,351.1
+202,Clerk General,350.1
+203,Wages Clerk,330.2
+204,Typist,321.1
+205,Accounts Clerk,330.2
+206,Audit Clerk,339.2
+207,Head Clerk,300.1
+208,Accountant,120.1
+209,"Book-keeper,General",330.1
+210,Accounts Clerk,330.2
+211,Ledger Clerk,330.4
+212,Audit Clerk,339.2
+213,Officer Superindent;Head Clerk,302.1
+214,"Office Assistant,Senior Clerk",300.1
+215,Typist,321.1
+216,Clerk General,350.1
+217,Duplicating Machine Operator,359.1
+218,"Office Assistant,Senior Clerk",300.1
+219,Clerk General,350.1
+220,Store Clerk,351.1
+221,Stores Distributor,351.2
+222,Store Clerk,351.1
+223,Store Verifier,351.3
+224,Clerk General,350.1
+225,Senior Clerk,302.1
+226,"Office Superindent,Head Clerk",300.1
+227,Telephone Operator (Public Service),390.1
+228,Telephone Operator P.B.X.,390.3
+229,Traffic Controller Air Service,369.2
+230,"Monitor,Telephone and (b) as on pre page",361.65
+231,Supervisor Telephone and as at above,361.6
+232,Dispenser,76.2
+233,Dresser,80.3
+234,Sanitary Darogha,89.4
+235,"Sanitary Darogha,Dispenser,Dresser& Fire Fighter",570.3
+236,Nurse General,84.1
+237,Nurse General,84.1
+238,Pharmacist,76.2
+239,Dresser,80.3
+240,Fire Officer,570.2
+241,Physical Instructor,193.6
+242,Supervisor Watchman,574.1
+243,Sports Coach,193.4
+244,Physical Instructor,193.6
+245,Sports Coach,193.4
+246,Physical Instructor,193.6
+247,Sergeant Police,571.2
+248,"Umpire,Referce(Sports)",193.7
+249,Police Constable,571.3
+250,"Searcher,cussoms",572.5
+251,"Driver,Car",986.4
+252,Despatch rider,381.2
+253,Assistant Sub-Inspector Police,571.1
+254,Sergent Police,571.2
+255,Sub-Inspector Police,571.1
+256,Sergent Police,571.2
+257,Clerk General,350.1
+258,"Fire Fighter,Fireman",570.3
+259,Physical Instructor,193.6
+260,"Office Assistant,Senior Clerk",302.1
+261,Physical Instructor,193.6
+262,"Supervisor,Fire Fighter,Fireman",570.3
+263,"Office Superindent,Head Clerk",300.1
+264,"Officer Assistant,Senior Clerk",302.1
+265,Physical Instructor,193.6
+266,Fire Officer,570.2
+267,House keeper(Institutional),510.1
+268,Kitchen Supervisor,520.1
+269,Steward Ship,539.2
+270,Butler,521.1
+271,House keeper(Institutional),510.1
+272,Kitchen Supervisor,520.1
+273,Steward Ship,539.2
+274,Supervisor Slaughter House,774.2
+275,Butcher Supervisor,774.1
+276,Flight Purser,539.4
+277,House keeper(Institutional),510.1
+278,Kitchen Supervisor,520.1
+279,Supervisor Slaughter House,774.2
+280,Butcher Supervisor,774.1
+281,Flight Purser,539.4
+282,House keeper(Institutional),510.1
+283,Kitchen Supervisor,520.1
+284,Supervisor Slaughter House,774.2
+285,Flight Purser,539.4
+286,"Driver,Truck",986.65
+287,"Driver,Bus",986.55
+288,"Driver,Ambulance",986.5
+289,"Driver,Taxi Car",986.45
+290,"Driver,Car",986.4
+291,Despatch rider,381.2
+292,Station Master Roadways,360.4
+293,Goods Supervisor Road Transport,369.67
+294,Supervisor Truck Services,986.65
+295,Supervisor Bus Service,986.55
+296,Store-keeper,351.1
+297,"Traffic Inspector,Motor Transport",369.6
+298,Goods Supervisor Road Transport,369.67
+299,Station Master Roadways,360.4
+300,Store Keeper,351.1
+301,Instsrumental Musician Precision Instruments,180.4
+302,Instrumental Musician Wind Instruments,180.6
+303,Instructor Music Precision,180.4
+304,Instructor Music Wind Instrument,180.6
+305,Orchestra Conductor (Band master),180.2
+306,Instructor Music Precision Instrument,180.4
+307,Instructor Music Wind Instrument,180.6
+Air,
+SI.No.,Air Force Trade Title
+1,Air Frame Fitter
+2,Air Frame Fitter
+3,Air Frame Fitter
+4,Air Frame Fitter
+5,Air Frame Fitter
+6,Air Frame Fitter
+7,Air Frame Fitter
+8,"Air Field Safety Operator, Gr.II"
+9,Airfield Safety Operator
+10,Airfield Safety Operator
+11,Airfield Safety Operator
+12,Airfield Safety Operator
+13,Airfield Safety Operator
+14,Airframe Technician
+15,Airframe Technician
+16,Airframe Technician
+17,Airframe Technician
+18,Airframe Technician
+19,Airframe Technician
+20,Airframe Technician
+21,Air Defence
+22,
+23,
+Old Trade Fitter II Air Frame Gr.I (Air Craftsman 2 & 1)
+Leading Aircraftsman
+Corporal
+Sergeant
+Junior Warrant Officer
+Warrant Officer
+Master Warrant Officer
+Aircraftsman class 2 & 1
+LAC
+Corporal
+Sergeant
+JWO
+WO & MWO
+Old trade Flight Mechanic Airframe Gr.II (Aircraftsman 2& 1)
+LAC
+Corporal
+Sergeant
+JWO
+WO
+MWO
+Equated Civil Occupation Code Numbers
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"844.2,844.1,844.3,842.1,932.2,726.1,726.2,726.3"
+"570.3,369.2,392.6"
+"570.3,369.2,392.6"
+"570.2,369.2,392.6,351.1"
+"570.2,369.2,B-392.6,351.1"
+"570.1,C-369.2,351.1"
+"570.1,C-369.2,351.1"
+"844.1, 842.1"
+"844.1,842.1,932.2,939.1"
+"844.1,842.1,932.2,939.1"
+"844.1,842.1,932.2,939.1"
+"844.1,842.1,932.2,939.1"
+"844.1,842.1,932.2,939.1"
+"844.1,842.1,932.2,939.1"
