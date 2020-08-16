@@ -50,7 +50,7 @@ class PersonalDetails extends Component {
     },
     {
       inplabel: "PAN card number",
-      type: "number",
+      type: "text",
       name: "pan",
     },
     {
@@ -66,7 +66,7 @@ class PersonalDetails extends Component {
     {
       sellabel: "Religion",
       type: "select",
-      selOption: ["A", "B", "C"],
+      selOption: ["Hinduism", "Islam", "Christianity", "Sikhism", "Budhism", "Jainism", "Others"],
       optionalCheck: "(Optional)",
       name: "relegion",
     },
@@ -147,6 +147,15 @@ class PersonalDetails extends Component {
       name: "offContactNum",
     },
   ];
+
+  limitChar = () => {
+    if(this.id = "servInp_1"){
+      if (this.value.length > 4) {
+        this.value = this.value.slice(0,4); 
+    }
+    }
+  }
+
   createElements = (dataParam) => {
     let radioElementsArray = [];
     let selectElementsArray = [];
@@ -196,6 +205,10 @@ class PersonalDetails extends Component {
                       type={data.type}
                       optional={data.optional}
                       name={data.name}
+                      minLength={data.minLength}
+                      maxLength={data.maxLength}
+                      changeHandler = {this.limitChar}
+
                     />
                   );
                 } else if (data.type === "select") {

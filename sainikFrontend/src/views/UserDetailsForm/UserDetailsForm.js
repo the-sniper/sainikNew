@@ -32,6 +32,8 @@ class UserDetailsForm extends Component {
   }
 
   changeFormNext = () => {
+    console.log('test')
+  
     let currentIndex = this.state.currentFormIndex + 1;
     if (currentIndex >= 6) {
       // currentIndex = 0;

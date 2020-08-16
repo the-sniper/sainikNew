@@ -18,9 +18,11 @@ class InputBox extends Component {
           placeholder={`Enter your ${this.props.label}`}
           required={this.props.required}
           min="0"
-          minLength={this.props.minLength}
+          // minLength={this.props.minLength}
+          max={this.props.maxLength}
           onChange={this.props.changeHandler}
           pattern={this.props.pattern}
+          onBlur={this.props.onBlur}
         />
         <small id="helpId" class="form-text text-muted">
           {this.props.errorText}

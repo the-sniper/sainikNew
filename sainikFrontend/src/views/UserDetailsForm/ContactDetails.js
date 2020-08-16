@@ -11,7 +11,8 @@ class ContactDetails extends Component {
     {
       inplabel: "Mobile number",
       type: "number",
-      name:"mobile"
+      name:"mobile",
+      pattern: "[0-9]{3}[0-9]{3}[0-9]{4}",
     },
     {
       inplabel: "Tele-phone number",
@@ -207,6 +208,7 @@ class ContactDetails extends Component {
                         type={data.type}
                         optional={data.optional}
                         name={data.name}
+                        pattern={data.pattern}
                       />
                     );
                   } else if (data.type === "select") {
