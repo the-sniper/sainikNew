@@ -14,7 +14,8 @@ urlpatterns = [
     # url(r"user", UserView.as_view(), name = "user"),
     path('user_auth/', include('UserAuth.urls')),
     url('registration_essentials/', RegistrationEssentials.as_view()),
-    path('admin/', include(router.urls))
+    path('admin/', include(router.urls)),
+    url('service/', include('ServiceDetails.urls'))
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)

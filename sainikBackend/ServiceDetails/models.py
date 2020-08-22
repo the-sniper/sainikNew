@@ -24,7 +24,7 @@ class ServiceDetails(models.Model):
         Service, null=False, on_delete=models.DO_NOTHING)
     serviceNumber = models.CharField(max_length=20)
     enrollmentDate = models.DateField()
-    rank = models.ManyToManyField(Rank, null=True)
+    rank = models.ForeignKey(Rank, null=True, on_delete=models.DO_NOTHING)
     trade = models.CharField(max_length=20)
     operationsAttended = models.IntegerField()
     decorations = models.CharField(

@@ -11,6 +11,15 @@ class ServiceDetailsView(viewsets.ModelViewSet):
     serializer_class = ServiceDetailsSerializer
     permission_classes = (IsUserOrAdmin,)
 
+    def update(self, request, pk=None):
+        object = self.get_object()
+        serializer = ServiceDetailsSerializer(
+            object, data=request.data, partial=True, context=request)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+
+        return Response(serializer.data)
+
 
 class DischargeDetailsView(viewsets.ModelViewSet):
 
