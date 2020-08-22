@@ -60,10 +60,3 @@ class UserAuthViewset(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-# @action(detail=True, methods=["post"])
-# def create_zsb_user(self, request, pk=None):
-#     serializer = self.serializer_class(
-#         data=request.data, context={'request': request})
-#     if serializer.is_valid(raise_exception = True):
-#         serializer.save()
-#     return Response(ser)

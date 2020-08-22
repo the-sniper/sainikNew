@@ -19,7 +19,7 @@ class ServiceDetails(models.Model):
 
     slno = models.AutoField(primary_key=True)
     user = models.OneToOneField(
-        UserAuthDetails, on_delete=models.CASCADE, db_column='user')
+        UserAuthDetails, on_delete=models.CASCADE, db_column='user', related_name="user")
     service = models.ForeignKey(
         Service, null=False, on_delete=models.DO_NOTHING)
     serviceNumber = models.CharField(max_length=20)
@@ -41,7 +41,7 @@ class ServiceDetails(models.Model):
 # Create your models here.
 
 
-class PensionDetails(models.Model):
+class DischargeDetails(models.Model):
 
     slno = models.AutoField(primary_key=True)
     user = models.OneToOneField(
@@ -55,20 +55,20 @@ class PensionDetails(models.Model):
     dischargeBook = models.CharField(max_length=15)
     pppNum = models.PositiveIntegerField()
     recordOffice = models.CharField(max_length=20)
-    pensionSanctioned = settings.CURRENCY_FIELD
-    disabilityPension = settings.CURRENCY_FIELD
+    pensionSanctioned = settings.CURRENCY_FIELD(default=0)
+    disabilityPension = settings.CURRENCY_FIELD(default=0)
     percentDisability = models.PositiveIntegerField(default=0)
     pensionAccNum = models.PositiveIntegerField()
     bankName = models.CharField(max_length=30)
     branchName = models.CharField(max_length=20)
     ifsc = models.CharField(max_length=15)
     board = models.CharField(max_length=30)
-    gratuityAmount = settings.CURRENCY_FIELD
-    groupInsuranceAmount= settings.CURRENCY_FIELD
-    leaveEnhancementAmount= settings.CURRENCY_FIELD
+    gratuityAmount = settings.CURRENCY_FIELD(default=0)
+    groupInsuranceAmount = settings.CURRENCY_FIELD(default=0)
+    leaveEnhancementAmount = settings.CURRENCY_FIELD(default=0)
 
     class Meta:
-        db_table = "PensionDetails"
+        db_table = "DischargeDetails"
 
     def __str__(self):
         return str(f"Slno : {self.slno}.")

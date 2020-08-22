@@ -38,9 +38,11 @@ MIN_PASSWORD_LENGTH = 5
 
 # CONFIG CONSTANTS
 
-CURRENCY_FIELD = models.DecimalField(max_digits=10, decimal_places=4)
+def CURRENCY_FIELD(*args, **kwargs):
+    return models.DecimalField(max_digits=10, decimal_places=4, *args, **kwargs)
 
 # CONFIG CONSTANTS END
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',

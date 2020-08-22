@@ -15,4 +15,16 @@ class ServiceDetailsSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
 
-        pass
+        return data
+
+
+class DischargeDetailsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = DischargeDetails
+        fields = '__all__'
+
+    def validate(self, data):
+
+        return data
