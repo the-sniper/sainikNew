@@ -1,6 +1,7 @@
 from django.db import models
 from UserAuth.models import *
 from RanksAndServices.models import *
+from django.conf import settings
 
 
 NONE = ""
@@ -54,14 +55,17 @@ class PensionDetails(models.Model):
     dischargeBook = models.CharField(max_length=15)
     pppNum = models.PositiveIntegerField()
     recordOffice = models.CharField(max_length=20)
-    pensionSanctioned = models.PositiveIntegerField(default=0)
-    disabilityPension = models.PositiveIntegerField(default=0)
+    pensionSanctioned = settings.CURRENCY_FIELD
+    disabilityPension = settings.CURRENCY_FIELD
     percentDisability = models.PositiveIntegerField(default=0)
     pensionAccNum = models.PositiveIntegerField()
     bankName = models.CharField(max_length=30)
     branchName = models.CharField(max_length=20)
     ifsc = models.CharField(max_length=15)
     board = models.CharField(max_length=30)
+    gratuityAmount = settings.CURRENCY_FIELD
+    groupInsuranceAmount= settings.CURRENCY_FIELD
+    leaveEnhancementAmount= settings.CURRENCY_FIELD
 
     class Meta:
         db_table = "PensionDetails"

@@ -14,6 +14,7 @@ import os
 from .states import states as INDIAN_STATES
 from rest_framework.settings import api_settings
 from datetime import timedelta
+from django.db import models
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,6 +34,13 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 MIN_PASSWORD_LENGTH = 5
 
 # Application definition
+
+
+# CONFIG CONSTANTS
+
+CURRENCY_FIELD = models.DecimalField(max_digits=10, decimal_places=4)
+
+# CONFIG CONSTANTS END
 
 INSTALLED_APPS = [
     'django.contrib.admin',

@@ -17,7 +17,7 @@ class Command(BaseCommand):
                 print("Trades list already present. Not updating as --no_update passed.")
                 return
         try:
-            df = pandas.read_csv('TradesCombined.csv')
+            df = pandas.read_csv('./TradesCombined.csv')
             if df.empty:
                 print("Dataframe empty.")
                 return
@@ -47,30 +47,3 @@ class Command(BaseCommand):
                 print('Element : ', df.loc[index])
 
             print('Trade Created : ', trade)
-
-        # for row in data[1:]:
-        #     columns = [x.strip().upper() for x in row.split(",")]
-        #     if not columns[1]:
-        #         continue
-
-        #     element = {}
-        #     for i in range(headings.__len__()):
-        #         element[headings[i]] = columns[i]
-
-        #     trade = None
-
-        #     if(element['servicetype'] == 'ARMY'):
-        #         trade = army.trade_set.get_or_create(tradeName=element.get(
-        #             'tradename'), ncoCode=element.get("nco"))
-        #     elif(element['servicetype'] == 'NAVY'):
-        #         trade = navy.trade_set.get_or_create(tradeName=element.get(
-        #             'tradename'), ncoCode=element.get("nco"))
-        #     elif(element['servicetype'] == 'AIR FORCE'):
-        #         trade = airforce.trade_set.get_or_create(tradeName=element.get(
-        #             'tradename'), ncoCode=element.get("nco"))
-        #     else:
-        #         print(
-        #             f'Service Type {element.get("servicetype")} not handled.')
-        #         print('Element : ', element)
-
-        #     print('Trade Created : ', trade)
