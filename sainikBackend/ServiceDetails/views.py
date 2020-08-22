@@ -5,10 +5,17 @@ from .serializers import *
 from .permissions import *
 
 
-class ServiceDetails(viewsets.ModelViewSet):
+class ServiceDetailsView(viewsets.ModelViewSet):
 
     queryset = ServiceDetails.objects.all()
     serializer_class = ServiceDetailsSerializer
+    permission_classes = (IsUserOrAdmin,)
+
+
+class DischargeDetailsView(viewsets.ModelViewSet):
+
+    queryset = DischargeDetails.objects.all()
+    serializer_class = DischargeDetailsSerializer
     permission_classes = (IsUserOrAdmin,)
 
 
