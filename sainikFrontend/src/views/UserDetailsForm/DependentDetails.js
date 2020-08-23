@@ -10,28 +10,28 @@ class DependentDetails extends Component {
     {
       inplabel: "Name of dependent",
       type: "text",
-      name:"dependentName"
+      name: "dependentName",
     },
     {
       sellabel: "Relation to ESM",
       type: "select",
       selOption: ["A", "B", "C"],
-      name:"EsmRelation"
+      name: "EsmRelation",
     },
     {
       inplabel: "Date of birth",
       type: "date",
-      name:"dob"
+      name: "dob",
     },
     {
       inplabel: "Qualification with course/class",
       type: "text",
-      name:"qualCourse"
+      name: "qualCourse",
     },
     {
       inplabel: "Academic year",
       type: "text",
-      name:"academicYear"
+      name: "academicYear",
     },
     {
       radLabel: "Employment status",
@@ -74,11 +74,31 @@ class DependentDetails extends Component {
       return selectElementsArray;
     }
   };
+
+  addMore = () => {
+    let dependentDet = document.getElementById("dependentDet");
+    let newDependent = document.createElement("div");
+    let removeDependent = document.createElement("a");
+    let dependentList = document.getElementById("dependentList");
+
+    newDependent.classList.add("newDependent");
+    newDependent.innerHTML = dependentDet.innerHTML;
+    dependentList.appendChild(newDependent);
+
+    removeDependent.id = "removeDependent";
+    removeDependent.innerHTML = "<span class='material-icons'>delete</span>";
+    newDependent.appendChild(removeDependent);
+
+    removeDependent.addEventListener("click", function deleteDependent() {
+      dependentList.removeChild(newDependent);
+    });
+  };
+
   render() {
     return (
       <form>
         <h3 className="formTitle">Dependent details</h3>
-        <div className="row text-left">
+        <div className="row text-left" id="dependentDet">
           {this.Form_Details.map((data, index) => (
             <div className="col-6">
               {(() => {
@@ -120,10 +140,20 @@ class DependentDetails extends Component {
             </div>
           ))}
         </div>
-        <div className="btnContainer d-flex justify-content-end">
-          {/* <TertButton type="submit" label="Previous" />
-          <PrimaryButton type="submit" label="Next" /> */}
+
+        <div className="d-flex flex-wrap text-left" id="dependentList"></div>
+
+        <div className="addMoreBtn">
+          <a
+            href="#currentPos"
+            className="d-flex align-items-center"
+            onClick={this.addMore}
+            id="currentPos"
+          >
+            <span className="material-icons">add_circle</span>Add More
+          </a>
         </div>
+        <div className="btnContainer d-flex justify-content-end"></div>
       </form>
     );
   }

@@ -10,6 +10,7 @@
   margin-right: 35px;
   height: 625px;
   padding: 45px 30px;
+  position: -webkit-sticky;
   position: sticky;
   top: 30px;
 }
@@ -21,7 +22,11 @@
 .userDetailsForm .ltPanel .tabItem {
   width: 100%;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -32,7 +37,7 @@
   font-weight: 500;
 }
 
-.userDetailsForm .ltPanel .react-tabs__tab{
+.userDetailsForm .ltPanel .react-tabs__tab {
   padding: 0;
   border: none;
 }
@@ -43,8 +48,14 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #d6d6d6;
   border: 1px solid currentColor;
@@ -123,4 +134,55 @@
 }
 .userDetailsForm .tertButton {
   margin-right: 15px;
+}
+
+.userDetailsForm .newDependent {
+  padding-top: 45px;
+  margin-top: 20px;
+  border-top: 1px solid #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+
+.userDetailsForm #removeDependent {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  color: #f37979;
+  background: #ffe6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.userDetailsForm #removeDependent span {
+  font-size: 21px;
+}
+
+.userDetailsForm .addMoreBtn{
+  padding: 0
+}
+
+.userDetailsForm .addMoreBtn a:hover{
+  text-decoration: none;
+}
+
+.userDetailsForm .addMoreBtn a span{
+  padding-right: 5px
 }
