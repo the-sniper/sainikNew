@@ -136,6 +136,10 @@
   margin-right: 15px;
 }
 
+.userDetailsForm #actBtnForm.hidePrev .tertButton{
+  display: none;
+}
+
 .userDetailsForm .newDependent {
   padding-top: 45px;
   margin-top: 20px;

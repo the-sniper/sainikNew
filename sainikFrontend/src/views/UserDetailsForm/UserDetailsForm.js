@@ -55,6 +55,20 @@ class UserDetailsForm extends Component {
     }));
   };
 
+  componentDidMount = () => {
+    if (this.state.currentFormIndex === 0) {
+      document.getElementById("actBtnForm").classList.add("hidePrev");
+    }
+  };
+
+  componentDidUpdate = () => {
+    if (this.state.currentFormIndex === 0) {
+      document.getElementById("actBtnForm").classList.add("hidePrev");
+    } else {
+      document.getElementById("actBtnForm").classList.remove("hidePrev");
+    }
+  };
+
   render() {
     return (
       <div className="userDetailsForm">
@@ -138,7 +152,7 @@ class UserDetailsForm extends Component {
                   <DependentDetails />
                 </TabPanel>
               </div>
-              <div>
+              <div id="actBtnForm">
                 <TertButton
                   type="submit"
                   actionFunction={this.changeFormPrevious}
