@@ -1,0 +1,31 @@
+.multiSelect .css-yk16xz-control{
+    height: 50px;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px !important;
+    background-color: #fff !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    padding: .375rem .75rem;
+    width: 100%;
+}
+
+.multiSelect .css-yk16xz-controlt:focus, .multiSelect .css-1pahdxg-control {
+    box-shadow: none;
+    border-color: #000;
+    height: 50px;
+    border-radius: 3px !important;
+    background-color: #fff !important;
+    padding: .375rem .75rem;
+}
+
+.multiSelect span.label{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: left;
+    display: block;
+}
