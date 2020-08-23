@@ -4,6 +4,7 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import { Link } from "react-router-dom";
+import Multiselect from "../../components/Multiselect/Multiselect";
 
 class ServiceDetails extends Component {
   Form_Details = [
@@ -42,15 +43,12 @@ class ServiceDetails extends Component {
       name: "trade",
     },
     {
-      inplabel: "Operations Attended",
-      type: "text",
-      name: "opsAttended",
+      type: "multiSelect",
+      label: "Operations Attended",
     },
     {
-      sellabel: "Decorations",
-      type: "select",
-      selOption: ["Army", "Airforce", "Navy"],
-      name: "decorations",
+      type: "multiSelect",
+      label: "Decorations",
     },
     {
       radLabel: "Participated in world war 2 ?",
@@ -129,6 +127,12 @@ class ServiceDetails extends Component {
                       <p className="radioLabel">{data.radLabel}</p>
                       <RadioBox>{this.createElements(data)}</RadioBox>
                     </div>
+                  );
+                }
+
+                else if (data.type === "multiSelect") {
+                  return (
+                    <Multiselect label={data.label}/>
                   );
                 }
               })()}
