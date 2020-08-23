@@ -51,16 +51,18 @@ class DependentDetails extends Component {
     let selectElementsArray = [];
 
     if (dataParam.type === "radio") {
+      let randomValueName = Math.floor(Math.random() * 1000)
       for (let i = 0; i < dataParam.radOpt.length; i++) {
+        let randomValue = Math.floor(Math.random() * 1000)
         radioElementsArray.push(
           <>
             <input
               type="radio"
-              id={`servRad_${dataParam.radOpt[i]}`}
-              name={dataParam.group}
+              id={`servRad_${dataParam.radOpt[i]}${randomValue}`}
+              name={dataParam.group+randomValueName}
               checked
             />
-            <label for={`servRad_${dataParam.radOpt[i]}`}>
+            <label for={`servRad_${dataParam.radOpt[i]}${randomValue}`}>
               {dataParam.radOpt[i]}
             </label>
           </>
