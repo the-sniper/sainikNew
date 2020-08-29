@@ -11,3 +11,4 @@ router.register(r"service-details", ServiceDetailsView)
 urlpatterns = [
     path(r'', include(router.urls)),
 ]
+  

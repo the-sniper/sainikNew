@@ -22,7 +22,7 @@ class ServiceDetailsSerializer(serializers.ModelSerializer):
 
         return {
             **data,
-            'user': self.context.user
+            'user': self.context['user']
         }
 
 
