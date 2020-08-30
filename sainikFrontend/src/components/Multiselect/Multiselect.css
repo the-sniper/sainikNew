@@ -21,7 +21,7 @@
 .multiSelect .css-1pahdxg-control {
   box-shadow: none;
   border-color: #000;
-  height: 50px;
+  min-height: 50px;
   border-radius: 3px !important;
   background-color: #fff !important;
   padding: 0.375rem 0.75rem;

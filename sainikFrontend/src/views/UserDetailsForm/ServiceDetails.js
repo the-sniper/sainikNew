@@ -45,10 +45,12 @@ class ServiceDetails extends Component {
     {
       type: "multiSelect",
       label: "Operations Attended",
+      className:"col-12"
     },
     {
       type: "multiSelect",
       label: "Decorations",
+      className:"col-12"
     },
     {
       radLabel: "Participated in world war 2 ?",
@@ -93,7 +95,7 @@ class ServiceDetails extends Component {
         <h3 className="formTitle">Service details</h3>
         <div className="row text-left">
           {this.Form_Details.map((data, index) => (
-            <div className="col-6">
+            <div className= { `${data.className}` === 'col-12' ? `${data.className}` : 'col-6' }>
               {(() => {
                 if (
                   data.type === "text" ||

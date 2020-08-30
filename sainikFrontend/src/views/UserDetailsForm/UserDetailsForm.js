@@ -89,7 +89,7 @@ class UserDetailsForm extends Component {
                     </Link>
                   </div>
                 </Tab>
-                <Tab disabled={false}>
+                <Tab>
                   <div class="tabItem active">
                     <span class="checkpoint">02</span>
                     <Link class="nav-link" to="#">
@@ -107,7 +107,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">04</span>
                     <Link class="nav-link" to="#">
                       Contact Details
                     </Link>
@@ -115,7 +115,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">05</span>
                     <Link class="nav-link" to="#">
                       Family Details
                     </Link>
@@ -123,7 +123,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">06</span>
                     <Link class="nav-link" to="#">
                       Dependent Details
                     </Link>
