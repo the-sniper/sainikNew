@@ -37,9 +37,8 @@ class ContactDetails extends Component {
       name:"district"
     },
     {
-      sellabel: "City",
-      type: "select",
-      selOption: ["A", "B", "C"],
+      inplabel: "City",
+      type: "text",
       name:"city"
     },
     {
@@ -87,9 +86,8 @@ class ContactDetails extends Component {
       name:"district"
     },
     {
-      sellabel: "City",
-      type: "select",
-      selOption: ["A", "B", "C"],
+      inplabel: "City",
+      type: "text",
       name:"city"
     },
     {

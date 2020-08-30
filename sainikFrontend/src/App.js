@@ -10,7 +10,7 @@ import Search from "./views/Search/Search";
 import Header from "./components/Header/Header";
 import { Routes } from "./RouteConstants";
 import CustomModal from "./components/CustomModal/CustomModal";
-import Multiselect from "react-widgets/lib/Multiselect";
+import Multiselect from "./components/Multiselect/Multiselect";
 
 function App() {
   return (

@@ -12,7 +12,27 @@ class ServiceDetailsSerializer(serializers.ModelSerializer):
 
         model = ServiceDetails
         fields = '__all__'
+        extra_kwargs = {
+            'user': {
+                'required': False
+            }
+        }
 
     def validate(self, data):
 
-        pass
+        return {
+            **data,
+            'user': self.context.user
+        }
+
+
+class DischargeDetailsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = DischargeDetails
+        fields = '__all__'
+
+    def validate(self, data):
+
+        return data

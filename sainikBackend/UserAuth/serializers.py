@@ -56,6 +56,9 @@ class UserSerializer(serializers.ModelSerializer):
         if requestFrom and requestFrom == "adminPage":
             return data
 
+        if 'zila' not in data:
+            raise serializers.ValidationError("'zila' field is required.")
+
         if(user.is_authenticated and user.userType not in [ZILLA_SAINIK]):
             if data.get("zila").__len__ > 1:
                 raise serializers.ValidationError(
@@ -63,7 +66,7 @@ class UserSerializer(serializers.ModelSerializer):
 
         if user.is_authenticated:
             logger.debug(
-                f"THis is the data :  {data} and user.zila : {user.zila}")
+                f"This is the data :  {data} and user.zila : {user.zila}")
             if user.userType == ZILLA_SAINIK and data["zila"][0] not in user.zila.all():
                 raise serializers.ValidationError(
                     "This zila doesn't fall under your board.")

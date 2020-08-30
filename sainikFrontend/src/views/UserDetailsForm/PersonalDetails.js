@@ -89,9 +89,8 @@ class PersonalDetails extends Component {
       name: "birthState",
     },
     {
-      sellabel: "Birth city",
-      type: "select",
-      selOption: ["A", "B", "C"],
+      inplabel: "Birth city",
+      type: "text",
       name: "birthCity",
     },
     {
@@ -148,13 +147,6 @@ class PersonalDetails extends Component {
     },
   ];
 
-  limitChar = () => {
-    if(this.id = "servInp_1"){
-      if (this.value.length > 4) {
-        this.value = this.value.slice(0,4); 
-    }
-    }
-  }
 
   createElements = (dataParam) => {
     let radioElementsArray = [];
