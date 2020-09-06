@@ -55,6 +55,20 @@ class UserDetailsForm extends Component {
     }));
   };
 
+  componentDidMount = () => {
+    if (this.state.currentFormIndex === 0) {
+      document.getElementById("actBtnForm").classList.add("hidePrev");
+    }
+  };
+
+  componentDidUpdate = () => {
+    if (this.state.currentFormIndex === 0) {
+      document.getElementById("actBtnForm").classList.add("hidePrev");
+    } else {
+      document.getElementById("actBtnForm").classList.remove("hidePrev");
+    }
+  };
+
   render() {
     return (
       <div className="userDetailsForm">
@@ -75,7 +89,7 @@ class UserDetailsForm extends Component {
                     </Link>
                   </div>
                 </Tab>
-                <Tab disabled={false}>
+                <Tab>
                   <div class="tabItem active">
                     <span class="checkpoint">02</span>
                     <Link class="nav-link" to="#">
@@ -93,7 +107,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">04</span>
                     <Link class="nav-link" to="#">
                       Contact Details
                     </Link>
@@ -101,7 +115,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">05</span>
                     <Link class="nav-link" to="#">
                       Family Details
                     </Link>
@@ -109,7 +123,7 @@ class UserDetailsForm extends Component {
                 </Tab>
                 <Tab>
                   <div class="tabItem">
-                    <span class="checkpoint">03</span>
+                    <span class="checkpoint">06</span>
                     <Link class="nav-link" to="#">
                       Dependent Details
                     </Link>
@@ -138,7 +152,7 @@ class UserDetailsForm extends Component {
                   <DependentDetails />
                 </TabPanel>
               </div>
-              <div>
+              <div id="actBtnForm">
                 <TertButton
                   type="submit"
                   actionFunction={this.changeFormPrevious}

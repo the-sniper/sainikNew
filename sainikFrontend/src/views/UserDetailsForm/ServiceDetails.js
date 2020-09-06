@@ -4,6 +4,7 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
 import PrimaryButton from "../../components/Input/Button/PrimaryButton";
 import { Link } from "react-router-dom";
+import Multiselect from "../../components/Multiselect/Multiselect";
 
 class ServiceDetails extends Component {
   Form_Details = [
@@ -42,15 +43,14 @@ class ServiceDetails extends Component {
       name: "trade",
     },
     {
-      inplabel: "Operations Attended",
-      type: "text",
-      name: "opsAttended",
+      type: "multiSelect",
+      label: "Operations Attended",
+      className:"col-12"
     },
     {
-      sellabel: "Decorations",
-      type: "select",
-      selOption: ["Army", "Airforce", "Navy"],
-      name: "decorations",
+      type: "multiSelect",
+      label: "Decorations",
+      className:"col-12"
     },
     {
       radLabel: "Participated in world war 2 ?",
@@ -95,7 +95,7 @@ class ServiceDetails extends Component {
         <h3 className="formTitle">Service details</h3>
         <div className="row text-left">
           {this.Form_Details.map((data, index) => (
-            <div className="col-6">
+            <div className= { `${data.className}` === 'col-12' ? `${data.className}` : 'col-6' }>
               {(() => {
                 if (
                   data.type === "text" ||
@@ -129,6 +129,12 @@ class ServiceDetails extends Component {
                       <p className="radioLabel">{data.radLabel}</p>
                       <RadioBox>{this.createElements(data)}</RadioBox>
                     </div>
+                  );
+                }
+
+                else if (data.type === "multiSelect") {
+                  return (
+                    <Multiselect label={data.label}/>
                   );
                 }
               })()}

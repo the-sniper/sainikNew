@@ -20,11 +20,11 @@ class PensionDetails extends Component {
     {
       sellabel: "Reason of discharge",
       type: "select",
-      selOption: ["A", "B", "C"],
-      name: "unitLastServed",
+      selOption: ["On completion of engagement", "Expired", "Medical", "Super Annuation"],
+      name: "dischargeReason",
     },
     {
-      radLabel: "Death while on service",
+      radLabel: "Whether  death while on service",
       radOpt: ["Yes", "No"],
       type: "radio",
       group: "deathOnService",
@@ -35,7 +35,7 @@ class PensionDetails extends Component {
       name: "dateOfDeath",
     },
     {
-      sellabel: "Death details",
+      sellabel: "Details of death",
       type: "select",
       selOption: ["A", "B", "C"],
       name: "deathDetails",
@@ -43,13 +43,13 @@ class PensionDetails extends Component {
     {
       sellabel: "Medical category while discharge",
       type: "select",
-      selOption: ["A", "B", "C"],
+      selOption: ["AYE", "BEE", "CEE", "DEE", "S1A1", "S2A2", "S3A3", "S4A4", "SHAPE1", "SHAPE2", "SHAPE3", "SHAPE4"],
       name: "medCat",
     },
     {
       sellabel: "Character while discharge",
       type: "select",
-      selOption: ["A", "B", "C"],
+      selOption: ["Exemplary", "Very Good", "Good", "Satisfactory"],
       name: "charDischarge",
     },
     {
@@ -58,35 +58,41 @@ class PensionDetails extends Component {
       name: "dischargeBook",
     },
     {
-      inplabel: "PPO Number",
+      inplabel: "Gratuity",
+      type: "number",
+      name: "gratuity",
+    },
+    {
+      inplabel: "Group Insurance",
       type: "text",
+      name: "groupInsurance",
+    },
+    {
+      inplabel: "Leave Enhancement",
+      type: "text",
+      name: "leaveEnhancement",
+    },
+    {
+      radLabel: "Whether pensioner",
+      radOpt: ["Yes", "No"],
+      type: "radio",
+      group: "isPensioner",
+    },
+    {
+      sellabel: "Type of pension",
+      type: "select",
+      selOption: ["Service Pension", "Disability Pension", "War Injury Pension", "Ex-gratia Pension", "Reservist Pension", "Ordinary Family Pension", "Special Family Pension", "Liberalised Family Pension"	],
+      name: "pensionType",
+    },
+    {
+      inplabel: "PPO number",
+      type: "number",
       name: "ppoNum",
     },
     {
-      inplabel: "Name of the record office",
-      type: "text",
-      name: "recordOffice",
-    },
-    {
-      inplabel: "Pension sanctioned",
+      inplabel: "Pension amount sanctioned",
       type: "number",
       name: "pensionSanctioned",
-    },
-    {
-      inplabel: "Disability pension",
-      type: "number",
-      name: "disabilityPension",
-    },
-    {
-      sellabel: "Percentage of disability",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "perDisability",
-    },
-    {
-      inplabel: "Pension account number",
-      type: "number",
-      name: "pensionAccNum",
     },
     {
       sellabel: "Bank name",
@@ -101,11 +107,29 @@ class PensionDetails extends Component {
       name: "branchName",
     },
     {
-      sellabel: "IFSC code",
-      type: "select",
-      selOption: ["A", "B", "C"],
+      inplabel: "IFSC code",
+      type: "text",
       name: "ifsc",
     },
+    {
+      inplabel: "Pension account number",
+      type: "number",
+      name: "pensionAccNum",
+    },
+    //If pension type = disability
+    {
+      sellabel: "Percentage of disability",
+      type: "select",
+      selOption: ["A", "B", "C"],
+      name: "perDisability",
+    },
+    {
+      sellabel: "Disability element",
+      type: "select",
+      selOption: ["A", "B", "C"],
+      name: "disabilityElement",
+    },
+    
   ];
   createElements = (dataParam) => {
     let radioElementsArray = [];
