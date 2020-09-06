@@ -27,5 +27,12 @@ class DischargeDetailsView(viewsets.ModelViewSet):
     serializer_class = DischargeDetailsSerializer
     permission_classes = (IsUserOrAdmin,)
 
+    def update(self, request, pk = None):
+        object = self.get_object()
+        serializer  = DischargeDetailsSerializer(object, data = request.data, partial = True, context = request)
+        if serializer.is_valid(raise_exception = True):
+            serializer.save()
+        return Response(serializers.data)
+
 
 # Create your views here.

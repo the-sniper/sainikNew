@@ -22,7 +22,7 @@ class ServiceDetailsSerializer(serializers.ModelSerializer):
 
         return {
             **data,
-            'user': self.context['user']
+            'user': self.context.user
         }
 
 
@@ -35,4 +35,7 @@ class DischargeDetailsSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
 
-        return data
+        return {
+            **data,
+            'user': self.context.user
+        }

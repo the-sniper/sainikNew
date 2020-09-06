@@ -5,8 +5,8 @@ from .views import *
 
 
 router = DefaultRouter()
-router.register(r"service-details", ServiceDetailsView)
-router.register(r"discharge-details", DischargeDetailsView)
+router.register(r"family-details", FamilyDetailsView)
+router.register(r"dependent-details", DependentDetailsView)
 
 
 
