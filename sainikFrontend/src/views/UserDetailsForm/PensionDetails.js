@@ -2,210 +2,224 @@ import React, { Component } from "react";
 import RadioBox from "../../components/Input/RadioBox/RadioBox";
 import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
-import PrimaryButton from "../../components/Input/Button/PrimaryButton";
-import TertButton from "../../components/Input/Button/TertButton";
 
 class PensionDetails extends Component {
-  Form_Details = [
-    {
-      inplabel: "Unit last served",
-      type: "text",
-      name: "unitLastServed",
-    },
-    {
-      inplabel: "Date of discharge",
-      type: "date",
-      name: "dateOfDischarge",
-    },
-    {
-      sellabel: "Reason of discharge",
-      type: "select",
-      selOption: ["On completion of engagement", "Expired", "Medical", "Super Annuation"],
-      name: "dischargeReason",
-    },
-    {
-      radLabel: "Whether  death while on service",
-      radOpt: ["Yes", "No"],
-      type: "radio",
-      group: "deathOnService",
-    },
-    {
-      inplabel: "Date of death",
-      type: "date",
-      name: "dateOfDeath",
-    },
-    {
-      sellabel: "Details of death",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "deathDetails",
-    },
-    {
-      sellabel: "Medical category while discharge",
-      type: "select",
-      selOption: ["AYE", "BEE", "CEE", "DEE", "S1A1", "S2A2", "S3A3", "S4A4", "SHAPE1", "SHAPE2", "SHAPE3", "SHAPE4"],
-      name: "medCat",
-    },
-    {
-      sellabel: "Character while discharge",
-      type: "select",
-      selOption: ["Exemplary", "Very Good", "Good", "Satisfactory"],
-      name: "charDischarge",
-    },
-    {
-      inplabel: "Discharge book number",
-      type: "text",
-      name: "dischargeBook",
-    },
-    {
-      inplabel: "Gratuity",
-      type: "number",
-      name: "gratuity",
-    },
-    {
-      inplabel: "Group Insurance",
-      type: "text",
-      name: "groupInsurance",
-    },
-    {
-      inplabel: "Leave Enhancement",
-      type: "text",
-      name: "leaveEnhancement",
-    },
-    {
-      radLabel: "Whether pensioner",
-      radOpt: ["Yes", "No"],
-      type: "radio",
-      group: "isPensioner",
-    },
-    {
-      sellabel: "Type of pension",
-      type: "select",
-      selOption: ["Service Pension", "Disability Pension", "War Injury Pension", "Ex-gratia Pension", "Reservist Pension", "Ordinary Family Pension", "Special Family Pension", "Liberalised Family Pension"	],
-      name: "pensionType",
-    },
-    {
-      inplabel: "PPO number",
-      type: "number",
-      name: "ppoNum",
-    },
-    {
-      inplabel: "Pension amount sanctioned",
-      type: "number",
-      name: "pensionSanctioned",
-    },
-    {
-      sellabel: "Bank name",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "bankName",
-    },
-    {
-      sellabel: "Branch name",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "branchName",
-    },
-    {
-      inplabel: "IFSC code",
-      type: "text",
-      name: "ifsc",
-    },
-    {
-      inplabel: "Pension account number",
-      type: "number",
-      name: "pensionAccNum",
-    },
-    //If pension type = disability
-    {
-      sellabel: "Percentage of disability",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "perDisability",
-    },
-    {
-      sellabel: "Disability element",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "disabilityElement",
-    },
-    
-  ];
-  createElements = (dataParam) => {
-    let radioElementsArray = [];
-    let selectElementsArray = [];
-
-    if (dataParam.type === "radio") {
-      for (let i = 0; i < dataParam.radOpt.length; i++) {
-        radioElementsArray.push(
-          <>
-            <input
-              type="radio"
-              id={`servRad_${dataParam.radOpt[i]}`}
-              name={dataParam.group}
-              checked
-            />
-            <label for={`servRad_${dataParam.radOpt[i]}`}>
-              {dataParam.radOpt[i]}
-            </label>
-          </>
-        );
-      }
-      return radioElementsArray;
-    } else if (dataParam.type === "select") {
-      for (let i = 0; i < dataParam.selOption.length; i++) {
-        selectElementsArray.push(<option>{dataParam.selOption[i]}</option>);
-      }
-      return selectElementsArray;
-    }
-  };
   render() {
     return (
       <form>
         <h3 className="formTitle">Pension details</h3>
         <div className="row text-left">
-          {this.Form_Details.map((data, index) => (
-            <div className="col-6">
-              {(() => {
-                if (
-                  data.type === "text" ||
-                  data.type === "date" ||
-                  data.type === "number" ||
-                  data.type === "email"
-                ) {
-                  return (
-                    <InputBox
-                      id={`servInp_${index}`}
-                      label={data.inplabel}
-                      type={data.type}
-                      name={data.name}
-                    />
-                  );
-                } else if (data.type === "select") {
-                  return (
-                    <SelectBox
-                      id={`servSel_${index}`}
-                      label={data.sellabel}
-                      name={data.name}
-                    >
-                      {this.createElements(data)}
-                    </SelectBox>
-                  );
-                } else if (data.type === "radio") {
-                  return (
-                    <div className="formRadio">
-                      <p className="radioLabel">{data.radLabel}</p>
-                      <RadioBox>{this.createElements(data)}</RadioBox>
-                    </div>
-                  );
-                }
-              })()}
-            </div>
-          ))}
-        </div>
-        <div className="btnContainer d-flex justify-content-end">
-          {/* <TertButton type="submit" label="Previous" />
-          <PrimaryButton type="submit" label="Next" /> */}
+          <div className="col-6">
+            <InputBox
+              id="pensLastUnit"
+              label="Unit last served"
+              type="text"
+              name="pensLastUnit"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensDischargeDate"
+              label="Date of discharge"
+              type="date"
+              name="pensDischargeDate"
+            />
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="pensDischargeReason"
+              label="Reason of discharge"
+              name="pensDischargeReason"
+            >
+              <option>On completion of engagement</option>
+              <option>Expired</option>
+              <option>Medical</option>
+              <option>Super Annuation</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <RadioBox>
+              <p className="radioLabel">Weather death while on service</p>
+              <input type="radio" id="yes" value="yes" name="deathInService" />
+              <label for="yes">Yes</label>
+              <input type="radio" id="no" value="no" name="deathInService" />
+              <label for="no">No</label>
+            </RadioBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensdod"
+              label="Date of death"
+              type="date"
+              name="pensdod"
+            />
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="pensDeathDetails"
+              label="Death details"
+              name="pensDeathDetails"
+            >
+              <option>Options</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="pensMedCatg"
+              label="Medical category while discharge"
+              name="pensMedCatg"
+            >
+              <option>AYE</option>
+              <option>BEE</option>
+              <option>CEE</option>
+              <option>DEE</option>
+              <option>S1A1</option>
+              <option>S2A2</option>
+              <option>S3A3</option>
+              <option>S4A4</option>
+              <option>SHAPE1</option>
+              <option>SHAPE2</option>
+              <option>SHAPE3</option>
+              <option>SHAPE4</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="pensDischargeChar"
+              label="Character while discharge"
+              name="pensDischargeChar"
+            >
+              <option>Exemplary</option>
+              <option>Very Good</option>
+              <option>Good</option>
+              <option>Satisfactory</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensDischargeBook"
+              label="Discharge book number"
+              type="number"
+              name="pensDischargeBook"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensGratuity"
+              label="Gratuity"
+              type="number"
+              name="pensGratuity"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensgroupInsurance"
+              label="Group Insurance"
+              type="number"
+              name="pensgroupInsurance"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensleaveEnhancement"
+              label="Leave Enhancement"
+              type="text"
+              name="pensleaveEnhancement"
+            />
+          </div>
+          <div className="col-6">
+            <RadioBox>
+              <p className="radioLabel">Whether pensioner ?</p>
+              <input type="radio" id="yes" value="yes" name="isPensioner" />
+              <label for="yes">Yes</label>
+              <input type="radio" id="no" value="no" name="isPensioner" />
+              <label for="no">No</label>
+            </RadioBox>
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="pensionType"
+              label="Type of pension"
+              name="pensionType"
+            >
+              <option>Service Pension</option>
+              <option>Disability Pension</option>
+              <option>War Injury Pension</option>
+              <option>Ex gratia Pension</option>
+              <option>Reservist Pension</option>
+              <option>Ordinary Family Pension</option>
+              <option>Special Family Pension</option>
+              <option>Liberalised Family Pension</option>
+            </SelectBox>
+          </div>
+
+          {/* If pension type = disability, show the next 2*/}
+
+          <div className="col-6">
+            <SelectBox
+              id="perDisability"
+              label="Percentage of disability"
+              name="perDisability"
+            >
+              <option>Option</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="disabilityElement"
+              label="Disability element"
+              name="disabilityElement"
+            >
+              <option>Option</option>
+            </SelectBox>
+          </div>
+
+          <div className="col-6">
+            <InputBox
+              id="servPpoNum"
+              label="PPO number"
+              type="number"
+              name="servPpoNum"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="pensionSanctioned"
+              label="Pension amount sanctioned"
+              type="number"
+              name="pensionSanctioned"
+            />
+          </div>
+          <div className="col-6">
+            <SelectBox id="servBankName" label="Bank name" name="servBankName">
+              <option>Option</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="servBranchName"
+              label="Branch name"
+              name="servBranchName"
+            >
+              <option>Option</option>
+            </SelectBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="servIfsc"
+              label="IFSC code"
+              type="text"
+              name="servIfsc"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="servpensionAccNum"
+              label="Pension account number"
+              type="number"
+              name="servpensionAccNum"
+            />
+          </div>
         </div>
       </form>
     );

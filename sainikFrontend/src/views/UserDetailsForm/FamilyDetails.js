@@ -2,153 +2,150 @@ import React, { Component } from "react";
 import RadioBox from "../../components/Input/RadioBox/RadioBox";
 import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
-import PrimaryButton from "../../components/Input/Button/PrimaryButton";
-import TertButton from "../../components/Input/Button/TertButton";
 
 class FamilyDetails extends Component {
-  Form_Details = [
-    {
-      radLabel: "Marital status",
-      radOpt: ["Married", "Single", "Un-married"],
-      type: "radio",
-      group: "maritalStatus",
-    },
-    {
-      inplabel: "Date of marriage",
-      type: "date",
-      name: "marriageDate",
-    },
-    {
-      inplabel: "Spouse's name",
-      type: "text",
-      name: "spouseName",
-    },
-    {
-      radLabel: "Spouse's relation",
-      radOpt: ["Wife", "Husband"],
-      type: "radio",
-      group: "spouseRelation",
-    },
-    {
-      inplabel: "Spouse's date of birth",
-      type: "date",
-      name: "spouseDob",
-    },
-    {
-      inplabel: "Spouse's identification mark",
-      type: "text",
-      name: "spouseIdMark",
-    },
-    {
-      inplabel: "Spouse's qualification",
-      type: "text",
-      name: "spouseQual",
-    },
-    {
-      radLabel: "Spouse's employment status",
-      radOpt: ["Employed", "Un-employed"],
-      type: "radio",
-      group: "spouseEmpStatus",
-    },
-    {
-      inplabel: "Spouse's employed profession",
-      type: "text",
-      name: "spouseEmpProf",
-    },
-    {
-      inplabel: "Spouse's date of retirement",
-      type: "date",
-      name: "spouseDor",
-    },
-    {
-      inplabel: "Name of next of kin",
-      type: "text",
-      name: "nextOfKin",
-    },
-    {
-      sellabel: "Relation to ESM",
-      type: "select",
-      selOption: ["A", "B", "C"],
-      name: "EsmRelation",
-    },
-  ];
-  createElements = (dataParam) => {
-    let radioElementsArray = [];
-    let selectElementsArray = [];
-
-    if (dataParam.type === "radio") {
-      for (let i = 0; i < dataParam.radOpt.length; i++) {
-        radioElementsArray.push(
-          <>
-            <input
-              type="radio"
-              id={`servRad_${dataParam.radOpt[i]}`}
-              name={dataParam.group}
-              checked
-            />
-            <label for={`servRad_${dataParam.radOpt[i]}`}>
-              {dataParam.radOpt[i]}
-            </label>
-          </>
-        );
-      }
-      return radioElementsArray;
-    } else if (dataParam.type === "select") {
-      for (let i = 0; i < dataParam.selOption.length; i++) {
-        selectElementsArray.push(<option>{dataParam.selOption[i]}</option>);
-      }
-      return selectElementsArray;
-    }
-  };
   render() {
     return (
       <form>
         <h3 className="formTitle">Family details</h3>
         <div className="row text-left">
-          {this.Form_Details.map((data, index) => (
-            <div className="col-6">
-              {(() => {
-                if (
-                  data.type === "text" ||
-                  data.type === "date" ||
-                  data.type === "number" ||
-                  data.type === "email"
-                ) {
-                  return (
-                    <InputBox
-                      id={`servInp_${index}`}
-                      label={data.inplabel}
-                      type={data.type}
-                      optional={data.optional}
-                      name={data.name}
-                    />
-                  );
-                } else if (data.type === "select") {
-                  return (
-                    <SelectBox
-                      id={`servSel_${index}`}
-                      label={data.sellabel}
-                      optional={data.optionalCheck}
-                      name={data.name}
-                    >
-                      {this.createElements(data)}
-                    </SelectBox>
-                  );
-                } else if (data.type === "radio") {
-                  return (
-                    <div className="formRadio">
-                      <p className="radioLabel">{data.radLabel}</p>
-                      <RadioBox>{this.createElements(data)}</RadioBox>
-                    </div>
-                  );
-                }
-              })()}
-            </div>
-          ))}
-        </div>
-        <div className="btnContainer d-flex justify-content-end">
-          {/* <TertButton type="submit" label="Previous" />
-          <PrimaryButton type="submit" label="Next" /> */}
+          <div className="col-6">
+            <RadioBox>
+              <p className="radioLabel">Marital status</p>
+              <input
+                type="radio"
+                id="Married"
+                value="Married"
+                name="maritalStatus"
+              />
+              <label for="Married">Married</label>
+              <input
+                type="radio"
+                id="Single"
+                value="Single"
+                name="maritalStatus"
+              />
+              <label for="Single">Single</label>
+              <input
+                type="radio"
+                id="Un-married"
+                value="Un-married"
+                name="maritalStatus"
+              />
+              <label for="Un-married">Un-married</label>
+            </RadioBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famDOM"
+              label="Date of marriage"
+              type="date"
+              name="famDOM"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseName"
+              label="Spouse's name"
+              type="text"
+              name="famSpouseName"
+            />
+          </div>
+          <div className="col-6">
+            <RadioBox>
+              <p className="radioLabel">Spouse's relation</p>
+              <input
+                type="radio"
+                id="Wife"
+                value="Wife"
+                name="spouseRelation"
+              />
+              <label for="Wife">Wife</label>
+              <input
+                type="radio"
+                id="Husband"
+                value="Husband"
+                name="spouseRelation"
+              />
+              <label for="Husband">Husband</label>
+            </RadioBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseDob"
+              label="Spouse's date of birth"
+              type="date"
+              name="famSpouseDob"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseIdMark"
+              label="Spouse's identification mark"
+              type="text"
+              name="famSpouseIdMark"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseQual"
+              label="Spouse's qualification"
+              type="text"
+              name="famSpouseQual"
+            />
+          </div>
+          <div className="col-6">
+            <RadioBox>
+              <p className="radioLabel">Spouse's employment status</p>
+              <input
+                type="radio"
+                id="Employed"
+                value="Employed"
+                name="spouseEmpStatus"
+              />
+              <label for="Employed">Employed</label>
+              <input
+                type="radio"
+                id="Un-employed"
+                value="Un-employed"
+                name="spouseEmpStatus"
+              />
+              <label for="Un-employed">Un-employed</label>
+            </RadioBox>
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseEmpProf"
+              label="Spouse's employed profession"
+              type="text"
+              name="famSpouseEmpProf"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famSpouseDor"
+              label="Spouse's date of retirement"
+              type="date"
+              name="famSpouseDor"
+            />
+          </div>
+          <div className="col-6">
+            <InputBox
+              id="famNextOfKin"
+              label="Name of next of kin"
+              type="text"
+              name="famNextOfKin"
+            />
+          </div>
+          <div className="col-6">
+            <SelectBox
+              id="EsmRelation"
+              label="Relation to ESM"
+              name="EsmRelation"
+            >
+              <option>Option</option>
+            </SelectBox>
+          </div>
         </div>
       </form>
     );
