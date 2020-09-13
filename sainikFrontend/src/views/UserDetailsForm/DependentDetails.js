@@ -4,12 +4,24 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
 
 class DependentDetails extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      dependentId: 0,
+    };
+  }
+
   addMore = () => {
     let dependentDet = document.getElementById("dependentDet");
     let newDependent = document.createElement("div");
     let removeDependent = document.createElement("a");
     let dependentList = document.getElementById("dependentList");
 
+    this.setState({
+      dependentId: this.state.dependentId + 1,
+    });
+
+    console.log(this.state.dependentId);
     newDependent.classList.add("newDependent");
     newDependent.innerHTML = dependentDet.innerHTML;
     dependentList.appendChild(newDependent);
@@ -30,43 +42,43 @@ class DependentDetails extends Component {
         <div className="row text-left" id="dependentDet">
           <div className="col-6">
             <InputBox
-              id="dependentName"
+              id={`${this.state.dependentId}_dependentName`}
               label="Name of dependent"
               type="text"
-              name="dependentName"
+              name={`${this.state.dependentId}_dependentName`}
             />
           </div>
           <div className="col-6">
             <SelectBox
-              id="depEsmRelation"
+              id={`${this.state.dependentId}_depEsmRelation`}
               label="Relation to ESM"
-              name="depEsmRelation"
+              name={`${this.state.dependentId}_depEsmRelation`}
             >
               <option>Option</option>
             </SelectBox>
           </div>
           <div className="col-6">
             <InputBox
-              id="depDOB"
+              id={`${this.state.dependentId}_depDOB`}
               label="Date of birth"
               type="date"
-              name="depDOB"
+              name={`${this.state.dependentId}_depDOB`}
             />
           </div>
           <div className="col-6">
             <InputBox
-              id="depQualCourse"
+              id={`${this.state.dependentId}_depQualCourse`}
               label="Qualification with course/class"
               type="text"
-              name="depQualCourse"
+              name={`${this.state.dependentId}_depQualCourse`}
             />
           </div>
           <div className="col-6">
             <InputBox
-              id="depAcademicYear"
+              id={`${this.state.dependentId}_depAcademicYear`}
               label="Academic year"
               type="text"
-              name="depAcademicYear"
+              name={`${this.state.dependentId}_depAcademicYear`}
             />
           </div>
           <div className="col-6">
@@ -74,18 +86,20 @@ class DependentDetails extends Component {
               <p className="radioLabel">Employment status</p>
               <input
                 type="radio"
-                id="Employed"
+                id={`employed_${this.state.dependentId}`}
                 value="Employed"
-                name="depEmpStatus"
+                name={`depEmpStatus_${this.state.dependentId}`}
               />
-              <label for="Employed">Employed</label>
+              <label for={`employed_${this.state.dependentId}`}>Employed</label>
               <input
                 type="radio"
-                id="Un-employed"
+                id={`unEmployed_${this.state.dependentId}`}
                 value="Un-employed"
-                name="depEmpStatus"
+                name={`depEmpStatus_${this.state.dependentId}`}
               />
-              <label for="Un-employed">Un-employed</label>
+              <label for={`unEmployed_${this.state.dependentId}`}>
+                Un-employed
+              </label>
             </RadioBox>
           </div>
           <div className="col-6">
@@ -93,25 +107,27 @@ class DependentDetails extends Component {
               <p className="radioLabel">Marital status</p>
               <input
                 type="radio"
-                id="Married"
+                id={`Married_${this.state.dependentId}`}
                 value="Married"
-                name="depMarStatus"
+                name={`depMarStatus_${this.state.dependentId}`}
               />
-              <label for="Married">Married</label>
+              <label for={`Married_${this.state.dependentId}`}>Married</label>
               <input
                 type="radio"
-                id="Single"
+                id={`single_${this.state.dependentId}`}
                 value="Single"
-                name="depMarStatus"
+                name={`depMarStatus_${this.state.dependentId}`}
               />
-              <label for="Single">Single</label>
+              <label for={`single_${this.state.dependentId}`}>Single</label>
               <input
                 type="radio"
-                id="Un-married"
+                id={`UnMarried_${this.state.dependentId}`}
                 value="Un-married"
-                name="depMarStatus"
+                name={`depMarStatus_${this.state.dependentId}`}
               />
-              <label for="Un-married">Un-married</label>
+              <label for={`UnMarried_${this.state.dependentId}`}>
+                Un-married
+              </label>
             </RadioBox>
           </div>
         </div>
