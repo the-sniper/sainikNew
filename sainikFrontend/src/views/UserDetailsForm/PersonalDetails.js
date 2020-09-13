@@ -4,6 +4,46 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
 
 class PersonalDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isCivilEmployed: false,
+      isCivilPensioned: false,
+    };
+  }
+
+  checkCivilEmployment = () => {
+    let targetPension = document.getElementById("persCivEmpStatus");
+
+    if (
+      targetPension.options[targetPension.selectedIndex].value === "retired"
+    ) {
+      this.setState({
+        isCivilEmployed: true,
+      });
+    } else {
+      this.setState({
+        isCivilEmployed: false,
+      });
+    }
+  };
+
+  changeHandler = () => {
+    let target = document.getElementsByName("civPensionStatus");
+    for (let i = 0; i < target.length; i++) {
+      if (target[0].checked === true) {
+        this.setState({
+          isCivilPensioned: true,
+        });
+      } else {
+        this.setState({
+          isCivilPensioned: false,
+        });
+      }
+    }
+  };
+
   render() {
     return (
       <form>
@@ -166,34 +206,54 @@ class PersonalDetails extends Component {
               id="persCivEmpStatus"
               label="Civil employment status"
               name="persCivEmpStatus"
+              changeHandler={this.checkCivilEmployment}
             >
-              <option>Employed</option>
-              <option>Un-employed</option>
-              <option>Retired</option>
+              <option value="employed">Employed</option>
+              <option value="unEmployed">Un-employed</option>
+              <option value="retired">Retired</option>
             </SelectBox>
           </div>
-          <div className="col-6">
-            <RadioBox>
-              <p className="radioLabel">Civil pension status</p>
-              <input
-                type="radio"
-                id="yes"
-                value="yes"
-                name="civPensionStatus"
-              />
-              <label for="yes">Yes</label>
-              <input type="radio" id="no" value="no" name="civPensionStatus" />
-              <label for="no">No</label>
-            </RadioBox>
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="persCivilPension"
-              label="Civil pension amount"
-              type="number"
-              name="persCivilPension"
-            />
-          </div>
+          {this.state.isCivilEmployed ? (
+            <>
+              <div className="col-6">
+                <RadioBox onChange={this.changeHandler}>
+                  <p className="radioLabel">Civil pension status</p>
+                  <input
+                    type="radio"
+                    id="yes"
+                    value="yes"
+                    name="civPensionStatus"
+                  />
+                  <label for="yes">Yes</label>
+                  <input
+                    type="radio"
+                    id="no"
+                    value="no"
+                    name="civPensionStatus"
+                  />
+                  <label for="no">No</label>
+                </RadioBox>
+              </div>
+              {this.state.isCivilPensioned ? (
+                <div className="col-6">
+                  <InputBox
+                    id="persCivilPension"
+                    label="Civil pension amount"
+                    type="number"
+                    name="persCivilPension"
+                  />
+                </div>
+              ) : null}
+              <div className="col-6">
+                <InputBox
+                  id="persDateOfRetirement"
+                  label="Date of retirement"
+                  type="date"
+                  name="persDateOfRetirement"
+                />
+              </div>
+            </>
+          ) : null}
           <div className="col-6">
             <InputBox
               id="persCivilEmp"
@@ -216,14 +276,6 @@ class PersonalDetails extends Component {
               label="Department in civil"
               type="text"
               name="persDeptInCivil"
-            />
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="persDateOfRetirement"
-              label="Date of retirement"
-              type="date"
-              name="persDateOfRetirement"
             />
           </div>
           <div className="col-6">

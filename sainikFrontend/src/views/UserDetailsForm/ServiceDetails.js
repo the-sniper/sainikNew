@@ -5,13 +5,36 @@ import InputBox from "../../components/Input/InputBox/InputBox";
 import Multiselect from "../../components/Multiselect/Multiselect";
 
 class ServiceDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isAirForce: false,
+    };
+  }
+
+  changeHandler = () => {
+    let target = document.getElementsByName("service");
+    for (let i = 0; i < target.length; i++) {
+      if (target[0].checked === true) {
+        this.setState({
+          isAirForce: true,
+        });
+      } else {
+        this.setState({
+          isAirForce: false,
+        });
+      }
+    }
+  };
+
   render() {
     return (
       <form>
         <h3 className="formTitle">Service details</h3>
         <div className="row text-left">
           <div className="col-6">
-            <RadioBox>
+            <RadioBox onChange={() => this.changeHandler()}>
               <p className="radioLabel">Select your service</p>
               <input
                 type="radio"
@@ -47,17 +70,19 @@ class ServiceDetails extends Component {
               <option>Option</option>
             </SelectBox>
           </div>
-          <div className="col-6">
-            <RadioBox>
-              <p className="radioLabel">Select your group</p>
-              <input type="radio" id="X" value="X" name="group" />
-              <label for="x">X</label>
-              <input type="radio" id="y" value="y" name="group" />
-              <label for="y">Y</label>
-              <input type="radio" id="z" value="z" name="group" />
-              <label for="z">Z</label>
-            </RadioBox>
-          </div>
+          {this.state.isAirForce ? (
+            <div className="col-6">
+              <RadioBox>
+                <p className="radioLabel">Select your group</p>
+                <input type="radio" id="x" value="X" name="group" />
+                <label for="x">X</label>
+                <input type="radio" id="y" value="y" name="group" />
+                <label for="y">Y</label>
+                <input type="radio" id="z" value="z" name="group" />
+                <label for="z">Z</label>
+              </RadioBox>
+            </div>
+          ) : null}
           <div className="col-6">
             <SelectBox id="servTrade" label="Trade" name="servTrade">
               <option>Option</option>

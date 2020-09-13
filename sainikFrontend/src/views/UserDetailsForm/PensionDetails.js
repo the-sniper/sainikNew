@@ -4,6 +4,46 @@ import SelectBox from "../../components/Input/SelectBox/SelectBox";
 import InputBox from "../../components/Input/InputBox/InputBox";
 
 class PensionDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isPensioner: false,
+      isDisabilityPension: false,
+      isExpiredDischarge: false,
+    };
+  }
+
+  checkPensionType = () => {
+    let targetPension = document.getElementById("pensionType");
+
+    if (
+      targetPension.options[targetPension.selectedIndex].value ===
+      "disabilityPension"
+    ) {
+      this.setState({
+        isDisabilityPension: true,
+      });
+    } else {
+      this.setState({
+        isDisabilityPension: false,
+      });
+    }
+  };
+  checkDischargeType = () => {
+    let targetDischarge = document.getElementById("pensDischargeReason");
+    if (
+      targetDischarge.options[targetDischarge.selectedIndex].value === "expired"
+    ) {
+      this.setState({
+        isExpiredDischarge: true,
+      });
+    } else {
+      this.setState({
+        isExpiredDischarge: false,
+      });
+    }
+  };
   render() {
     return (
       <form>
@@ -30,39 +70,57 @@ class PensionDetails extends Component {
               id="pensDischargeReason"
               label="Reason of discharge"
               name="pensDischargeReason"
+              changeHandler={this.checkDischargeType}
             >
-              <option>On completion of engagement</option>
-              <option>Expired</option>
-              <option>Medical</option>
-              <option>Super Annuation</option>
+              <option value="engagementCompletion">
+                On completion of engagement
+              </option>
+              <option value="expired">Expired</option>
+              <option value="medical">Medical</option>
+              <option value="superAnnuation">Super Annuation</option>
             </SelectBox>
           </div>
-          <div className="col-6">
-            <RadioBox>
-              <p className="radioLabel">Weather death while on service</p>
-              <input type="radio" id="yes" value="yes" name="deathInService" />
-              <label for="yes">Yes</label>
-              <input type="radio" id="no" value="no" name="deathInService" />
-              <label for="no">No</label>
-            </RadioBox>
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="pensdod"
-              label="Date of death"
-              type="date"
-              name="pensdod"
-            />
-          </div>
-          <div className="col-6">
-            <SelectBox
-              id="pensDeathDetails"
-              label="Death details"
-              name="pensDeathDetails"
-            >
-              <option>Options</option>
-            </SelectBox>
-          </div>
+          {this.state.isExpiredDischarge ? (
+            <>
+              <div className="col-6">
+                <RadioBox>
+                  <p className="radioLabel">Weather death while on service</p>
+                  <input
+                    type="radio"
+                    id="yes"
+                    value="yes"
+                    name="deathInService"
+                  />
+                  <label for="yes">Yes</label>
+                  <input
+                    type="radio"
+                    id="no"
+                    value="no"
+                    name="deathInService"
+                  />
+                  <label for="no">No</label>
+                </RadioBox>
+              </div>
+              <div className="col-6">
+                <InputBox
+                  id="pensdod"
+                  label="Date of death"
+                  type="date"
+                  name="pensdod"
+                />
+              </div>
+              <div className="col-6">
+                <SelectBox
+                  id="pensDeathDetails"
+                  label="Death details"
+                  name="pensDeathDetails"
+                >
+                  <option>Options</option>
+                </SelectBox>
+              </div>
+            </>
+          ) : null}
+
           <div className="col-6">
             <SelectBox
               id="pensMedCatg"
@@ -130,96 +188,127 @@ class PensionDetails extends Component {
           <div className="col-6">
             <RadioBox>
               <p className="radioLabel">Whether pensioner ?</p>
-              <input type="radio" id="yes" value="yes" name="isPensioner" />
-              <label for="yes">Yes</label>
-              <input type="radio" id="no" value="no" name="isPensioner" />
-              <label for="no">No</label>
+              <input
+                type="radio"
+                id="pensionYes"
+                value="yes"
+                name="isPensioner"
+                onClick={() => this.setState({ isPensioner: true })}
+              />
+              <label for="pensionYes">Yes</label>
+              <input
+                type="radio"
+                id="pensionNo"
+                value="no"
+                name="isPensioner"
+                onClick={() => this.setState({ isPensioner: false })}
+              />
+              <label for="pensionNo">No</label>
             </RadioBox>
           </div>
-          <div className="col-6">
-            <SelectBox
-              id="pensionType"
-              label="Type of pension"
-              name="pensionType"
-            >
-              <option>Service Pension</option>
-              <option>Disability Pension</option>
-              <option>War Injury Pension</option>
-              <option>Ex gratia Pension</option>
-              <option>Reservist Pension</option>
-              <option>Ordinary Family Pension</option>
-              <option>Special Family Pension</option>
-              <option>Liberalised Family Pension</option>
-            </SelectBox>
-          </div>
 
-          {/* If pension type = disability, show the next 2*/}
+          {this.state.isPensioner ? (
+            <>
+              <div className="col-6">
+                <SelectBox
+                  id="pensionType"
+                  label="Type of pension"
+                  name="pensionType"
+                  changeHandler={this.checkPensionType}
+                >
+                  <option value="servicePension">Service Pension</option>
+                  <option value="disabilityPension">Disability Pension</option>
+                  <option value="warInjuryPension">War Injury Pension</option>
+                  <option value="exGratiaPension">Ex gratia Pension</option>
+                  <option value="reservistPension">Reservist Pension</option>
+                  <option value="ordinaryFamilyPension">
+                    Ordinary Family Pension
+                  </option>
+                  <option value="specialFamilyPension">
+                    Special Family Pension
+                  </option>
+                  <option value="liberalisedFamilyPension">
+                    Liberalised Family Pension
+                  </option>
+                </SelectBox>
+              </div>
 
-          <div className="col-6">
-            <SelectBox
-              id="perDisability"
-              label="Percentage of disability"
-              name="perDisability"
-            >
-              <option>Option</option>
-            </SelectBox>
-          </div>
-          <div className="col-6">
-            <SelectBox
-              id="disabilityElement"
-              label="Disability element"
-              name="disabilityElement"
-            >
-              <option>Option</option>
-            </SelectBox>
-          </div>
+              {/* If pension type = disability, show the next 2*/}
+              {this.state.isDisabilityPension ? (
+                <>
+                  <div className="col-6">
+                    <SelectBox
+                      id="perDisability"
+                      label="Percentage of disability"
+                      name="perDisability"
+                    >
+                      <option>Option</option>
+                    </SelectBox>
+                  </div>
+                  <div className="col-6">
+                    <SelectBox
+                      id="disabilityElement"
+                      label="Disability element"
+                      name="disabilityElement"
+                    >
+                      <option>Option</option>
+                    </SelectBox>
+                  </div>
+                </>
+              ) : null}
 
-          <div className="col-6">
-            <InputBox
-              id="servPpoNum"
-              label="PPO number"
-              type="number"
-              name="servPpoNum"
-            />
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="pensionSanctioned"
-              label="Pension amount sanctioned"
-              type="number"
-              name="pensionSanctioned"
-            />
-          </div>
-          <div className="col-6">
-            <SelectBox id="servBankName" label="Bank name" name="servBankName">
-              <option>Option</option>
-            </SelectBox>
-          </div>
-          <div className="col-6">
-            <SelectBox
-              id="servBranchName"
-              label="Branch name"
-              name="servBranchName"
-            >
-              <option>Option</option>
-            </SelectBox>
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="servIfsc"
-              label="IFSC code"
-              type="text"
-              name="servIfsc"
-            />
-          </div>
-          <div className="col-6">
-            <InputBox
-              id="servpensionAccNum"
-              label="Pension account number"
-              type="number"
-              name="servpensionAccNum"
-            />
-          </div>
+              <div className="col-6">
+                <InputBox
+                  id="servPpoNum"
+                  label="PPO number"
+                  type="number"
+                  name="servPpoNum"
+                />
+              </div>
+              <div className="col-6">
+                <InputBox
+                  id="pensionSanctioned"
+                  label="Pension amount sanctioned"
+                  type="number"
+                  name="pensionSanctioned"
+                />
+              </div>
+              <div className="col-6">
+                <SelectBox
+                  id="servBankName"
+                  label="Bank name"
+                  name="servBankName"
+                >
+                  <option>Option</option>
+                </SelectBox>
+              </div>
+              <div className="col-6">
+                <SelectBox
+                  id="servBranchName"
+                  label="Branch name"
+                  name="servBranchName"
+                >
+                  <option>Option</option>
+                </SelectBox>
+              </div>
+              <div className="col-6">
+                <InputBox
+                  id="servIfsc"
+                  label="IFSC code"
+                  type="text"
+                  name="servIfsc"
+                />
+              </div>
+              <div className="col-6">
+                <InputBox
+                  id="servpensionAccNum"
+                  label="Pension account number"
+                  type="number"
+                  name="servpensionAccNum"
+                />
+              </div>
+            </>
+          ) : null}
         </div>
       </form>
     );
